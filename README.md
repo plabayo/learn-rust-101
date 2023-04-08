@@ -2,7 +2,7 @@
 
 [rust]: https://www.rust-lang.org/
 
->A repository aid you in your journey of becoming a Rustacean (Rust developer). See the [Contributing](./CONTRIBUTING.md) and [Code of Conduct](./CODE_OF_CONDUCT.md) for more information about how to contribute to this repository.
+> A guide to aid you in your journey of becoming a Rustacean (Rust developer). See the [Contributing](./CONTRIBUTING.md) and [Code of Conduct](./CODE_OF_CONDUCT.md) for more information about how to contribute to this repository.
 
 [Rust][rust] is a modern systems programming language with safety in mind as one of its core goals and strengths. Systems programming is programming within a resource contrained environment. However, as a lot of our services run now in paid-for-usage cloud environments, we can also consider them as resource constrained environments. This is why Rust is a great fit for more use cases then people might realize.
 
