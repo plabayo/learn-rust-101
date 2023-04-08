@@ -500,7 +500,7 @@ A language is a tool, but a tool is not to be applied to any problem. Rust has i
 
 In case you come from Python or Javascript you can alternatively replace the first four steps of this learning guide with a single book. [Rust Web Programming](https://www.packtpub.com/product/rust-web-programming-second-edition/9781803234694) (Packt Publishing) aims to get web developers (including Python developers) get started with Rust and has a very pragmatic approach.
 
-Given how important Async is in our work environment it is still worth to go through section [(3) “Learn Async Rust”](3-learn-async-rust) to make sure you do really grasp that very well. It is also where a lot of your Rust knowledge starts to come together, so if you get that you know you’re on the right track.
+Given how important Async is in our work environment it is still worth to go through section [(3) “Learn Async Rust”](#3-learn-async-rust) to make sure you do really grasp that very well. It is also where a lot of your Rust knowledge starts to come together, so if you get that you know you’re on the right track.
 
 Should you after completing this book (even if partly) want to have some more hands on experience you can opt to never the less do section (4) as well and go through [the “Zero to Production in Rust” book](#4-study-using-the-zero-to-production-in-rust-book)
 
