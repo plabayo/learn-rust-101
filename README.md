@@ -89,7 +89,7 @@ Support this project by becoming a [sponsor](https://github.com/sponsors/plabayo
   - [Appendix III. Native Apps](#appendix-iii-native-apps)
     - [Tauri](#tauri)
   - [Appendix IV. Rust in the background](#appendix-iv-rust-in-the-background)
-  - [Appendix V. Python / Javascript developers](#appendix-v-python--javascript-developers)]
+  - [Appendix V. Python / Javascript developers](#appendix-v-python--javascript-developers)
   - [Appendix VI. Next Steps](#appendix-vi-next-steps)
     - [Keep up to date](#keep-up-to-date)
     - [Lists](#lists)
