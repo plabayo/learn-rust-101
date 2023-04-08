@@ -306,8 +306,6 @@ Understanding concurrency, the primitives used to do so safely and how it all wo
 
 The book “[Rust Atomics and Locks](https://marabos.nl/atomics/)” by O’Reilly is an amazingly good book by Mara Bos, an important Rust Contributor. Going through the book will take you some time despite its smaller size, but doing so is very rewarding. As with any technical book it is best to read this book as well as do its exercises and apply its knowledge using one program or another. Learn, Apply, Repeat. Play with it, Understand it.
 
-You can read the book for free using the OTA Insight subscription to the O’Reilly online platform. We also own one paperback (physical) copy, but feel free to request the purchase of a second (or third) copy in case it is not available for lending out.
-
 This book is so good, that even Go, Python or JS developers that will never ever touch Rust, might want to learn Rust just to understand the knowledge that can be found in this Gem of a book. Read it. You won’t regret it.
 
 As it is more advanced knowledge it can however be seen as “Extra”, so in case you are in a hurry to finish [section (3) of the Rust track](#3-learn-async-rust), feel free to skip it. But even if so, keep its existence in mind and come perhaps back to it when you start to get yourself into trouble.
