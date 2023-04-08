@@ -67,7 +67,7 @@ Support this project by becoming a [sponsor](https://github.com/sponsors/plabayo
 ## Index
 
 - [About](#about)
-- [Python / Javascript developers](#Python-/-Javascript-developers)
+- [Python / Javascript developers](#python--javascript-developers)
 - [1. Learn Rust](#1-learn-rust)
 - [2. Learn More Rust](#2-learn-more-rust)
   - [Learn More Rust: Extra](#learn-more-rust-extra)
@@ -138,7 +138,7 @@ In case you're new to the language we suggest you to take a look at [Learn Rust]
 
 - [The Rust Programming Language - The Rust Programming Language](https://doc.rust-lang.org/book/) gives you a very nice overview;
   - There are plenty of exercises in the book and at the end of your learning journey you'll get to [build your own multi-threaded web server](https://doc.rust-lang.org/book/ch20-00-final-project-a-web-server.html)!
-- [GitHub - rust-lang/rustlings](https://doc.rust-lang.org/stable/rust-by-example/): Small exercises to get you used to reading and writing Rust code! is an alternative more pragmatic approach on learning the language;
+- [GitHub - rust-lang/rustlings](https://github.com/rust-lang/rustlings): Small exercises to get you used to reading and writing Rust code! is an alternative more pragmatic approach on learning the language;
 - [Introduction - Rust By Example](https://doc.rust-lang.org/stable/rust-by-example/) is there for people who like learning from real-world examples;
 
 > ⓘ **Hardcore** alternative
