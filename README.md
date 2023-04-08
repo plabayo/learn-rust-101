@@ -110,6 +110,7 @@ Support this project by becoming a [sponsor](https://github.com/sponsors/plabayo
 - GitHub’s npm, Inc., uses Rust to deliver “upwards of 1.3 billion package downloads per day.”
 - Oracle developed a container runtime with Rust to overcome problems with the Go reference implementation.
 - Samsung, via its subsidiary SmartThings, uses Rust in its Hub, which is the firmware backend for its Internet of Things (IoT) service.
+- [The U.S. Department of Commerce’s National Institute of Standards and Technology (NIST) has added Rust to its list of “Safer Languages” as part of its Software Assurance Metrics and Tool Evaluation (SAMATE)](https://foundation.rust-lang.org/news/rust-identified-as-safer-coding-tool-by-nist/).
 
 The language and its ecosystem have also very matured. Concepts like Async have also landed and Async runtimes such as Tokio have become stable and can be used without fear. While it was harder to convince companies to jump on the Rust wagon in the past, by now it should be a lot easier to sell. Is it one language to replace them all? Of course not, but neither should it be overlooked. Are you not sure how Rust might benefit your team for one thing or another? Contact [Glen](https://www.glendc.com/) and figure it out together.
 
