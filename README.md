@@ -14,6 +14,8 @@ The goal of this guide is to introduce Rust to you as an individual or an entire
 
 The origins of this guide can be found in the preparation of a semester long course I gave to a group of employees at [OTA Insight Ltd.](https://www.ota-insight.com/). The recordings of this course are available on YouTube at: <https://www.youtube.com/playlist?list=PLQgXEsLXFxpVyLddG8FFXfNQEiodTzAjj>.
 
+> This course is still actively being thought and the videos will be uploaded weekly when I find time to upload the recordings.
+
 ## Learning Rust in Milestones
 
 ```
