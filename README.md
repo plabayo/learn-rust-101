@@ -95,7 +95,7 @@ Support this project by becoming a [sponsor](https://github.com/sponsors/plabayo
     - [Lists](#lists)
     - [Read](#read)
     - [Educational](#educational)
-  - [Appendix VII. Community Chat](appendix-vii-community-chat)
+  - [Appendix VII. Community Chat](#appendix-vii-community-chat)
 
 ## About
 
