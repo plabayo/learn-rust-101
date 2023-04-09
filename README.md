@@ -579,7 +579,7 @@ A nice reference sheet if you need one can be found at: <https://cheats.rs/>
   - Do not take the list as-is and use mostly as inspiration. No need to really do all on that list, but if you need more learning resources, there is plenty of good content and inspiration in there!
 - Black Hat Rust book: <https://kerkour.com/black-hat-rust> (could be nice for inspiration on some hands-on experience while becoming more familiar with Rust)
 - If you want to test your Rust concept skills you might also enjoy taking [the Rust Quiz](https://dtolnay.github.io/rust-quiz/). The more answers you have wrong the better, as it means you’ll learn new things from the explanation :)
-- If you want to learn by doing by contributing to an existing Rust OSS
+- If you want to learn by doing by contributing to an existing Rust OSS project (including the Rust language and tooling) you can try to find a mentor to help you for free online in achieving this, by going to Awesome Rust Mentors: <https://rustbeginners.github.io/awesome-rust-mentors/>
 
 ### Appendix VII. Community Chat
 
