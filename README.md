@@ -95,6 +95,7 @@ Support this project by becoming a [sponsor](https://github.com/sponsors/plabayo
     - [Lists](#lists)
     - [Read](#read)
     - [Educational](#educational)
+  - [Appendix VII. Community Chat](appendix-vii-community-chat)
 
 ## About
 
@@ -578,4 +579,15 @@ A nice reference sheet if you need one can be found at: <https://cheats.rs/>
   - Do not take the list as-is and use mostly as inspiration. No need to really do all on that list, but if you need more learning resources, there is plenty of good content and inspiration in there!
 - Black Hat Rust book: <https://kerkour.com/black-hat-rust> (could be nice for inspiration on some hands-on experience while becoming more familiar with Rust)
 - If you want to test your Rust concept skills you might also enjoy taking [the Rust Quiz](https://dtolnay.github.io/rust-quiz/). The more answers you have wrong the better, as it means you’ll learn new things from the explanation :)
-- If you want to learn by doing by contributing to an existing Rust OSS project (including the Rust language and tooling) you can try to find a mentor to help you for free online in achieving this, by going to Awesome Rust Mentors: <https://rustbeginners.github.io/awesome-rust-mentors/>
+- If you want to learn by doing by contributing to an existing Rust OSS
+
+### Appendix VII. Community Chat
+
+Learning from and working with a community is one of the many perks of Rust, which is rightfully known for its warm, inclusive and charming community. Always open and friendly to others.
+
+Here are some chat servers you can join to interact with this fantastic community reward. All of them are great places to meet other Rust developers, find help, share news or a project and also to give back to the community yourself:
+
+- Discord chat server for the Tokio ecosystem and its community: <https://discord.com/invite/tokio>
+- Discord chat server for the Rust community in general (has a great channel for beginners to find help, and in a very fast manner): <https://discord.com/invite/rust-lang>
+- zulip chat server for Rust, great for core work and advanced purposes: <https://rust-lang.zulipchat.com/>
+project (including the Rust language and tooling) you can try to find a mentor to help you for free online in achieving this, by going to Awesome Rust Mentors: <https://rustbeginners.github.io/awesome-rust-mentors/>
