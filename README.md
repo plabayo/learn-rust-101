@@ -249,7 +249,7 @@ The most popular and recommended by many Async Runtime is [the Tokio runtime](ht
 - To start with your Async Learning Journey you might want to start with: [Getting Started - Asynchronous Programming in Rust](https://rust-lang.github.io/async-book/);
 - Afterwards you can finally start going through the Tokio [learning journey Tutorial | Tokio - An asynchronous Rust runtime](https://tokio.rs/tokio/tutorial) 
 
-Please also join the Tokio Discord community as part of your async Journey, a place where you can ask any questions you want as well: <https://discord.com/invite/tokio>. It will be a place you want to be in once you start working for the Crawler team on RSProxy and its dependencies.
+Please also join the Tokio Discord community as part of your async Journey, a place where you can ask any questions you want as well: <https://discord.com/invite/tokio>.
 
 As an extra you may also want to read and develop alongside the following articles:
 
