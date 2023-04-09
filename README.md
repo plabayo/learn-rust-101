@@ -85,6 +85,7 @@ Support this project by becoming a [sponsor](https://github.com/sponsors/plabayo
   - [Learn More Rust: Extra](#learn-more-rust-extra)
   - [Code like a pro in Rust](#code-like-a-pro-in-rust)
   - [A Crust of Rust](#a-crust-of-rust)
+  - [API Design](#api-design)
 - [3. Learn Async Rust](#3-learn-async-rust)
   - [Tower](#tower)
   - [Rust Atomics and Locks](#rust-atomics-and-locks)
@@ -253,6 +254,14 @@ Once you get at this point you are around the level of a beginner or intermediat
 Therefore while you go through the next couple of sections it could be helpful to now and then (e.g. while washing dishes or instead of Netflix) an education Rust code video. In the appendix at the bottom of this page there a couple of such suggestions.
 
 Particular to this context you might want to save [the “Crust of Rust” playlist](https://www.youtube.com/watch?v=rAl-9HwD858&list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa). Each video will go over a specific topic, e.g. Lifetimes, macros, Atomics, … No need to watch them one by one, feel free to jump to them in whatever orders and only those that interest you (which is the same tip that I can give for the "Rust for Rustaceans" book).
+
+### API Design
+
+Designing APIs is a big part of being a Rust programmer, any programmer really. Once you start to get comfortable enough in Rust or start building your own public crate, it is a topic you'll want to invest in.
+
+A good starting point is the [API Guidelines](https://rust-lang.github.io/api-guidelines/about.html) which are a set of guidelines that are meant to help you design good APIs. They are not meant to be followed blindly, but rather to be used as a reference to help you make the right decisions.
+
+A next and continuos step is to read blog posts and watch videos about API design. The Rust newsletter often has an article listed in its weekly edition. But other platforms such as HackerNews will have interesting Rust articles pop up as well. <https://sabrinajewson.org/blog/errors> is for example a great article talking about one might to give errors as much love as the other parts of the API, and also talks about why crates like `thiserror` might nog be that great. All in all, similar to other parts of your continuous Rust learning journey, you'll want to remain critical and open to new ideas and see what works for you and what not.
 
 ## 3. Learn Async Rust
 
