@@ -4,6 +4,8 @@
 
 > A guide to aid you in your journey of becoming a Rustacean (Rust developer). See the [Contributing](./CONTRIBUTING.md) and [Code of Conduct](./CODE_OF_CONDUCT.md) for more information about how to contribute to this repository.
 
+> This guide was featured [on the front page of HackerNews on the 8th of April 2023](<https://news.ycombinator.com/item?id=35489029>).
+
 [Rust][rust] is a modern systems programming language with safety in mind as one of its core goals and strengths. Systems programming is programming within a resource contrained environment. However, as a lot of our services run now in paid-for-usage cloud environments, we can also consider them as resource constrained environments. This is why Rust is a great fit for more use cases then people might realize.
 
 As it is a modern language and has taken the lessons from many other languages before it, it is also surprisingly pleasant to use once you get the hang of it. Its type system also allows expressive code that can help you exclude a great categories of bugs beyond the benefits that static typing can bring.
@@ -61,6 +63,15 @@ The origins of this guide can be found in the preparation of a semester long cou
       Continiously Learn, Take Your Time
       Enjoy the road :)
 ```
+
+The above paths are just a suggestion and also should make clear that there are many ways and approaches to using this guide.
+Most important is that you do enjoy the journey and that you learn consistently (e.g. ~ X hours per week). How you'll walk the path and how often you revisit things will depend on your learning style and capabilities. There are however no wrong ways to go. E.g. maybe you want to dive into some code yourself as soon as possible and only then will start covering foundations. Or perhaps you first wanna feel very comfortable to only then start really coding yourself once you think you understand the foundations well. All up to you really.
+
+Only thing I would really want to hammer on is to do a lot of coding yourself. The best way to learn is to do. So don't be afraid to make mistakes and to try things out. You'll learn a lot more that way. It will be a very confronting journey but it will be worth it. If all you do is read and read you'll never really get a feel for the language and you'll never really get a feel for what you can do with it. So please, do a lot of coding yourself. Plus at times we can trick our brain into thinking we understand something when we don't.
+
+Also even if you start to reach advanced topics (e.g. Rust for Rustaceans), it is still very important to keep doing the basics. You'll be surprised how quickly you can forget things. So keep doing the basics and keep doing the advanced topics. It is a never ending journey.
+
+If you ever feel stuck, or want a guide, teacher or mentor. Feel free to reach out to Glen at [glen@plabayo.tech](mailto:glen@plabayo.tech) to book a 1-on-1 session or a workshop for your organization. It can be a one time thing or we can meet regularly to help you along the way.
 
 ## Sponsors
 
@@ -252,12 +263,14 @@ The most popular and recommended by many Async Runtime is [the Tokio runtime](ht
 - To start with your Async Learning Journey you might want to start with: [Getting Started - Asynchronous Programming in Rust](https://rust-lang.github.io/async-book/);
 - Afterwards you can finally start going through the Tokio [learning journey Tutorial | Tokio - An asynchronous Rust runtime](https://tokio.rs/tokio/tutorial) 
 
-Please also join the Tokio Discord community as part of your async Journey, a place where you can ask any questions you want as well: <https://discord.com/invite/tokio>.
+Please also join the Tokio Discord community as part of your async Journey, a place where you can ask any questions you want as well: <https://discord.com/invite/tokio>. This server also has also individual channels for the different projects in the Tokio ecosystem such as Hyper, Axum, Tower and more. The maintainers of the different projects are also very active in the server and are happy to help you out, but of course please do not take this for granted. Be respectful and if possible contribute back to the community as well.
 
 As an extra you may also want to read and develop alongside the following articles:
 
 - [The HTTP crash course nobody asked for](https://fasterthanli.me/articles/the-http-crash-course-nobody-asked-for)
 - [Understanding Rust futures by going way too deep](https://fasterthanli.me/articles/understanding-rust-futures-by-going-way-too-deep)
+
+In order to help you understand how Async code works (e.g. what about the Async keyword and How do futures really work. And how do you define traits with futures. And How do you implement them), you might want to read through the articles linked in the [Tower](#tower) section, as seeing how to implement your own _Tower_ middleware might answer many of such questions. Gaining a deeper theoretical but still pragmatic enough understanding behind it is probably better done by reading some of the books listed in this guide.
 
 > ⓘ Note: Tokio also provides support to [the new Linux kernel io_uring concept](https://unixism.net/loti/), a new powerful way to allow async programming on Linux. Support for it can be found at: [GitHub - tokio-rs/tokio-uring: An io_uring backed runtime for Rust](https://github.com/tokio-rs/tokio-uring)
 > 
