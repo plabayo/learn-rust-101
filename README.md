@@ -95,7 +95,7 @@ Support this project by becoming a [sponsor](https://github.com/sponsors/plabayo
 - [5. Contribute for the first time to an existing project](#5-contribute-for-the-first-time-to-an-existing-project)
 - [6. Study using the “Rust for Rustaceans: Idiomatic Programming for Experienced Developers” book](#6-study-using-the-rust-for-rustaceans-idiomatic-programming-for-experienced-developers-book)
 - [7. Contribute an advanced feature to an existing project or start a project from scratch](#7-contribute-an-advanced-feature-to-an-existing-project-or-start-a-project-from-scratch)
-- [Next Steps]
+- [Next Steps](#next-steps)
 - Appendix:
   - [Appendix I. Install Rust](#appendix-i-install-rust)
     - [Linting and styling](#linting-and-styling)
