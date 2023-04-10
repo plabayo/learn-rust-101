@@ -1,5 +1,7 @@
 ![Repository Banner Image](./img/banner.png)
 
+![GitHub Repo stars](https://img.shields.io/github/stars/plabayo/learn-rust-101?style=social) ![GitHub](https://img.shields.io/github/license/plabayo/learn-rust-101) [![available to hire](https://img.shields.io/badge/Glen-available%20to%20hire%20as%20consultant-green)](mailto:glen@plabayo.tech)
+
 [rust]: https://www.rust-lang.org/
 
 > A guide to aid you in your journey of becoming a Rustacean (Rust developer). See the [Contributing](./CONTRIBUTING.md) and [Code of Conduct](./CODE_OF_CONDUCT.md) for more information about how to contribute to this repository.
@@ -93,6 +95,7 @@ Support this project by becoming a [sponsor](https://github.com/sponsors/plabayo
 - [5. Contribute for the first time to an existing project](#5-contribute-for-the-first-time-to-an-existing-project)
 - [6. Study using the “Rust for Rustaceans: Idiomatic Programming for Experienced Developers” book](#6-study-using-the-rust-for-rustaceans-idiomatic-programming-for-experienced-developers-book)
 - [7. Contribute an advanced feature to an existing project or start a project from scratch](#7-contribute-an-advanced-feature-to-an-existing-project-or-start-a-project-from-scratch)
+- [Next Steps]
 - Appendix:
   - [Appendix I. Install Rust](#appendix-i-install-rust)
     - [Linting and styling](#linting-and-styling)
@@ -102,7 +105,7 @@ Support this project by becoming a [sponsor](https://github.com/sponsors/plabayo
     - [Tauri](#tauri)
   - [Appendix IV. Rust in the background](#appendix-iv-rust-in-the-background)
   - [Appendix V. Python / Javascript developers](#appendix-v-python--javascript-developers)
-  - [Appendix VI. Next Steps](#appendix-vi-next-steps)
+  - [Appendix VI. More Material](#appendix-vi-more-material)
     - [Keep up to date](#keep-up-to-date)
     - [Lists](#lists)
     - [Read](#read)
@@ -422,6 +425,28 @@ Another option is to contribute to an open source project that you like or may w
 
 See [section (5) about your first contribution](#5-contribute-for-the-first-time-to-an-existing-project) for some inspiration on where to start.
 
+## Next Steps
+
+If you have completed all the steps above, you have done more then enough and can call yourself a Rustacean. You can now start to contribute to the Rust ecosystem and help others to learn Rust. Perhaps more importantly, you have all the knowledge you need to build your own projects in Rust.
+
+What you'll build depends on your interest or perhaps in the type of industry or company you're working in.
+
+- If you're doing full stack development you can get inspired on what's next by checking out [WASM Learning Resources Appendix](#wasm-learning-resources);
+  - For all your web dev needs you might also get inspired on what frameworks to use by checking out a website such as <https://www.arewewebyet.org/>;
+  - By coincidence, some of the books and articles listed in this guide also teach you a lot about web development, so if you did indeed complete these guide you're really already well on your way to becoming a full stack developer in Rust, or backend, whatever floats your boat;
+- Some call WASM (on the server side) the next thing after docker containers. So perhaps even as a "pure" backened developer you might want to check out [that _same_ appendix](#wasm-learning-resources) to help you get started;
+- If you're a game developer (or inspiring to be) you can check out resources such as <https://arewegameyet.rs/#ecosystem> to figure out what Rust technologies are out there in the ecosystem to help you build the next fantastic game;
+  - If you're a game developer you might also want to check out the [Rust GameDev Working Group](https://gamedev.rs/) (they also have a monthly news letter);
+  - You could also subscribe to the a podcast about GameDev in Rust called [Rust GameDev Podcast](https://rustgamedev.com/);
+- If you want to develop Operating Systems I already listed some resources to help you get started with that.
+  - Once (and if) Rust is accepted as a second language (next to C) to develop patches for the Linux kernel you can also start contributing to the Linux kernel in Rust. Future dreams;
+  - Or you might want to apply to Google and help build [their Fuchsia OS](https://fuchsia.dev/) in Rust. Have fun;
+    - It's open source so nobody can stop you to contribute it either way, well except them I guess;
+- If you want to develop blockchain technology... Well, not going to guide you in that one, there's a running joke that it's hard to find a job in Rust that's not blockchain tech, so, you should have no problem finding a job in that field if that's what you want to do;
+- If you want to develop embedded systems, you can check out the [Rust Embedded Working Groups's Blog](https://blog.rust-embedded.org/). There are also plenty of companies who sometimes appear in articles or podcasts listed in [the More Material appendix](#more-material), so you can check that also out for yourself.
+
+There's a lot more of course. You probably know best where you're going. A lot of exciting stuff is happening. Plenty of conferences (e.g. Rust Conf) to help you get inspired on it if you're not already. And of course, plenty of people to help you out if you get stuck. So, good luck and have fun!
+
 ## Appendix
 
 ### Appendix I. Install Rust
@@ -484,6 +509,9 @@ Run WASM Backend Services in the cloud:
 
 - Cloudflare workers: [Cloudflare Workers®](https://workers.cloudflare.com/)
 - Fermyon Cloud (free for now): [Deploy & manage cloud native WebAssembly apps](https://www.fermyon.com/cloud)
+- Wasmer's goal is to run any code on any client (think Java's dream, but for real): <https://wasmer.io/>
+
+As you can see, WASM on the backend it is a thing. Wether it's more then just hype is something the future will tell, but either way a lot of interesting stuff is happening and there's big money behind it somehow. So you might as well jump on the car, especially if you missed the Docker train somehow. Happens.
 
 ### Appendix III. Native Apps
 
@@ -534,9 +562,9 @@ However, in case you are confident you did get all the foundational concepts of 
 
 The “Rust in Action” book can also be seen as yet another alternative all together, as it is also aimed at introducing Rust to people who never did any Systems programming, So you could also do it instead of the Rust Web Programming book.
 
-### Appendix VI. Next Steps
+### Appendix VI. More Material
 
-Learning to master a language has a beginning but it doesn’t have an ending. You’ll want to continue to learn, teach others and keep up to date.
+Learning to master a language has a beginning but it doesn’t have an ending. You’ll want to continue to learn, teach others and keep up to date. In this appendix you'll find material to help you with all this and more.
 
 #### Keep up to date
 
