@@ -257,7 +257,7 @@ Once you get at this point you are around the level of a beginner or intermediat
 
 Therefore while you go through the next couple of sections it could be helpful to now and then (e.g. while washing dishes or instead of Netflix) an education Rust code video. In the appendix at the bottom of this page there a couple of such suggestions.
 
-Particular to this context you might want to save [the "Crust of Rust" playlist](https://www.youtube.com/watch?v=rAl-9HwD858&list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa). Each video will go over a specific topic, e.g. Lifetimes, macros, Atomics, … No need to watch them one by one, feel free to jump to them in whatever orders and only those that interest you (which is the same tip that I can give for the "Rust for Rustaceans" book).
+Particular to this context you might want to save [the "Crust of Rust" playlist](https://www.youtube.com/playlist?list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa). Each video will go over a specific topic, e.g. Lifetimes, macros, Atomics, … No need to watch them one by one, feel free to jump to them in whatever orders and only those that interest you (which is the same tip that I can give for the "Rust for Rustaceans" book).
 
 ### API Design
 
