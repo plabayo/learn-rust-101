@@ -91,9 +91,9 @@ Support this project by becoming a [sponsor](https://github.com/sponsors/plabayo
 - [3. Learn Async Rust](#3-learn-async-rust)
   - [Tower](#tower)
   - [Rust Atomics and Locks](#rust-atomics-and-locks)
-- [4. Study using the “Zero to Production in Rust” book](#4-study-using-the-zero-to-production-in-rust-book)
+- [4. Study using the "Zero to Production in Rust" book](#4-study-using-the-zero-to-production-in-rust-book)
 - [5. Contribute for the first time to an existing project](#5-contribute-for-the-first-time-to-an-existing-project)
-- [6. Study using the “Rust for Rustaceans: Idiomatic Programming for Experienced Developers” book](#6-study-using-the-rust-for-rustaceans-idiomatic-programming-for-experienced-developers-book)
+- [6. Study using the "Rust for Rustaceans: Idiomatic Programming for Experienced Developers" book](#6-study-using-the-rust-for-rustaceans-idiomatic-programming-for-experienced-developers-book)
 - [7. Contribute an advanced feature to an existing project or start a project from scratch](#7-contribute-an-advanced-feature-to-an-existing-project-or-start-a-project-from-scratch)
 - [Next Steps](#next-steps)
 - Appendix:
@@ -114,19 +114,19 @@ Support this project by becoming a [sponsor](https://github.com/sponsors/plabayo
 
 ## About
 
-[Glen De Cauwsemaecker](https://www.glendc.com/) created this Educational track to help you get started with [Rust][rust] from an absolute beginner all the way until you’re an expert in it. He is open to mentor people, lead workshops and more. If you’re a team lead that wants to introduce Rust to their team, feel free to talk to him. Glen started with Rust around 2015, when Rust was still unstable and fast moving. Coming from a C++ background in a system programming job the benefits were immediately clear to him. In the meanwhile things have changed a lot and many companies have been starting to adopt Rust in their toolset:
+[Glen De Cauwsemaecker](https://www.glendc.com/) created this Educational track to help you get started with [Rust][rust] from an absolute beginner all the way until you're an expert in it. He is open to mentor people, lead workshops and more. If you're a team lead that wants to introduce Rust to their team, feel free to talk to him. Glen started with Rust around 2015, when Rust was still unstable and fast moving. Coming from a C++ background in a system programming job the benefits were immediately clear to him. In the meanwhile things have changed a lot and many companies have been starting to adopt Rust in their toolset:
 
 - Amazon Web Services (AWS) has used Rust since 2017 for its serverless computing offerings, AWS Lambda and AWS Fargate. With that, Rust has gained further inroads. The company has written the Bottlerocket OS and the AWS Nitro System to deliver its Elastic Compute Cloud (EC2) service.
 - Cloudflare develops many of its services, including its public DNS, serverless computing, and packet inspection offerings with Rust.
 - Dropbox rebuilt its backend warehouse, which manages exabytes of storage, with Rust.
-- Google develops parts of Android, such as its Bluetooth module, with Rust. Rust is also used for the crosvm component of Chrome OS and plays an important role in Google’s new operating system, Fuchsia.
-- Facebook uses Rust to power Facebook’s web, mobile, and API services, as well as parts of HHVM, the HipHop virtual machine used by the Hack programming language.
+- Google develops parts of Android, such as its Bluetooth module, with Rust. Rust is also used for the crosvm component of Chrome OS and plays an important role in Google's new operating system, Fuchsia.
+- Facebook uses Rust to power Facebook's web, mobile, and API services, as well as parts of HHVM, the HipHop virtual machine used by the Hack programming language.
 - Microsoft writes components of its Azure platform including a security daemon for its Internet of Things (IoT) service in Rust.
-- Mozilla uses Rust to enhance the Firefox web browser, which contains 15 million lines of code. Mozilla’s first two Rust-in-Firefox projects, its MP4 metadata parser and text encoder/decoder, led to overall performance and stability improvements.
-- GitHub’s npm, Inc., uses Rust to deliver “upwards of 1.3 billion package downloads per day.”
+- Mozilla uses Rust to enhance the Firefox web browser, which contains 15 million lines of code. Mozilla's first two Rust-in-Firefox projects, its MP4 metadata parser and text encoder/decoder, led to overall performance and stability improvements.
+- GitHub's npm, Inc., uses Rust to deliver "upwards of 1.3 billion package downloads per day."
 - Oracle developed a container runtime with Rust to overcome problems with the Go reference implementation.
 - Samsung, via its subsidiary SmartThings, uses Rust in its Hub, which is the firmware backend for its Internet of Things (IoT) service.
-- [The U.S. Department of Commerce’s National Institute of Standards and Technology (NIST) has added Rust to its list of “Safer Languages” as part of its Software Assurance Metrics and Tool Evaluation (SAMATE)](https://foundation.rust-lang.org/news/rust-identified-as-safer-coding-tool-by-nist/).
+- [The U.S. Department of Commerce's National Institute of Standards and Technology (NIST) has added Rust to its list of "Safer Languages" as part of its Software Assurance Metrics and Tool Evaluation (SAMATE)](https://foundation.rust-lang.org/news/rust-identified-as-safer-coding-tool-by-nist/).
 
 The language and its ecosystem have also very matured. Concepts like Async have also landed and Async runtimes such as Tokio have become stable and can be used without fear. While it was harder to convince companies to jump on the Rust wagon in the past, by now it should be a lot easier to sell. Is it one language to replace them all? Of course not, but neither should it be overlooked. Are you not sure how Rust might benefit your team for one thing or another? Contact [Glen](https://www.glendc.com/) and figure it out together.
 
@@ -135,7 +135,7 @@ If you are a bit of a history nerd you might also enjoy:
 - this article: [How Rust went from a side project to the world's most-loved programming language](https://www.technologyreview.com/2023/02/14/1067869/rust-worlds-fastest-growing-programming-language/)
 - or this podcast: [History of Rust with Ben Striegel — Rustacean Station](https://rustacean-station.org/episode/042-ben-striegel/)
 
-There’s a [last section on the end of the Rust learning content](#appendix).
+There's a [last section on the end of the Rust learning content](#appendix).
 This one contains useful references and sources that you can check as part of your
 continuous journey as a capable Rust developer.
 
@@ -154,13 +154,13 @@ Sooner or later you might also need help for a project you work on or simply to 
 
 > ⓘ **Hardcore** alternative
 >
-> [Programming Rust, 2nd Edition](https://www.oreilly.com/library/view/programming-rust-2nd/9781492052586/) (O’Reilly Publishing) is a big book and will take you some time to get through. It is not for the faint of heart. However… If you do choose for this route as an alternative to [(1) Learn Rust](#1-learn-rust), you will absolutely not regret it. In fact, your entire rest of the Journey will be a breeze.
+> [Programming Rust, 2nd Edition](https://www.oreilly.com/library/view/programming-rust-2nd/9781492052586/) (O'Reilly Publishing) is a big book and will take you some time to get through. It is not for the faint of heart. However… If you do choose for this route as an alternative to [(1) Learn Rust](#1-learn-rust), you will absolutely not regret it. In fact, your entire rest of the Journey will be a breeze.
 >
-> The “Programming Rust, 2nd Edition” book is a gem and in case you can handle big dry Technical books such as these it is one that will give you just as much love back as the energy that you put into it. Take your time, get through it, play with it, and enjoy. In fact, it can be easily paired with Rustlings by doing the exercises linked to the content you’re reading. Rust by Example can also be added on top of that to see some more code related to the stuff your learning.
+> The "Programming Rust, 2nd Edition" book is a gem and in case you can handle big dry Technical books such as these it is one that will give you just as much love back as the energy that you put into it. Take your time, get through it, play with it, and enjoy. In fact, it can be easily paired with Rustlings by doing the exercises linked to the content you're reading. Rust by Example can also be added on top of that to see some more code related to the stuff your learning.
 >
-> Soak it in. It’s a hardcore alternative, but if you’re up for it, it’s there for you to grab.
+> Soak it in. It's a hardcore alternative, but if you're up for it, it's there for you to grab.
 >
-> If you’ve never done any Systems programming before, this will be an especially helpful book given it will explain a lot of the magic you’ve encountered in your very protected professional life so far. You’re welcome.
+> If you've never done any Systems programming before, this will be an especially helpful book given it will explain a lot of the magic you've encountered in your very protected professional life so far. You're welcome.
 
 Questions you should be able to answer at the end of this step:
 
@@ -173,10 +173,10 @@ Questions you should be able to answer at the end of this step:
 7. How can you extend the behaviour of external types?
 8. Can you extend behaviour of external types using external traits? Why or why not?
 9. What is a constant? Where can we define these?
-10. What is a static variable? How is it different from a constant? What’s special about mutable variables?
+10. What is a static variable? How is it different from a constant? What's special about mutable variables?
 11. How does Rust support Async Rust? How do you use it? What are Futures?
 12. How do you achieve parallel programming in Rust?
-13. What’s the difference between async programming and parallel programming? How are they related?
+13. What's the difference between async programming and parallel programming? How are they related?
 14. What is the borrow checker? What is ownership? How are these concepts related?
 15. Data can be moved and it can also be dropped. What do we mean with this? How do we have control over this?
 16. How do we achieve shared mutable references to the same data? How can this be done safe?
@@ -199,7 +199,7 @@ Questions you should be able to answer at the end of this step:
 
 ## 2. Learn more Rust
 
-- [Introduction - The Cargo Book](https://doc.rust-lang.org/cargo/index.html): Cargo is the Rust package manager. Cargo downloads your Rust package's dependencies, compiles your packages, makes distributable packages, and uploads them to crates.io: [Rust Package Registry](http://crates.io/), the Rust community’s package registry;
+- [Introduction - The Cargo Book](https://doc.rust-lang.org/cargo/index.html): Cargo is the Rust package manager. Cargo downloads your Rust package's dependencies, compiles your packages, makes distributable packages, and uploads them to crates.io: [Rust Package Registry](http://crates.io/), the Rust community's package registry;
 - [Getting started - Command Line Applications in Rust](https://rust-cli.github.io/book/index.html): Gives you another practical approach in your Rust Learning, by specifically learning how to write CLI applications in it;
 
 Questions you should be able to answer at the end of this step:
@@ -218,22 +218,22 @@ Questions you should be able to answer at the end of this step:
 
 ### Learn More Rust: Extra
 
-Once you went through the resources in the previous two chapters you might want to start working on a real project to start applying and solidifying your knowledge. A classic way to do this is by porting a small specialized codebase from one language to Rust, keeping in mind to not 1-to-1 map the lines of code but to instead focus on porting the logic with the “Rust way to do things” in mind.
+Once you went through the resources in the previous two chapters you might want to start working on a real project to start applying and solidifying your knowledge. A classic way to do this is by porting a small specialized codebase from one language to Rust, keeping in mind to not 1-to-1 map the lines of code but to instead focus on porting the logic with the "Rust way to do things" in mind.
 
 Should you want some inspiration or a more guided approach, here are some resources that could help you out with this extra optional, but recommended step:
 
 - [Command-Line Rust](https://www.oreilly.com/library/view/command-line-rust/9781098109424/): build a cli tool such as grep in rust, using test driven development (TDD), all to learn Rust
 - [Rust Application Books - The Little Book of Rust Books](https://lborb.github.io/book/applications.html): lists a lot of different books, including ones that allow you to develop small projects using Rust, usually in a well guided fashion;
-  - [Introduction - PNGme: An Intermediate Rust Project](https://picklenerd.github.io/pngme_book/introduction.html) is an especially fun small project. It allows you to apply the knowledge that you learned above in a very narrow program, that is for once not network related. At the end you’ll have a cli tool that allows you to encode and decode “hidden” messages in a PNG image;
-- [Introduction - MacroKata](https://tfpk.github.io/macrokata/index.html): Macro’s are in general not very covered in the resources above, as it is not that common that you have to write your own macros. They can however be convenient in certain situations. This book can be seen as a bootstrap tutorial to get you started with one kind of Rust macros.
+  - [Introduction - PNGme: An Intermediate Rust Project](https://picklenerd.github.io/pngme_book/introduction.html) is an especially fun small project. It allows you to apply the knowledge that you learned above in a very narrow program, that is for once not network related. At the end you'll have a cli tool that allows you to encode and decode "hidden" messages in a PNG image;
+- [Introduction - MacroKata](https://tfpk.github.io/macrokata/index.html): Macro's are in general not very covered in the resources above, as it is not that common that you have to write your own macros. They can however be convenient in certain situations. This book can be seen as a bootstrap tutorial to get you started with one kind of Rust macros.
   - If you are interested in (also) learning procedural macros you can perhaps consult the following resources:
     - [GitHub - dtolnay/proc-macro-workshop: Learn to write Rust procedural macros [Rust Latam conference, Montevideo Uruguay, March 2019]](https://github.com/dtolnay/proc-macro-workshop)
     - [Procedural Macros in Rust (part 1)](https://www.youtube.com/watch?v=geovSK3wMB8)
     - Check out "[Diesel is a Safe, Extensible ORM and Query Builder for Rust](https://diesel.rs/)" if you want to see a very cool example of macros (besides all the derives, formatting and printing you might already have been doing)
     - [json in serde_json - Rust](https://docs.rs/serde_json/latest/serde_json/macro.json.html) is another neat example as it allows you to quickly define a Json value directly in Rust
       - Taking a couple of hours is also a life well spent reading through this codebase as it will teach you a lot of nice things about Rust, especially given how simple and scoped the problem of json serialization is. It will really show you and teach you how serde works and why it works;
-    - Most web frameworks (if not all) in Rust also heavily make use of Macro’s to give you a very neat and clean API
-  - And of course do not forget to consult the “classic” macro Rust book: [The Little Book of Rust Macros](https://danielkeep.github.io/tlborm/book/index.html)
+    - Most web frameworks (if not all) in Rust also heavily make use of Macro's to give you a very neat and clean API
+  - And of course do not forget to consult the "classic" macro Rust book: [The Little Book of Rust Macros](https://danielkeep.github.io/tlborm/book/index.html)
   - If you want to get a quick intro and overview of Macros this video can help a lot as well: [Rust's Witchcraft](https://www.youtube.com/watch?v=MWRPYBoCEaY)
 
 If you have a lot of free time at your hand and you want to build something really cool that is totally useless, here are some more ideas:
@@ -246,17 +246,17 @@ Seriously though, do not consider the above recommended or mandatory in any way.
 
 ### Code like a pro in Rust
 
-At this point of your Rust learning journey you’ve come a far way already, relatively speaking. Perhaps you want to shortcut, at least for now.
+At this point of your Rust learning journey you've come a far way already, relatively speaking. Perhaps you want to shortcut, at least for now.
 
-If so, [the still to be published “Code like a pro in Rust” book](https://www.manning.com/books/code-like-a-pro-in-rust) might be enough for you to quickly get from beginner to advanced Rust programmer.
+If so, [the still to be published "Code like a pro in Rust" book](https://www.manning.com/books/code-like-a-pro-in-rust) might be enough for you to quickly get from beginner to advanced Rust programmer.
 
 ### A Crust of Rust
 
-Once you get at this point you are around the level of a beginner or intermediate Rust programmer. At this point you could already start to tackle stuff like [“Rust for Rustaceans” of step (6)](#6-study-using-the-rust-for-rustaceans-idiomatic-programming-for-experienced-developers-book). However it might be a bit much.
+Once you get at this point you are around the level of a beginner or intermediate Rust programmer. At this point you could already start to tackle stuff like ["Rust for Rustaceans" of step (6)](#6-study-using-the-rust-for-rustaceans-idiomatic-programming-for-experienced-developers-book). However it might be a bit much.
 
 Therefore while you go through the next couple of sections it could be helpful to now and then (e.g. while washing dishes or instead of Netflix) an education Rust code video. In the appendix at the bottom of this page there a couple of such suggestions.
 
-Particular to this context you might want to save [the “Crust of Rust” playlist](https://www.youtube.com/watch?v=rAl-9HwD858&list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa). Each video will go over a specific topic, e.g. Lifetimes, macros, Atomics, … No need to watch them one by one, feel free to jump to them in whatever orders and only those that interest you (which is the same tip that I can give for the "Rust for Rustaceans" book).
+Particular to this context you might want to save [the "Crust of Rust" playlist](https://www.youtube.com/watch?v=rAl-9HwD858&list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa). Each video will go over a specific topic, e.g. Lifetimes, macros, Atomics, … No need to watch them one by one, feel free to jump to them in whatever orders and only those that interest you (which is the same tip that I can give for the "Rust for Rustaceans" book).
 
 ### API Design
 
@@ -286,15 +286,15 @@ In order to help you understand how Async code works (e.g. what about the Async 
 
 > ⓘ Note: Tokio also provides support to [the new Linux kernel io_uring concept](https://unixism.net/loti/), a new powerful way to allow async programming on Linux. Support for it can be found at: [GitHub - tokio-rs/tokio-uring: An io_uring backed runtime for Rust](https://github.com/tokio-rs/tokio-uring)
 > 
-> Synacktiv made an IO network scanner using io_uring as can be seen at [GitHub - synacktiv/io_uring_scanner: io_uring based network scanner written in Rust](https://github.com/synacktiv/io_uring_scanner), using tokio’s low level userspace bindings to io_uring.
+> Synacktiv made an IO network scanner using io_uring as can be seen at [GitHub - synacktiv/io_uring_scanner: io_uring based network scanner written in Rust](https://github.com/synacktiv/io_uring_scanner), using tokio's low level userspace bindings to io_uring.
 
 ### Questions you should be able to answer at the end of this step:
 
-1. How does Async programming work in Rust, if you didn’t understand this already?
+1. How does Async programming work in Rust, if you didn't understand this already?
 2. What types of concurrent programming does Rust support? How many are there in general?
 3. What are Futures and how do they work? What function they have? How do they affect you?
 4. What is Send and Sync? What is it used for? How does it affect you?
-5. What are good use cases of Async code? What kind of tasks aren’t a good fit for this?
+5. What are good use cases of Async code? What kind of tasks aren't a good fit for this?
 6. What are Async Executors? What are Async Runtimes?
 7. What is Tokio? How do you use it? What does it give you?
 8. What are some other libraries in the Tokio ecosystem?
@@ -321,13 +321,13 @@ like a... _tower_.
 
 ### Rust Atomics and Locks
 
-Understanding concurrency, the primitives used to do so safely and how it all works “under the hood” (e.g. the OS level) is not critical but it will help you big time the rest of your Async professional career.
+Understanding concurrency, the primitives used to do so safely and how it all works "under the hood" (e.g. the OS level) is not critical but it will help you big time the rest of your Async professional career.
 
-The book “[Rust Atomics and Locks](https://marabos.nl/atomics/)” by O’Reilly is an amazingly good book by Mara Bos, an important Rust Contributor. Going through the book will take you some time despite its smaller size, but doing so is very rewarding. As with any technical book it is best to read this book as well as do its exercises and apply its knowledge using one program or another. Learn, Apply, Repeat. Play with it, Understand it.
+The book "[Rust Atomics and Locks](https://marabos.nl/atomics/)" by O'Reilly is an amazingly good book by Mara Bos, an important Rust Contributor. Going through the book will take you some time despite its smaller size, but doing so is very rewarding. As with any technical book it is best to read this book as well as do its exercises and apply its knowledge using one program or another. Learn, Apply, Repeat. Play with it, Understand it.
 
-This book is so good, that even Go, Python or JS developers that will never ever touch Rust, might want to learn Rust just to understand the knowledge that can be found in this Gem of a book. Read it. You won’t regret it.
+This book is so good, that even Go, Python or JS developers that will never ever touch Rust, might want to learn Rust just to understand the knowledge that can be found in this Gem of a book. Read it. You won't regret it.
 
-As it is more advanced knowledge it can however be seen as “Extra”, so in case you are in a hurry to finish [section (3) of the Rust track](#3-learn-async-rust), feel free to skip it. But even if so, keep its existence in mind and come perhaps back to it when you start to get yourself into trouble.
+As it is more advanced knowledge it can however be seen as "Extra", so in case you are in a hurry to finish [section (3) of the Rust track](#3-learn-async-rust), feel free to skip it. But even if so, keep its existence in mind and come perhaps back to it when you start to get yourself into trouble.
 
 #### Questions you should be able to answer at the end of this extra step:
 
@@ -336,18 +336,18 @@ As it is more advanced knowledge it can however be seen as “Extra”, so in ca
 3. What is the difference between threads and async programming?
 4. Why is async programming faster?
 5. When would you use threads? When would you use async programming?
-6. What’s a Mutex? How could you implement one?
-7. What’s a Conditional Variable? How could you implement one?
-8. What’s a Signal? How could you implement one?
-9. What’s a Channel? How do you implement it? What types of channels are there?
+6. What's a Mutex? How could you implement one?
+7. What's a Conditional Variable? How could you implement one?
+8. What's a Signal? How could you implement one?
+9. What's a Channel? How do you implement it? What types of channels are there?
 10. What is Reordering? How can we deal with this? How does it affect us?
-11. How can we efficiently make a thread go to “Sleep” and have it woken up again?
-12. What’s a Spin Lock? How do we build one?
-13. What’s an atomic? What kind of atomics are there? How do they work under the hood?
+11. How can we efficiently make a thread go to "Sleep" and have it woken up again?
+12. What's a Spin Lock? How do we build one?
+13. What's an atomic? What kind of atomics are there? How do they work under the hood?
 14. How does Rust achieve thread safety?
-15. What’s Memory Ordering? What’s the Memory Model? What types are there? Which ones can you use?
+15. What's Memory Ordering? What's the Memory Model? What types are there? Which ones can you use?
 16. What is Aquire and Release? What is this an example of?
-17. When we talk about a “happens-before relationship”. What do we mean with it? Why is it important?
+17. When we talk about a "happens-before relationship". What do we mean with it? Why is it important?
 18. What is caching in context of your CPU? How does it affect us? What can we do about it?
 
 ## A Note About the remaining part of this guide
@@ -356,7 +356,7 @@ The next sections are all optional and are not required to really be productive 
 
 This guide is either way not meant to be read in a single session or series. Take it as yours and just use it as part of your learning journey. Take your time as learning Rust isn't easy, but it is a very rewarding one once you did climb the mountain and are dancing with a double rainbow in the background.
 
-## 4. Study using the “Zero to Production in Rust” book
+## 4. Study using the "Zero to Production in Rust" book
 
 Go through the entire book, filling any gaps you might still have and do all the exercises as well.
 
@@ -389,7 +389,7 @@ In [The weekly Rust Newsletter](https://this-week-in-rust.org/) you can find a l
 
 If you are a seasoned programmer already you might also opt to already start making your own new project or parting a scoped project from another language to Rust.
 
-## 6. Study using the “Rust for Rustaceans: Idiomatic Programming for Experienced Developers” book
+## 6. Study using the "Rust for Rustaceans: Idiomatic Programming for Experienced Developers" book
 
 > <https://nostarch.com/rust-rustaceans>
 
@@ -455,7 +455,7 @@ In order to start using Rust you have to install and configure its tooling on yo
 
 - The Rust compiler (`rustc`), standard library and tooling (e.g. `cargo`) are all managed using `rustup`.
   - You can learn how to get started by going to: Getting started 
-  - Once you finished with this you’ll have Rust ready on your machine out of the box. Each time there is a new version of Rust you can update it, simply by running `rustup update`
+  - Once you finished with this you'll have Rust ready on your machine out of the box. Each time there is a new version of Rust you can update it, simply by running `rustup update`
 
 With this installed you should now be able to run the following command:
 
@@ -478,7 +478,7 @@ You can learn to create, compile and run your first Rust program at "[First Step
 - Install `rustfmt` using `rustup component add rustfmt`
   - This way you can use `cargo fmt` to format your code (best to also configure this in your IDE to be done each time you save the file)
 
-No custom linting configurations are agreements are required. If you use these two tools, you’re golden. These tools also work nicely with any IDE you might use. Within your CI environment these same tools will be used to check that your code adheres to its standards.
+No custom linting configurations are agreements are required. If you use these two tools, you're golden. These tools also work nicely with any IDE you might use. Within your CI environment these same tools will be used to check that your code adheres to its standards.
 
 ### Appendix II. WebAssembly (WASM)
 
@@ -515,7 +515,7 @@ As you can see, WASM on the backend it is a thing. Wether it's more then just hy
 
 ### Appendix III. Native Apps
 
-Native apps are applications written for a specific platform. While that could be any platform, it usually refers to anything that is not the “web” and even more so, these days, it pretty much always refers to Desktop, Mobile or the combination of. Cross platform apps mean that multiple platforms are supported, which could be any set of web or non-web platforms.
+Native apps are applications written for a specific platform. While that could be any platform, it usually refers to anything that is not the "web" and even more so, these days, it pretty much always refers to Desktop, Mobile or the combination of. Cross platform apps mean that multiple platforms are supported, which could be any set of web or non-web platforms.
 
 #### Tauri
 
@@ -535,7 +535,7 @@ You can also opt to go fully native by using plugins such as tauri-egui: <https:
 
 ### Appendix IV. Rust in the background
 
-As with any (new) language, there’s no point in replacing every existing technology written before, with a new implementation written in Rust. While at times there are benefits such as with [ripgrep](https://github.com/BurntSushi/ripgrep) instead of grep, this is not a generally useful strategy not a desired one.
+As with any (new) language, there's no point in replacing every existing technology written before, with a new implementation written in Rust. While at times there are benefits such as with [ripgrep](https://github.com/BurntSushi/ripgrep) instead of grep, this is not a generally useful strategy not a desired one.
 
 - In [Appendix I.](#appendix-i-install-rust) we already saw that Rust can be compiled to WASM, and as such you can build an entire WebApp in Rust. However instead of replacing your entire WebApp, it is also just as well possible that you only replace the components of your App where it makes sense, e.g. where you need to do a lot of computations;
 - In [Appendix II.](#appendix-ii-webassembly-wasm) we learned about Tauri to build native apps with Rust, and also here noted that it can be done while at the same time building your core frontend logic in the frameworks you are used to;
@@ -554,24 +554,24 @@ A language is a tool, but a tool is not to be applied to any problem. Rust has i
 
 In case you come from Python or Javascript you can alternatively replace the first four steps of this learning guide with a single book. [Rust Web Programming](https://www.packtpub.com/product/rust-web-programming-second-edition/9781803234694) (Packt Publishing) aims to get web developers (including Python developers) get started with Rust and has a very pragmatic approach.
 
-Given how important Async is in our work environment it is still worth to go through section [(3) “Learn Async Rust”](#3-learn-async-rust) to make sure you do really grasp that very well. It is also where a lot of your Rust knowledge starts to come together, so if you get that you know you’re on the right track.
+Given how important Async is in our work environment it is still worth to go through section [(3) "Learn Async Rust"](#3-learn-async-rust) to make sure you do really grasp that very well. It is also where a lot of your Rust knowledge starts to come together, so if you get that you know you're on the right track.
 
-Should you after completing this book (even if partly) want to have some more hands on experience you can opt to never the less do section (4) as well and go through [the “Zero to Production in Rust” book](#4-study-using-the-zero-to-production-in-rust-book)
+Should you after completing this book (even if partly) want to have some more hands on experience you can opt to never the less do section (4) as well and go through [the "Zero to Production in Rust" book](#4-study-using-the-zero-to-production-in-rust-book)
 
-However, in case you are confident you did get all the foundational concepts of Rust and want to just develop stuff already and get it “into your fingers” you might want to opt to after this (and before jumping onto section (5)) read [“Rust In Action”](https://www.manning.com/books/rust-in-action) first. It gives a lot of fun things to build. Alternatively you can check the “Learn More Rust: Extra” part of [section (2) Learn more Rust](#2-learn-more-rust), where we also go over many ideas for you to get more experience and help you solidify your Rust knowledge.
+However, in case you are confident you did get all the foundational concepts of Rust and want to just develop stuff already and get it "into your fingers" you might want to opt to after this (and before jumping onto section (5)) read ["Rust In Action"](https://www.manning.com/books/rust-in-action) first. It gives a lot of fun things to build. Alternatively you can check the "Learn More Rust: Extra" part of [section (2) Learn more Rust](#2-learn-more-rust), where we also go over many ideas for you to get more experience and help you solidify your Rust knowledge.
 
-The “Rust in Action” book can also be seen as yet another alternative all together, as it is also aimed at introducing Rust to people who never did any Systems programming, So you could also do it instead of the Rust Web Programming book.
+The "Rust in Action" book can also be seen as yet another alternative all together, as it is also aimed at introducing Rust to people who never did any Systems programming, So you could also do it instead of the Rust Web Programming book.
 
 ### Appendix VI. More Material
 
-Learning to master a language has a beginning but it doesn’t have an ending. You’ll want to continue to learn, teach others and keep up to date. In this appendix you'll find material to help you with all this and more.
+Learning to master a language has a beginning but it doesn't have an ending. You'll want to continue to learn, teach others and keep up to date. In this appendix you'll find material to help you with all this and more.
 
 #### Keep up to date
 
 Official Blogs:
 
 - [The Rust Programming Language Blog](https://blog.rust-lang.org/)
-  - e.g. in October of 2022 GAT’s (Generic Associated Types) were finally stabilised, after 6+ years of work: [Generic associated types to be stable in Rust 1.65 | Rust Blog](https://blog.rust-lang.org/2022/10/28/gats-stabilization.html)
+  - e.g. in October of 2022 GAT's (Generic Associated Types) were finally stabilised, after 6+ years of work: [Generic associated types to be stable in Rust 1.65 | Rust Blog](https://blog.rust-lang.org/2022/10/28/gats-stabilization.html)
   - [The "Inside Rust" Blog](https://blog.rust-lang.org/inside-rust/index.html)
 
 Conferences:
@@ -580,16 +580,16 @@ Conferences:
 
 Podcasts:
 
-- Rustacean Station is a pretty great podcast with very interesting guests and even more interesting knowledge to share. Listen to it, you won’t regret: <https://rustacean-station.org/>
+- Rustacean Station is a pretty great podcast with very interesting guests and even more interesting knowledge to share. Listen to it, you won't regret: <https://rustacean-station.org/>
 - In order to learn Rust you can also listen to the New Rustacean podcast, which is a podcast about learning Rust: <https://newrustacean.com/>
   - It no longer airs, but its content remains useful and available
 
 Actuality:
 
-- [“This week in Rust”](https://this-week-in-rust.org/) is a weekly newsletter helping you stay up to date with Rust from the lazy comfort of your Mailbox. Easy peasy. They can also be read online in case you prefer a browser instead of the web or do not want to subscribe for w/e reason.
+- ["This week in Rust"](https://this-week-in-rust.org/) is a weekly newsletter helping you stay up to date with Rust from the lazy comfort of your Mailbox. Easy peasy. They can also be read online in case you prefer a browser instead of the web or do not want to subscribe for w/e reason.
   - Blog articles from the community get shared here as well, some accessible to new comers to Rust, others a bit more advanced
-  - They also share VOD’s of recent conferences, e.g. the issue in which they share the rust talks from [FOSDEM 2023: This Week in Rust 481  · This Week in Rust](https://this-week-in-rust.org/blog/2023/02/08/this-week-in-rust-481/)
-- [“Rust Magazine”](https://rustmagazine.org/): an online magazine dedicated to Rust
+  - They also share VOD's of recent conferences, e.g. the issue in which they share the rust talks from [FOSDEM 2023: This Week in Rust 481  · This Week in Rust](https://this-week-in-rust.org/blog/2023/02/08/this-week-in-rust-481/)
+- ["Rust Magazine"](https://rustmagazine.org/): an online magazine dedicated to Rust
 
 #### Lists
 
@@ -599,38 +599,38 @@ community curated crate lists:
 
 #### Read
 
-Free Rust Resources that we haven’t mentioned yet, but are great to read at one point or another:
+Free Rust Resources that we haven't mentioned yet, but are great to read at one point or another:
 
 - The Rust Performance Book: <https://nnethercote.github.io/perf-book/>
 - Rust Fuzz Book (Fuzz Testing): <https://rust-fuzz.github.io/book/>
 - Idiomatic solutions to common programming tasks: <https://rust-lang-nursery.github.io/rust-cookbook/>
 - The little book of Rust books: [Unofficial Rust Books - The Little Book of Rust Books](https://lborb.github.io/book/unofficial.html) (which we also already linked in an earlier section)
 
-If you learn by doing and haven’t gotten enough from the resources we linked already in “Learn more Rust”, here are some more tips:
+If you learn by doing and haven't gotten enough from the resources we linked already in "Learn more Rust", here are some more tips:
 
 - Implement a Redis client and server using Tokio, a very well documented and excellent guide on how to write Asynchronous code in Rust: <https://github.com/tokio-rs/mini-redis/> - for learning purposes only 
 - If you want to improve your borrowing and reference skills, implementing a Linked List data structure might be for you: <https://rust-unofficial.github.io/too-many-lists/>
 - Or perhaps you want to write your own OS in Rust: <https://os.phil-opp.com/>
 
-A blog you might want to RSS subscribe to is Amos’s his blog which is always fun to read, be it sometimes a bit heavy: <https://fasterthanli.me/tags/rust/> 
+A blog you might want to RSS subscribe to is Amos's his blog which is always fun to read, be it sometimes a bit heavy: <https://fasterthanli.me/tags/rust/> 
 
 A nice reference sheet if you need one can be found at: <https://cheats.rs/>
 
 #### Educational
 
-- Crust of Rust video series by “Jon Gjengset”, for those that want to see an experienced Rust Developer work through problems: [Crust of Rust](https://www.youtube.com/playlist?list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa)
+- Crust of Rust video series by "Jon Gjengset", for those that want to see an experienced Rust Developer work through problems: [Crust of Rust](https://www.youtube.com/playlist?list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa)
   - You can combine it while learning a bit about networking and implement TCP in Rust yourself: <https://www.youtube.com/playlist?list=PLqbS7AVVErFivDY3iKAQk3_VAm8SXwt1X>
 - If you like to learn by watching you can find a Rust streaming list at <https://github.com/jamesmunns/awesome-rust-streaming/>
 - Interesting youtube channel with a lot of great stuff to learn about Rust: <https://www.youtube.com/@NoBoilerplate>
-- If any of the basic (textual) learning resources from the actual learning journey didn’t quite work for you, you might find a video course more useful. If so, here are two of them:
+- If any of the basic (textual) learning resources from the actual learning journey didn't quite work for you, you might find a video course more useful. If so, here are two of them:
   - [Ultimate Rust Crash Course](https://www.udemy.com/course/ultimate-rust-crash-course/) 
   - [Ultimate Rust 2: Intermediate Concepts](https://www.udemy.com/course/ultimate-rust-2/)
 - If you need inspiration on things you can build with Rust to get the language in your fingers as well as learn how software that you use is implemented, you might want to check out: <https://app.codecrafters.io/tracks/rust>
 - Learn Full Stack Rust Interactively: [Rust Insight! - an interactive book for practicing Rust on the laptop](https://rustinsight.com/) (early access)
-- A big index of many more learning resources, named aptly “How to learn Modern Rust — A Guide to the adventurer”: <https://github.com/joaocarvalhoopen/How_to_learn_modern_Rust>
+- A big index of many more learning resources, named aptly "How to learn Modern Rust — A Guide to the adventurer": <https://github.com/joaocarvalhoopen/How_to_learn_modern_Rust>
   - Do not take the list as-is and use mostly as inspiration. No need to really do all on that list, but if you need more learning resources, there is plenty of good content and inspiration in there!
 - Black Hat Rust book: <https://kerkour.com/black-hat-rust> (could be nice for inspiration on some hands-on experience while becoming more familiar with Rust)
-- If you want to test your Rust concept skills you might also enjoy taking [the Rust Quiz](https://dtolnay.github.io/rust-quiz/). The more answers you have wrong the better, as it means you’ll learn new things from the explanation :)
+- If you want to test your Rust concept skills you might also enjoy taking [the Rust Quiz](https://dtolnay.github.io/rust-quiz/). The more answers you have wrong the better, as it means you'll learn new things from the explanation :)
 - If you want to learn by doing by contributing to an existing Rust OSS project (including the Rust language and tooling) you can try to find a mentor to help you for free online in achieving this, by going to Awesome Rust Mentors: <https://rustbeginners.github.io/awesome-rust-mentors/>
 
 ### Appendix VII. Community Chat
