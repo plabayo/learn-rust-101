@@ -1,4 +1,7 @@
 include:
   - README.md
 
+title: Learn Rust 101
+description: A guide to aid you in your journey of becoming a Rustacean (Rust developer).
+
 theme: jekyll-theme-minima
