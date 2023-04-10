@@ -443,7 +443,7 @@ What you'll build depends on your interest or perhaps in the type of industry or
   - Or you might want to apply to Google and help build [their Fuchsia OS](https://fuchsia.dev/) in Rust. Have fun;
     - It's open source so nobody can stop you to contribute it either way, well except them I guess;
 - If you want to develop blockchain technology... Well, not going to guide you in that one, there's a running joke that it's hard to find a job in Rust that's not blockchain tech, so, you should have no problem finding a job in that field if that's what you want to do;
-- If you want to develop embedded systems, you can check out the [Rust Embedded Working Groups's Blog](https://blog.rust-embedded.org/). There are also plenty of companies who sometimes appear in articles or podcasts listed in [the More Material appendix](#more-material), so you can check that also out for yourself.
+- If you want to develop embedded systems, you can check out the [Rust Embedded Working Groups's Blog](https://blog.rust-embedded.org/). There are also plenty of companies who sometimes appear in articles or podcasts listed in [the More Material appendix](#appendix-vi-more-material), so you can check that also out for yourself.
 
 There's a lot more of course. You probably know best where you're going. A lot of exciting stuff is happening. Plenty of conferences (e.g. Rust Conf) to help you get inspired on it if you're not already. And of course, plenty of people to help you out if you get stuck. So, good luck and have fun!
 
