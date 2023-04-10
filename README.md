@@ -273,7 +273,7 @@ There is no standard / official Asynchronous runtime. This in contrast to actual
 The most popular and recommended by many Async Runtime is [the Tokio runtime](https://tokio.rs/). Which brings us to the next chapter:
 
 - To start with your Async Learning Journey you might want to start with: [Getting Started - Asynchronous Programming in Rust](https://rust-lang.github.io/async-book/);
-- Afterwards you can finally start going through the Tokio [learning journey Tutorial | Tokio - An asynchronous Rust runtime](https://tokio.rs/tokio/tutorial) 
+- Afterwards you can finally start going through the Tokio [learning journey Tutorial](https://tokio.rs/tokio/tutorial) 
 
 Please also join the Tokio Discord community as part of your async Journey, a place where you can ask any questions you want as well: <https://discord.com/invite/tokio>. This server also has also individual channels for the different projects in the Tokio ecosystem such as Hyper, Axum, Tower and more. The maintainers of the different projects are also very active in the server and are happy to help you out, but of course please do not take this for granted. Be respectful and if possible contribute back to the community as well.
 
@@ -571,7 +571,7 @@ Learning to master a language has a beginning but it doesn't have an ending. You
 Official Blogs:
 
 - [The Rust Programming Language Blog](https://blog.rust-lang.org/)
-  - e.g. in October of 2022 GAT's (Generic Associated Types) were finally stabilised, after 6+ years of work: [Generic associated types to be stable in Rust 1.65 | Rust Blog](https://blog.rust-lang.org/2022/10/28/gats-stabilization.html)
+  - e.g. in October of 2022 GAT's (Generic Associated Types) were finally stabilised, after 6+ years of work: [Generic associated types to be stable in Rust 1.65 — Rust Blog](https://blog.rust-lang.org/2022/10/28/gats-stabilization.html)
   - [The "Inside Rust" Blog](https://blog.rust-lang.org/inside-rust/index.html)
 
 Conferences:
