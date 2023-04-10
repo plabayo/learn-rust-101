@@ -1,6 +1,7 @@
 [![Repository Banner Image](./img/banner.png)](https://rust-lang.guide)
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/plabayo/learn-rust-101?style=social)](https://github.com/plabayo/learn-rust-101) [![GitHub](https://img.shields.io/github/license/plabayo/learn-rust-101)](https://github.com/plabayo/learn-rust-101/blob/main/LICENSE) [![available to hire](https://img.shields.io/badge/Glen-available%20to%20hire%20as%20consultant-green)](mailto:glen@plabayo.tech)
+[![GitHub Repo stars](https://img.shields.io/github/stars/plabayo/learn-rust-101?style=social)](https://github.com/plabayo/learn-rust-101) [![GitHub](https://img.shields.io/github/license/plabayo/learn-rust-101)](https://github.com/plabayo/learn-rust-101/blob/main/LICENSE) [![available to hire](https://img.shields.io/badge/Glen-available%20to%20hire%20as%20consultant-green)](mailto:glen@plabayo.tech) [![GitHub Sponsors Badge](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/plabayo)
+
 
 [rust]: https://www.rust-lang.org/
 
