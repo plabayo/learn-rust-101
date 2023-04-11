@@ -136,7 +136,7 @@ If you are a bit of a history nerd you might also enjoy:
 - this article: [How Rust went from a side project to the world's most-loved programming language](https://www.technologyreview.com/2023/02/14/1067869/rust-worlds-fastest-growing-programming-language/)
 - or this podcast: [History of Rust with Ben Striegel — Rustacean Station](https://rustacean-station.org/episode/042-ben-striegel/)
 
-There's a [last section on the end of the Rust learning content](#appendix).
+There's a [last section on the end of the Rust learning content](#appendix-vi-more-material).
 This one contains useful references and sources that you can check as part of your
 continuous journey as a capable Rust developer.
 
