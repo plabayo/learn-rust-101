@@ -5,15 +5,15 @@
 
 [rust]: https://www.rust-lang.org/
 
-> A guide to aid you in your journey of becoming a Rustacean (Rust developer). See the [Contributing](./CONTRIBUTING.md) and [Code of Conduct](./CODE_OF_CONDUCT.md) for more information about how to contribute to this repository.
+> ⓘ A guide to aid you in your journey of becoming a Rustacean (Rust developer). See the [Contributing](https://github.com/plabayo/learn-rust-101/blob/main/CONTRIBUTING.md) and [Code of Conduct](https://github.com/plabayo/learn-rust-101/blob/main/CODE_OF_CONDUCT.md) for more information about how to contribute to this repository.
 
-> This guide was featured [on the front page of HackerNews on the 8th of April 2023](<https://news.ycombinator.com/item?id=35489029>).
+> 🗞 This guide was featured [on the front page of HackerNews on the 8th of April 2023](<https://news.ycombinator.com/item?id=35489029>).
 
-[Rust][rust] is a modern systems programming language with safety in mind as one of its core goals and strengths. Systems programming is programming within a resource contrained environment. However, as a lot of our services run now in paid-for-usage cloud environments, we can also consider them as resource constrained environments. This is why Rust is a great fit for more use cases then people might realize.
+[Rust][rust] is a modern systems programming language with safety in mind as one of its core goals and strengths. Systems programming is programming within a resource constrained environment. However, as a lot of our services run now in paid-for-usage cloud environments, we can also consider them as resource constrained environments. This is why Rust is a great fit for more use cases then people might realize.
 
 As it is a modern language and has taken the lessons from many other languages before it, it is also surprisingly pleasant to use once you get the hang of it. Its type system also allows expressive code that can help you exclude a great categories of bugs beyond the benefits that static typing can bring.
 
-The goal of this guide is to introduce Rust to you as an individual or an entire organization. Should this not be sufficient you can also contact me for 1-on-1 coaching or workshops for your organization, by emailing me at [glen@plabayo.tech](mailto:glen@plabayo.tech).
+The goal of this guide is to introduce Rust to you as an individual or an entire organization. Should this not be sufficient you can also contact me for 1-on-1 coaching or workshops for your organization, by emailing me at [glen@plabayo.tech](mailto:glen@plabayo.tech). More information on Glen can be found at <https://glendc.com/>.
 
 ## Rust 101 Course
 
@@ -309,7 +309,7 @@ In order to help you understand how Async code works (e.g. what about the Async 
 
 Once you step into the world of Async Rust, Tokio and Web Services you'll sooner or later come across [Tower](https://github.com/tower-rs/tower), in a similar fashion as [Serde](https://serde.rs/) blew your mind away for your serialization needs. Yes it did, you can admit it, this is a safe space.
 
-> Tower is a library of modular and reusable components for building robust networking clients and servers.
+> ⓘ Tower is a library of modular and reusable components for building robust networking clients and servers.
 
 With [Tower](https://github.com/tower-rs/tower) everything is a service. A service takes in a request and outputs either an error or a response.
 What the actual types for these request-response pairs are, is up to you and depend mostly on the layer it is used.
@@ -392,7 +392,7 @@ If you are a seasoned programmer already you might also opt to already start mak
 
 ## 6. Study using the "Rust for Rustaceans: Idiomatic Programming for Experienced Developers" book
 
-> <https://nostarch.com/rust-rustaceans>
+> 🔗 <https://nostarch.com/rust-rustaceans>
 
 Go through the entire book, getting a deep(er) understanding of the advanced concepts and inner workings of them.
 
@@ -483,9 +483,9 @@ No custom linting configurations are agreements are required. If you use these t
 
 ### Appendix II. WebAssembly (WASM)
 
-> WebAssembly (abbreviated Wasm) is a binary instruction format for a stack-based virtual machine. Wasm is designed as a portable compilation target for programming languages, enabling deployment on the web for client and server applications.
+> ⓘ WebAssembly (abbreviated Wasm) is a binary instruction format for a stack-based virtual machine. Wasm is designed as a portable compilation target for programming languages, enabling deployment on the web for client and server applications.
 >
-> <https://webassembly.org/>
+> 🔗 <https://webassembly.org/>
 
 WebAssembly on itself is completely isolated from Rust, but it must be said that among the WASM community, the Rust part is probably the biggest and most active one. Compiling Rust to WASM is a true pleasure and allows for browser client code to be written in Rust, be it a small library to be used from JS or an entire web client. WASM projects can also be used to quickly deploy web services (in the backend). These are similar to lambda functions but are even faster to use and in a way also safer.
 
@@ -522,7 +522,7 @@ Native apps are applications written for a specific platform. While that could b
 
 **Tauri** is the toolset you want to check out if you want to build native apps with a Gui in Rust. You can find all information about it on their official website: <https://tauri.app/>
 
-> Build an optimized, secure, and frontend-independent application for multi-platform deployment.
+> ⓘ Build an optimized, secure, and frontend-independent application for multi-platform deployment.
 
 Tauri applications can be compared to Electron, but it uses a very different approach. Multiple rendering engines are supported, with web view like rendering engines being the default. But this is still different then shipping a Node runtime and Chromium with each and one of your apps. Meaning your desktop applications can be as small as a couple of megabytes, compared to the usually bloated 150MB apps. And once running they will also be a lot less resource hungry compared to your topical Electron app.
 
