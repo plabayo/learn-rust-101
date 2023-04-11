@@ -76,6 +76,10 @@ Only thing I would really want to hammer on is to do a lot of coding yourself. T
 
 Also even if you start to reach advanced topics (e.g. Rust for Rustaceans), it is still very important to keep doing the basics. You'll be surprised how quickly you can forget things. So keep doing the basics and keep doing the advanced topics. It is a never ending journey.
 
+You'll notice when reading this guide that there are often alternatives mentioned as well as layers of difficulty. With this in mind it might very well be your choice to take a section lightly too start, going through the basic/foundational material, to thrn come back to it after having gone through other sections already with more experience at your belt. At this point  you might have more confidence to get to the more advanced material of the  section or have gained the background or mindset to understand that content and  get more out of it. The spatial repition as a result is also an excellent way to slowly but surely mold your grey mass into the desired shapes.
+
+In case you are not planning to work on a project anytime soon that requires Async programming. Feel free to skip that section for the time being should that be  the case. For now just know that it exists and that it has an important place within the Rust ecosystem. You cam always come (back) to it at a future point when you do decide or realise that strong foundations in this section can help out.
+
 If you ever feel stuck, or want a guide, teacher or mentor. Feel free to reach out to Glen at [glen@plabayo.tech](mailto:glen@plabayo.tech) to book a 1-on-1 session or a workshop for your organization. It can be a one time thing or we can meet regularly to help you along the way.
 
 ## Sponsors
@@ -391,7 +395,7 @@ There's also the Rust Mentorship program, which pairs up new contributors with e
 
 In [The weekly Rust Newsletter](https://this-week-in-rust.org/) you can find a list of projects that are looking for contributors.
 
-If you are a seasoned programmer already you might also opt to already start making your own new project or parting a scoped project from another language to Rust.
+If you are a seasoned programmer already you might also opt to already start making your own new project or porting a scoped project from another language to Rust.
 
 ## [6. Study using the "Rust for Rustaceans: Idiomatic Programming for Experienced Developers" book](#6-study-using-the-rust-for-rustaceans-idiomatic-programming-for-experienced-developers-book)
 
