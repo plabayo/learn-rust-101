@@ -82,7 +82,7 @@ If you ever feel stuck, or want a guide, teacher or mentor. Feel free to reach o
 
 Support this project by becoming a [sponsor](https://github.com/sponsors/plabayo).
 
-## Index
+## [Index](#index)
 
 - [About](#about)
 - [1. Learn Rust](#1-learn-rust)
@@ -458,7 +458,7 @@ There's a lot more of course. You probably know best where you're going. A lot o
 In order to start using Rust you have to install and configure its tooling on your machinery.
 
 - The Rust compiler (`rustc`), standard library and tooling (e.g. `cargo`) are all managed using `rustup`.
-  - You can learn how to get started by going to: Getting started 
+  - You can learn how to get started by going to: <https://www.rust-lang.org/learn/get-started>
   - Once you finished with this you'll have Rust ready on your machine out of the box. Each time there is a new version of Rust you can update it, simply by running `rustup update`
 
 With this installed you should now be able to run the following command:
