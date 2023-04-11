@@ -545,8 +545,8 @@ You can also opt to go fully native by using plugins such as tauri-egui: <https:
 
 As with any (new) language, there's no point in replacing every existing technology written before, with a new implementation written in Rust. While at times there are benefits such as with [ripgrep](https://github.com/BurntSushi/ripgrep) instead of grep, this is not a generally useful strategy not a desired one.
 
-- In [Appendix I.](#appendix-i-install-rust) we already saw that Rust can be compiled to WASM, and as such you can build an entire WebApp in Rust. However instead of replacing your entire WebApp, it is also just as well possible that you only replace the components of your App where it makes sense, e.g. where you need to do a lot of computations;
-- In [Appendix II.](#appendix-ii-webassembly-wasm) we learned about Tauri to build native apps with Rust, and also here noted that it can be done while at the same time building your core frontend logic in the frameworks you are used to;
+- In [Appendix II.](#appendix-ii-webassembly-wasm) we already saw that Rust can be compiled to WASM, and as such you can build an entire WebApp in Rust. However instead of replacing your entire WebApp, it is also just as well possible that you only replace the components of your App where it makes sense, e.g. where you need to do a lot of computations;
+- In [Appendix III.](#appendix-iii-native-apps) we learned about Tauri to build native apps with Rust, and also here noted that it can be done while at the same time building your core frontend logic in the frameworks you are used to;
 
 At times however you might be able to incorporate the benefits of Rust in your existing benefits without having to expose the language to anyone:
 
