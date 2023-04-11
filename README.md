@@ -65,7 +65,7 @@ The origins of this guide can be found in the preparation of a semester long cou
                        │ 8. Continue to Learn │
                        └──────────────────────┘
 
-      Continiously Learn, Take Your Time
+      Continuously Learn, Take Your Time
       Enjoy the road :)
 ```
 
@@ -178,8 +178,8 @@ Questions you should be able to answer at the end of this step:
 4. Is data passed by Reference or value in Rust? And what does it mean?
 5. Is data mutable or immutable by default? How do we make it the other way?
 6. What are traits and how are these related to the data models that you structure in Rust?
-7. How can you extend the behaviour of external types?
-8. Can you extend behaviour of external types using external traits? Why or why not?
+7. How can you extend the behavior of external types?
+8. Can you extend behavior of external types using external traits? Why or why not?
 9. What is a constant? Where can we define these?
 10. What is a static variable? How is it different from a constant? What's special about mutable variables?
 11. How does Rust support Async Rust? How do you use it? What are Futures?
@@ -354,7 +354,7 @@ Questions you should be able to answer at the end of this extra step:
 13. What's an atomic? What kind of atomics are there? How do they work under the hood?
 14. How does Rust achieve thread safety?
 15. What's Memory Ordering? What's the Memory Model? What types are there? Which ones can you use?
-16. What is Aquire and Release? What is this an example of?
+16. What is Acquire and Release? What is this an example of?
 17. When we talk about a "happens-before relationship". What do we mean with it? Why is it important?
 18. What is caching in context of your CPU? How does it affect us? What can we do about it?
 
@@ -594,7 +594,7 @@ Podcasts:
 
 Actuality:
 
-- ["This week in Rust"](https://this-week-in-rust.org/) is a weekly newsletter helping you stay up to date with Rust from the lazy comfort of your Mailbox. Easy peasy. They can also be read online in case you prefer a browser instead of the web or do not want to subscribe for w/e reason.
+- ["This week in Rust"](https://this-week-in-rust.org/) is a weekly newsletter helping you stay up to date with Rust from the lazy comfort of your Mailbox. Easy. They can also be read online in case you prefer a browser instead of the web or do not want to subscribe for w/e reason.
   - Blog articles from the community get shared here as well, some accessible to new comers to Rust, others a bit more advanced
   - They also share VOD's of recent conferences, e.g. the issue in which they share the rust talks from [FOSDEM 2023: This Week in Rust 481  · This Week in Rust](https://this-week-in-rust.org/blog/2023/02/08/this-week-in-rust-481/)
 - ["Rust Magazine"](https://rustmagazine.org/): an online magazine dedicated to Rust
