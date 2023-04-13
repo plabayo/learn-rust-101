@@ -7,7 +7,7 @@
 
 > ⓘ A guide to aid you in your journey of becoming a Rustacean (Rust developer). See the [Contributing](https://github.com/plabayo/learn-rust-101/blob/main/CONTRIBUTING.md) and [Code of Conduct](https://github.com/plabayo/learn-rust-101/blob/main/CODE_OF_CONDUCT.md) for more information about how to contribute to this repository.
 
-> 🗞 This guide was featured [on the front page of HackerNews on the 8th of April 2023](<https://news.ycombinator.com/item?id=35489029>).
+> 🗞 This guide was featured [on the front page of HackerNews on the 8th of April 2023](<https://news.ycombinator.com/item?id=35489029>) and in [the weekly edition of the Rust newsletter on the 12th of April 2023](https://this-week-in-rust.org/blog/2023/04/12/this-week-in-rust-490/).
 
 [Rust][rust] is a modern systems programming language with safety in mind as one of its core goals and strengths. Systems programming is programming within a resource constrained environment. However, as a lot of our services run now in paid-for-usage cloud environments, we can also consider them as resource constrained environments. This is why Rust is a great fit for more use cases then people might realize.
 
