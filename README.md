@@ -96,6 +96,7 @@ Support this project by becoming a [sponsor](https://github.com/sponsors/plabayo
   - [A Crust of Rust](#a-crust-of-rust)
   - [API Design](#api-design)
 - [3. Learn Async Rust](#3-learn-async-rust)
+  - [Threading](#threading)
   - [Tower](#tower)
   - [Rust Atomics and Locks](#rust-atomics-and-locks)
 - [A note about the remaining steps of this guide](#a-note-about-the-remaining-part-of-this-guide)
@@ -119,6 +120,7 @@ Support this project by becoming a [sponsor](https://github.com/sponsors/plabayo
     - [Read](#read)
     - [Educational](#educational)
   - [Appendix VII. Community Chat](#appendix-vii-community-chat)
+  - [Appendix VIII. Debugging Rust](#appendix-viii-debugging-rust)
 
 ## [About](#about)
 
@@ -249,6 +251,7 @@ If you have a lot of free time at your hand and you want to build something real
 - Build your own Gameboy (classic) emulator: [Introduction - DMG-01: How to Emulate a Game Boy](https://rylev.github.io/DMG-01/public/book/introduction.html)
 - Build your own CHIP-8 (8-bit computer) interpreter: [Cowgod's Chip-8 Technical Reference](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM) (no Rust guidance, directly from the CHIP-8 specification instead, you can do it, I believe in you)
 - Build your own Ray Tracer (not a Rust tutorial, but can easily be implemented in Rust as well): [Ray Tracing in One Weekend Series](https://raytracing.github.io/) (fun if you always had the dream to start dabbling into the world of Graphics Programming)
+  - <https://www.superperfundo.dev/?tag=ray-tracer-challenge> might be a useful blog series if you want a more guided approach on how you might make a Ray Tracer in Rust;
 
 Seriously though, do not consider the above recommended or mandatory in any way. If you however really like to develop stuff and you do like to do it extensively in your free time, then, and only then, I do believe that the above are a great way to really solidify your current Rust knowledge and give yourself a great (pragmatic) foundation.
 
@@ -311,6 +314,15 @@ Questions you should be able to answer at the end of this step:
 11. How do you achieve Rust programming with only standard code (meaning code developed by the Rust core team)?
 12. Why does Rust not bundle an Async runtime?
 13. What is parallel programming? How do you do it in Rust? How does it relate to Async programming?
+
+### [Threading](#threading)
+
+Please do remember that Async programming is only beneficial to optimize the idle time of your threads away.
+For tasks where you already near 100% utilize your threads (e.g. computation heavy algorithms) something
+like async will not help you and will in fact make your codebase a lot more complex and difficult to reasons about.
+
+Should you have computation-heavy algorithms which you want to paralyze you can achieve that by making use
+of [threading](https://doc.rust-lang.org/std/thread/) alone. A crate such as <https://docs.rs/rayon/latest/rayon/> might help you a lot with this as well.
 
 ### [Tower](#tower)
 
@@ -652,3 +664,32 @@ Here are some chat servers you can join to interact with this fantastic communit
 - zulip chat server for Rust, great for core work and advanced purposes: <https://rust-lang.zulipchat.com/>.
 
 There are others of course but these are the one which are both active, inclusive, friendly and known to the authors of this guide as being a great place to be and be part of.
+
+### [Appendix VIII. Debugging Rust](#appendix-viii-debugging-rust)
+
+Debugging Rust code can be seen on three different levels:
+
+1. Write Rustic code, making full use of the language and its expressive type system;
+2. Have good logging and metrics in place for your production infrastructure;
+3. Know your way around a debugger.
+
+Underappreciated is point (1). Ensuring that impossible state and behavior is in fact impossible
+at compile team and thus guaranteed by the compiler is a big class of errors that you simply
+can no longer make and thus never have to debug. Using maker types and enums can help you a lot here.
+
+Rust is also a typed language so ensuring to use the proper types and use them consistently,
+will also help avoid a big category of bugs. Similarly, you probably do not really ever want to
+unwrap/expect any of your library code and only do so at the very top level, as to avoid nasty edge cases at runtime.
+
+That being said, sometimes things do go wrong. And debugging in production is not always fun.
+In fact, trying to reproduce rare scenarios locally is even less fun. For that you really
+want to ensure you know the right tools and crates to help you deal with point (2).
+
+- If you use [Tokio](https://tokio.rs) then the [`tracing` crate](https://tracing.rs/tracing/) and its mini ecosystem will be your friend, to help you define logs, metrics and more.
+  - The more data you have for your production infrastructure the easier it should be to spot potential issues that you didn't foresee but that you do clearly see in your logs and/or metrics;
+  - If you really want to dive deep and also learn about its macros, a blog article like <https://dietcode.io/p/tracing-macros/> might help you get into that;
+  - A blog article like <https://broch.tech/posts/rust-tracing-opentelemetry/> might help you get started with Tracing in Rust,
+    and introduce you to "Open Telemetry" in general.
+- If you do not use _Tokio_, then a crate like [log](https://crates.io/crates/log) is your best bet, and it will ensure that no matter what application makes use of your crate, will be able to consume your logs the way they want :)
+
+Finally when shit really hits the fan, and you do not see what's wrong from metrics and logs (alone), you might need to grab to a debugger. The book <https://rustc-dev-guide.rust-lang.org/debugging-support-in-rustc.html> might be able to give you a good starting point. Articles such as <https://dev.to/rogertorres/debugging-rust-with-vs-code-11dj> might help you get started on debugging in case you are using VScode for Rust, which is what plenty of people seem to use these days. There's also a Gist about it for VSCode at <https://gist.github.com/xanathar/c7c83e6d53b72dd4464f695607012629>.
