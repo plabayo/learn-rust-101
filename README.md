@@ -445,6 +445,12 @@ Another option is to contribute to an open source project that you like or may w
 
 See [section (5) about your first contribution](#5-contribute-for-the-first-time-to-an-existing-project) for some inspiration on where to start.
 
+> As it is assumed that at this point you are doing intermediate level work in Rust
+> it will be the case that sooner or later you'll need to debug. Or perhaps you are about
+> to deploy your own small project to production. In any case, you'll need to know how to
+> debug Rust applications. You can read all about this and tracing in
+> [Appendix VIII. Debugging Rust](#appendix-viii-debugging-rust).
+
 ## [Next Steps](#next-steps)
 
 If you have completed all the steps above, you have done more then enough and can call yourself a Rustacean. You can now start to contribute to the Rust ecosystem and help others to learn Rust. Perhaps more importantly, you have all the knowledge you need to build your own projects in Rust.
