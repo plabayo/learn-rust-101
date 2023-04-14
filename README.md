@@ -19,7 +19,7 @@ This guide is fully open source and the complete source code can be found at <ht
 
 ## Rust 101 Course
 
-The origins of this guide can be found in the preparation of a semester long course I gave to a group of employees at [OTA Insight Ltd.](https://www.ota-insight.com/). The recordings of this course are available on YouTube at: <https://www.youtube.com/playlist?list=PLQgXEsLXFxpVyLddG8FFXfNQEiodTzAjj>.
+The origins of this guide can be found in the preparation of a semester long course I gave to a group of employees at [OTA Insight Ltd.](https://www.otainsight.com/). The recordings of this course are available on YouTube at: <https://www.youtube.com/playlist?list=PLQgXEsLXFxpVyLddG8FFXfNQEiodTzAjj>.
 
 > This course is still actively being thought and the videos will be uploaded weekly when I find time to upload the recordings.
 
