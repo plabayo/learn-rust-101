@@ -383,6 +383,11 @@ Go through the entire book, filling any gaps you might still have and do all the
 At the end of the book you should be able to present your own GitHub or GitLab hosted projected based on the exercises and projects of the books, where you applied all your knowledge and also put in something of yourself in it.
 
 > ⓘ Backend frameworks like [Rocket](https://rocket.rs/) and [Actix](https://actix.rs/) are pretty commonly used in books. However know that [the Axum framework](https://docs.rs/axum/latest/axum/) is currently probably your best best if you need to choose a backend framework for your next or current Rust project.
+>
+> Learning Axum in specific could be done by following tutorials
+> such as <https://github.com/jeremychone-channel/rust-axum-course>, which seem pretty complete and focussed.
+>
+> Given how much Axum is built with [Tower in mind, you probably also want to learn that][tower].
 
 Questions you should be able to answer at the end of this step:
 
@@ -529,6 +534,7 @@ Frameworks that you might want to check if you want to make a front-end (web) ap
 - Another front-end framework: [GitHub - chinedufn/percy: Build frontend browser apps with Rust + WebAssembly](https://github.com/chinedufn/percy). Supports server side rendering. 
 - Yet another front-end framework: [GitHub - sycamore-rs/sycamore](https://github.com/sycamore-rs/sycamore): A library for creating reactive web apps in Rust and WebAssembly 
 - Exciting new and very fast front-end framework: [GitHub - leptos-rs/leptos: Build fast web applications with Rust](https://github.com/leptos-rs/leptos).
+- Another front-end framework (or perhaps rather a GUI framework) that you might want to know about is Dioxus (<https://dioxuslabs.com/>) which is made not only for web-apps, but also with CLI, mobile and Desktop in mind.
 - Also a pretty nice front-end framework: [GitHub - framesurge/perseus: A state-driven web development framework for Rust with full support for server-side rendering and static generation](https://github.com/framesurge/perseus).
 
 Run WASM Backend Services in the cloud:
