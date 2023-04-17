@@ -387,7 +387,7 @@ At the end of the book you should be able to present your own GitHub or GitLab h
 > Learning Axum in specific could be done by following tutorials
 > such as <https://github.com/jeremychone-channel/rust-axum-course>, which seem pretty complete and focussed.
 >
-> Given how much Axum is built with [Tower in mind, you probably also want to learn that][tower].
+> Given how much Axum is built with [Tower in mind, you probably also want to learn that](#tower).
 
 Questions you should be able to answer at the end of this step:
 
