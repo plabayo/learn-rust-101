@@ -9,7 +9,7 @@
 
 ## Disclaimer
 
-This guide is made by [Glen De Cauwsemaecker](https://www.glendc.com/) and is no way endorsed nor affiliated with the Rust foundation. Rust & Cargo are registered trademarks of the Rust foundation.
+This guide is made by [Glen De Cauwsemaecker](https://www.glendc.com/) and is in no way endorsed nor affiliated with the Rust foundation. Rust & Cargo are registered trademarks of the Rust foundation.
 
 ## Sharing is caring
 
