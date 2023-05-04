@@ -487,7 +487,7 @@ What you'll build depends on your interest or perhaps in the type of industry or
 - If you want to develop embedded systems, you can check out the [Rust Embedded Working Groups's Blog](https://blog.rust-embedded.org/). There are also plenty of companies who sometimes appear in articles or podcasts listed in [the More Material appendix](#appendix-vi-more-material), so you can check that also out for yourself.
   - A podcast episode about it the embedded WG can be found at: <https://rustacean-station.org/episode/jonathan-pallant/>
   - You can interact with the WG using  the matrix chat: <https://matrix.to/#/!BHcierreUuwCMxVqOf:matrix.org>
-- If you are interested in using Rust for Data Engineering then <https://datawithrust.com/> could be agreat start;
+- If you are interested in using Rust for Data Engineering then <https://datawithrust.com/> could be a great start;
 
 There's a lot more of course. You probably know best where you're going. A lot of exciting stuff is happening. Plenty of conferences (e.g. Rust Conf) to help you get inspired on it if you're not already. And of course, plenty of people to help you out if you get stuck. So, good luck and have fun!
 
