@@ -485,6 +485,9 @@ What you'll build depends on your interest or perhaps in the type of industry or
     - It's open source so nobody can stop you to contribute it either way, well except them I guess;
 - If you want to develop blockchain technology... Well, not going to guide you in that one, there's a running joke that it's hard to find a job in Rust that's not blockchain tech, so, you should have no problem finding a job in that field if that's what you want to do;
 - If you want to develop embedded systems, you can check out the [Rust Embedded Working Groups's Blog](https://blog.rust-embedded.org/). There are also plenty of companies who sometimes appear in articles or podcasts listed in [the More Material appendix](#appendix-vi-more-material), so you can check that also out for yourself.
+  - A podcast episode about it the embedded WG can be found at: <https://rustacean-station.org/episode/jonathan-pallant/>
+  - You can interact with the WG using  the matrix chat: <https://matrix.to/#/!BHcierreUuwCMxVqOf:matrix.org>
+- If you are interested in using Rust for Data Engineering then <https://datawithrust.com/> could be agreat start;
 
 There's a lot more of course. You probably know best where you're going. A lot of exciting stuff is happening. Plenty of conferences (e.g. Rust Conf) to help you get inspired on it if you're not already. And of course, plenty of people to help you out if you get stuck. So, good luck and have fun!
 
@@ -542,7 +545,8 @@ Frameworks that you might want to check if you want to make a front-end (web) ap
 - Make desktop apps using web tech (think Electron, but better): [GitHub - tauri-apps/tauri: Build smaller, faster, and more secure desktop applications with a web frontend](https://github.com/tauri-apps/tauri);
 - Very popular and fast front-end framework for Rust: [GitHub - yewstack/yew: Rust / Wasm framework for building client web apps](https://github.com/yewstack/yew)
 - Another front-end framework: [GitHub - chinedufn/percy: Build frontend browser apps with Rust + WebAssembly](https://github.com/chinedufn/percy). Supports server side rendering. 
-- Yet another front-end framework: [GitHub - sycamore-rs/sycamore](https://github.com/sycamore-rs/sycamore): A library for creating reactive web apps in Rust and WebAssembly 
+- Yet another front-end framework: [GitHub - sycamore-rs/sycamore](https://github.com/sycamore-rs/sycamore): A library for creating reactive web apps in Rust and WebAssembly
+- If you are looking for a complete framework you  might want to give <https://github.com/framesurge/perseus> achance, it builds on top of Sycamore;
 - Exciting new and very fast front-end framework: [GitHub - leptos-rs/leptos: Build fast web applications with Rust](https://github.com/leptos-rs/leptos).
 - Another front-end framework (or perhaps rather a GUI framework) that you might want to know about is Dioxus (<https://dioxuslabs.com/>) which is made not only for web-apps, but also with CLI, mobile and Desktop in mind.
 - Also a pretty nice front-end framework: [GitHub - framesurge/perseus: A state-driven web development framework for Rust with full support for server-side rendering and static generation](https://github.com/framesurge/perseus).
