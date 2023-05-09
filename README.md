@@ -309,6 +309,8 @@ In order to help you understand how Async code works (e.g. what about the Async 
 > 
 > Synacktiv made an IO network scanner using io_uring as can be seen at [GitHub - synacktiv/io_uring_scanner: io_uring based network scanner written in Rust](https://github.com/synacktiv/io_uring_scanner), using tokio's low level userspace bindings to io_uring.
 
+To get a better idea about how futures work and the executor which polls them,  you might want to read this article: <https://bertptrs.nl/2023/04/27/how-does-async-rust-work.html>.
+
 Questions you should be able to answer at the end of this step:
 
 1. How does Async programming work in Rust, if you didn't understand this already?
