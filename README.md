@@ -29,55 +29,28 @@ This guide is fully open source and the complete source code can be found at <ht
 
 ## Rust 101 Course
 
-The origins of this guide can be found in the preparation of a semester long course I gave to a group of employees at [OTA Insight Ltd.](https://www.otainsight.com/). The recordings of this course are available on YouTube at: <https://www.youtube.com/playlist?list=PLQgXEsLXFxpVyLddG8FFXfNQEiodTzAjj>.
+The origins of this guide can be found in the preparation of a semester long course I gave to a group of employees at [OTA Insight Ltd.](https://www.otainsight.com/). The recordings of this course are available on YouTube at: <https://www.youtube.com/playlist?list=PLQgXEsLXFxpVyLddG8FFXfNQEiodTzAjj>. The videos are hower not of the highest quality, especially given the many better resources out there.
 
-> This course is still actively being thought and the videos will be uploaded weekly when I find time to upload the recordings.
+## Learning Rust
 
-## Learning Rust in Milestones
+Becoming proficient in Rust requires the fulfillment of three pilars:
 
-```
-                                   ┌───────────────────────────┐
-                                   │                           │
-                           ┌───────┴──────────┐                │
-┌───────────┬─────────────►│2. Learn More Rust├─────┐          │
-│           │              └────────┬─────────┘     │          │
-│     ┌─────┴───────┐               │   ▲           │          │
-│     │1. Learn Rust│               │   │           │          │
-│     └──┬──┬───────┘               ▼   │           │          │
-│        │  │              ┌────────────┴──────┐    │          │
-│        │  └─────────────►│3. Learn Async Rust│    │          │
-│        │                 └─────────┬─────────┘    │          │
-│        │                           │              │          │
-│        │                           │              │          │
-│        ▼                           ▼              ▼          │
-│     ┌────────────────────────────────────────────────────┐   │
-│     │4. Study Using the "Zero to Production in Rust" book│◄──┤
-│     └──────────────────────────────┬─────────────────────┘   │
-│                                ▲   │                         │
-│                                │   │                         │
-│                                │   ▼                         │
-│  ┌─────────────────────────────┴─────────────────────────┐   │
-│  │5. Contribute for the first time to an existing project│◄──┘
-│  └──┬─────────────────────────────┬──────────────────────┘
-│     │                             │
-│     │                             ▼
-│     │    ┌───────────────────────────────────────────────┐
-│     │    │ 6. Study using the "Rust for Rustaceans" Book │
-│     │    └────────────────────────┬──────────────────────┘
-│     │                          ▲  │
-│     ▼                          │  ▼
-│ ┌──────────────────────────────┴────────────────────────────┐
-└─┤7. Contribute an advanced feature or start your own project│
-  └──────────────────────────────────┬────────────────────────┘
-                                     │
-                                     ▼
-                       ┌──────────────────────┐
-                       │ 8. Continue to Learn │
-                       └──────────────────────┘
+- Pilar I: Learn Rust and get your foundations right
+  - [1. Learn Rust](#1-learn-rust)
+  - [2. Learn More Rust](#2-learn-more-rust)
+  - [3. Learn Async Rust](#3-learn-async-rust)
+  - [6. Study using the "Rust for Rustaceans: Idiomatic Programming for Experienced Developers" book](#6-study-using-the-rust-for-rustaceans-idiomatic-programming-for-experienced-developers-book)
+- Pilar II: Develop with Rust (Practical Experience)
+  - [4. Study using the "Zero to Production in Rust" book](#4-study-using-the-zero-to-production-in-rust-book)
+  - [5. Contribute for the first time to an existing project](#5-contribute-for-the-first-time-to-an-existing-project)
+  - [7. Contribute an advanced feature to an existing project or start a project from scratch](#7-contribute-an-advanced-feature-to-an-existing-project-or-start-a-project-from-scratch)
+- Pilar III: Be part of the Rust Ecosystem:
+  - [Next Steps](#next-steps)
 
-      Continuously Learn, Take Your Time
-      Enjoy the road :)
-```
+What steps of each pilar you do is not of too much problem, do whatever feels best for you.
+You can of course complete all steps, and do them in the order as given, but most likely
+you probably want to use this learning guide more as a reference and for inspiration,
+rather then to follow it word by word.
 
 The above paths are just a suggestion and also should make clear that there are many ways and approaches to using this guide.
 Most important is that you do enjoy the journey and that you learn consistently (e.g. ~ X hours per week). How you'll walk the path and how often you revisit things will depend on your learning style and capabilities. There are however no wrong ways to go. E.g. maybe you want to dive into some code yourself as soon as possible and only then will start covering foundations. Or perhaps you first wanna feel very comfortable to only then start really coding yourself once you think you understand the foundations well. All up to you really.
@@ -148,6 +121,8 @@ Support this project by becoming a [sponsor](https://github.com/sponsors/plabayo
 - Samsung, via its subsidiary SmartThings, uses Rust in its Hub, which is the firmware backend for its Internet of Things (IoT) service.
 - [The U.S. Department of Commerce's National Institute of Standards and Technology (NIST) has added Rust to its list of "Safer Languages" as part of its Software Assurance Metrics and Tool Evaluation (SAMATE)](https://foundation.rust-lang.org/news/rust-identified-as-safer-coding-tool-by-nist/).
 
+Google also has a nice article about Facts and Debunked Myths about Rust which you can find at <https://opensource.googleblog.com/2023/06/rust-fact-vs-fiction-5-insights-from-googles-rust-journey-2022.html> (2022).
+
 The language and its ecosystem have also very matured. Concepts like Async have also landed and Async runtimes such as Tokio have become stable and can be used without fear. While it was harder to convince companies to jump on the Rust wagon in the past, by now it should be a lot easier to sell. Is it one language to replace them all? Of course not, but neither should it be overlooked. Are you not sure how Rust might benefit your team for one thing or another? Contact [Glen](https://www.glendc.com/) and figure it out together.
 
 If you are a bit of a history nerd you might also enjoy:
@@ -216,6 +191,9 @@ Questions you should be able to answer at the end of this step:
 ### [Alternative or Companion resources](#alternative-or-companion-resources)
 
 [Welcome to Comprehensive Rust 🦀 - Comprehensive Rust 🦀](https://google.github.io/comprehensive-rust/): a small bootcamp course by Google focussed on Android Engineers. Most of it is however applicable to anyone coming to Rust from another language and could be a great alternative or companion for some of the resources above.
+
+[The "Effective Rust" book](https://www.lurklurk.org/effective-rust/) is an excellent book that might just as well be official Rust material, and
+recommended for all Rust learners. So once you think you understand the content of "the Rust book" and the like, you probably want to start reading "Effective Rust", you won't regret it.
 
 ## [2. Learn more Rust](#2-learn-more-rust)
 
@@ -311,6 +289,8 @@ In order to help you understand how Async code works (e.g. what about the Async 
 
 To get a better idea about how futures work and the executor which polls them,  you might want to read this article: <https://bertptrs.nl/2023/04/27/how-does-async-rust-work.html>.
 
+The blog series as found at <https://hegdenu.net/posts/understanding-async-await-1/> can be another great reference to help you understand the entire `async/await` part of Rust.
+
 Questions you should be able to answer at the end of this step:
 
 1. How does Async programming work in Rust, if you didn't understand this already?
@@ -350,6 +330,10 @@ like a... _tower_.
 
 - if you are new to Tower you can start learning how to use it by building your own tower middleware from scratch by following the guide at: <https://github.com/tower-rs/tower/blob/master/guides/building-a-middleware-from-scratch.md>;
   - if you are not convinced on the usefulness of Tower you perhaps read to [the "inventing your own Service trait" guide](https://tokio.rs/blog/2021-05-14-inventing-the-service-trait).
+ 
+If you want to get an idea of how `Tower` might look like in a Rust ecosystem since 2024,
+you can enjoy this future today already at <https://github.com/plabayo/tower-async>.
+Have fun not requiring to implement futures by hand.
 
 ### [Rust Atomics and Locks](#rust-atomics-and-locks)
 
