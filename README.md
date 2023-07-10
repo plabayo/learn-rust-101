@@ -329,7 +329,7 @@ In tower it is typical that a service wraps another service, called "layers", as
 like a... _tower_.
 
 - if you are new to Tower, you can start learning how to use it by building your own tower middleware from scratch by following the guide at: <https://github.com/tower-rs/tower/blob/master/guides/building-a-middleware-from-scratch.md>;
-  - if you are not convinced on the usefulness of Tower, you perhaps read to [the "inventing your own Service trait" guide](https://tokio.rs/blog/2021-05-14-inventing-the-service-trait).
+  - if you are not convinced on the usefulness of Tower, you can perhaps read [the "inventing your own Service trait" guide](https://tokio.rs/blog/2021-05-14-inventing-the-service-trait).
  
 If you want to get an idea of how `Tower` might look like in a Rust ecosystem since 2024,
 you can enjoy this future today already at <https://github.com/plabayo/tower-async>.
