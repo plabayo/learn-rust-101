@@ -19,7 +19,7 @@ This guide is free and will remain gratis available to share for all who are int
 
 ## Prelogue
 
-[Rust][rust] is a modern systems programming language with safety in mind as one of its core goals and strengths. Systems programming is programming within a resource constrained environment. However, as a lot of our services run now in paid-for-usage cloud environments, we can also consider them as resource constrained environments. This is why Rust is a great fit for more use cases then people might realize.
+[Rust][rust] is a modern systems programming language with safety in mind as one of its core goals and strengths. Systems programming is programming within a resource constrained environment. However, as a lot of our services run now in paid-for-usage cloud environments, we can also consider them as resource constrained environments. This is why Rust is a great fit for more use cases than people might realize.
 
 As it is a modern language and has taken the lessons from many other languages before it, it is also surprisingly pleasant to use once you get the hang of it. Its type system also allows expressive code that can help you exclude a great categories of bugs beyond the benefits that static typing can bring.
 
@@ -29,25 +29,25 @@ This guide is fully open source and the complete source code can be found at <ht
 
 ## Rust 101 Course
 
-The origins of this guide can be found in the preparation of a semester long course I gave to a group of employees at [OTA Insight Ltd.](https://www.otainsight.com/). The recordings of this course are available on YouTube at: <https://www.youtube.com/playlist?list=PLQgXEsLXFxpVyLddG8FFXfNQEiodTzAjj>. The videos are hower not of the highest quality, especially given the many better resources out there.
+The origins of this guide can be found in the preparation of a semester long course I gave to a group of employees at [OTA Insight Ltd.](https://www.otainsight.com/). The recordings of this course are available on YouTube at: <https://www.youtube.com/playlist?list=PLQgXEsLXFxpVyLddG8FFXfNQEiodTzAjj>. The videos are however not of the highest quality, especially given the many better resources out there.
 
 ## Learning Rust
 
-Becoming proficient in Rust requires the fulfillment of three pilars:
+Becoming proficient in Rust requires the fulfillment of three pillars:
 
-- Pilar I: Learn Rust and get your foundations right
+- Pillar I: Learn Rust and get your foundations right
   - [1. Learn Rust](#1-learn-rust)
   - [2. Learn More Rust](#2-learn-more-rust)
   - [3. Learn Async Rust](#3-learn-async-rust)
   - [6. Study using the "Rust for Rustaceans: Idiomatic Programming for Experienced Developers" book](#6-study-using-the-rust-for-rustaceans-idiomatic-programming-for-experienced-developers-book)
-- Pilar II: Develop with Rust (Practical Experience)
+- Pillar II: Develop with Rust (Practical Experience)
   - [4. Study using the "Zero to Production in Rust" book](#4-study-using-the-zero-to-production-in-rust-book)
   - [5. Contribute for the first time to an existing project](#5-contribute-for-the-first-time-to-an-existing-project)
   - [7. Contribute an advanced feature to an existing project or start a project from scratch](#7-contribute-an-advanced-feature-to-an-existing-project-or-start-a-project-from-scratch)
-- Pilar III: Be part of the Rust Ecosystem:
+- Pillar III: Be part of the Rust Ecosystem:
   - [Next Steps](#next-steps)
 
-What steps of each pilar you do is not of too much problem, do whatever feels best for you.
+What steps of each pillar you do is not of too much problem, do whatever feels best for you.
 You can of course complete all steps, and do them in the order as given, but most likely
 you probably want to use this learning guide more as a reference and for inspiration,
 rather then to follow it word by word.
@@ -59,7 +59,7 @@ Only thing I would really want to hammer on is to do a lot of coding yourself. T
 
 Also even if you start to reach advanced topics (e.g. Rust for Rustaceans), it is still very important to keep doing the basics. You'll be surprised how quickly you can forget things. So keep doing the basics and keep doing the advanced topics. It is a never ending journey.
 
-You'll notice when reading this guide that there are often alternatives mentioned or several layers of difficulty. With this in mind it might very well be your choice to go through a section shallow to start, going through the basic/foundational material, to then come back to it after having gone through other sections already with more experience at your belt. At this point you might have more confidence to get to the more advanced material of the section or have gained the background or mindset to understand that content and get more out of it. The spatial repetition as a result is on top of this all an excellent way to slowly but surely mold your grey mass into the desired shape.
+You'll notice when reading this guide that there are often alternatives mentioned or several layers of difficulty. With this in mind it might very well be your choice to go through a section shallow to start, going through the basic/foundational material, to then come back to it after having gone through other sections already with more experience under your belt. At this point you might have more confidence to get to the more advanced material of the section or have gained the background or mindset to understand that content and get more out of it. The spatial repetition as a result is on top of this all an excellent way to slowly but surely mold your grey mass into the desired shape.
 
 In case you are not planning to work on a project anytime soon that requires Async programming. Feel free to skip [that section](#3-learn-async-rust) for the time being should it be the case. For now just know that official Async support in Rust exists and that it has an important place within the Rust ecosystem. You can always come (back) to it at a future point when you do decide or realize that strong foundations in this section can help out.
 
@@ -151,7 +151,7 @@ Sooner or later you might also need help for a project you work on or simply to 
 >
 > [Programming Rust, 2nd Edition](https://www.oreilly.com/library/view/programming-rust-2nd/9781492052586/) (O'Reilly Publishing) is a big book and will take you some time to get through. It is not for the faint of heart. However… If you do choose for this route as an alternative to [(1) Learn Rust](#1-learn-rust), you will absolutely not regret it. In fact, your entire rest of the Journey will be a breeze.
 >
-> The "Programming Rust, 2nd Edition" book is a gem and in case you can handle big dry Technical books such as these it is one that will give you just as much love back as the energy that you put into it. Take your time, get through it, play with it, and enjoy. In fact, it can be easily paired with Rustlings by doing the exercises linked to the content you're reading. Rust by Example can also be added on top of that to see some more code related to the stuff your learning.
+> The "Programming Rust, 2nd Edition" book is a gem and in case you can handle big dry Technical books such as these it is one that will give you just as much love back as the energy that you put into it. Take your time, get through it, play with it, and enjoy. In fact, it can be easily paired with Rustlings by doing the exercises linked to the content you're reading. Rust by Example can also be added on top of that to see some more code related to the stuff you're learning.
 >
 > Soak it in. It's a hardcore alternative, but if you're up for it, it's there for you to grab.
 >
@@ -184,13 +184,13 @@ Questions you should be able to answer at the end of this step:
 23. What is an Enum in Rust and how can we use it? How can we define it?
 24. What is pattern matching in Rust? How do we do it? How is it more powerful than a switch?
 25. How do we write tests in Rust? What kind of tests are there?
-26. What are closures and how are they related to functions? What they have in common? How do they differ?
-27. What kind of smart pointers does the Rust std library provide you? What are there use cases, differences, and so on?
-28. What is unsafe Rust? How do we use it? When do we use it? What guarantees we still get, even when using unsafe Rust?
+26. What are closures and how are they related to functions? What do they have in common? How do they differ?
+27. What kind of smart pointers does the Rust std library provide you? What are their use cases, differences, and so on?
+28. What is unsafe Rust? How do we use it? When do we use it? What guarantees do we still get, even when using unsafe Rust?
 
 ### [Alternative or Companion resources](#alternative-or-companion-resources)
 
-[Welcome to Comprehensive Rust 🦀 - Comprehensive Rust 🦀](https://google.github.io/comprehensive-rust/): a small bootcamp course by Google focussed on Android Engineers. Most of it is however applicable to anyone coming to Rust from another language and could be a great alternative or companion for some of the resources above.
+[Welcome to Comprehensive Rust 🦀 - Comprehensive Rust 🦀](https://google.github.io/comprehensive-rust/): a small bootcamp course by Google focused on Android Engineers. Most of it is however applicable to anyone coming to Rust from another language and could be a great alternative or companion for some of the resources above.
 
 [The "Effective Rust" book](https://www.lurklurk.org/effective-rust/) is an excellent book that might just as well be official Rust material, and
 recommended for all Rust learners. So once you think you understand the content of "the Rust book" and the like, you probably want to start reading "Effective Rust", you won't regret it.
@@ -263,7 +263,7 @@ Designing APIs is a big part of being a Rust programmer, any programmer really. 
 
 A good starting point is the [API Guidelines](https://rust-lang.github.io/api-guidelines/about.html) which are a set of guidelines that are meant to help you design good APIs. They are not meant to be followed blindly, but rather to be used as a reference to help you make the right decisions.
 
-A next and continuos step is to read blog posts and watch videos about API design. The Rust newsletter often has an article listed in its weekly edition. But other platforms such as HackerNews will have interesting Rust articles pop up as well. <https://sabrinajewson.org/blog/errors> is for example a great article talking about one might to give errors as much love as the other parts of the API, and also talks about why crates like `thiserror` might nog be that great. All in all, similar to other parts of your continuous Rust learning journey, you'll want to remain critical and open to new ideas and see what works for you and what not.
+A next and continuous step is to read blog posts and watch videos about API design. The Rust newsletter often has an article listed in its weekly edition. But other platforms such as HackerNews will have interesting Rust articles pop up as well. <https://sabrinajewson.org/blog/errors> is for example a great article talking about one might to give errors as much love as the other parts of the API, and also talks about why crates like `thiserror` might not be that great. All in all, similar to other parts of your continuous Rust learning journey, you'll want to remain critical and open to new ideas and see what works for you and what not.
 
 ## [3. Learn Async Rust](#3-learn-async-rust)
 
@@ -274,7 +274,7 @@ The most popular and recommended by many Async Runtime is [the Tokio runtime](ht
 - To start with your Async Learning Journey you might want to start with: [Getting Started - Asynchronous Programming in Rust](https://rust-lang.github.io/async-book/);
 - Afterwards you can finally start going through the Tokio [learning journey Tutorial](https://tokio.rs/tokio/tutorial) 
 
-Please also join the Tokio Discord community as part of your async Journey, a place where you can ask any questions you want as well: <https://discord.com/invite/tokio>. This server also has also individual channels for the different projects in the Tokio ecosystem such as Hyper, Axum, Tower and more. The maintainers of the different projects are also very active in the server and are happy to help you out, but of course please do not take this for granted. Be respectful and if possible contribute back to the community as well.
+Please also join the Tokio Discord community as part of your async Journey, a place where you can ask any questions you want as well: <https://discord.com/invite/tokio>. This server also has individual channels for the different projects in the Tokio ecosystem such as Hyper, Axum, Tower and more. The maintainers of the different projects are also very active in the server and are happy to help you out, but of course please do not take this for granted. Be respectful and if possible contribute back to the community as well.
 
 As an extra you may also want to read and develop alongside the following articles:
 
@@ -287,7 +287,7 @@ In order to help you understand how Async code works (e.g. what about the Async 
 > 
 > Synacktiv made an IO network scanner using io_uring as can be seen at [GitHub - synacktiv/io_uring_scanner: io_uring based network scanner written in Rust](https://github.com/synacktiv/io_uring_scanner), using tokio's low level userspace bindings to io_uring.
 
-To get a better idea about how futures work and the executor which polls them,  you might want to read this article: <https://bertptrs.nl/2023/04/27/how-does-async-rust-work.html>.
+To get a better idea about how futures work and the executor which polls them, you might want to read this article: <https://bertptrs.nl/2023/04/27/how-does-async-rust-work.html>.
 
 The blog series as found at <https://hegdenu.net/posts/understanding-async-await-1/> can be another great reference to help you understand the entire `async/await` part of Rust.
 
@@ -311,7 +311,7 @@ Questions you should be able to answer at the end of this step:
 
 Please do remember that Async programming is only beneficial to optimize the idle time of your threads away.
 For tasks where you already near 100% utilize your threads (e.g. computation heavy algorithms) something
-like async will not help you and will in fact make your codebase a lot more complex and difficult to reasons about.
+like async will not help you and will in fact make your codebase a lot more complex and difficult to reason about.
 
 Should you have computation-heavy algorithms which you want to paralyze you can achieve that by making use
 of [threading](https://doc.rust-lang.org/std/thread/) alone. A crate such as <https://docs.rs/rayon/latest/rayon/> might help you a lot with this as well.
@@ -328,8 +328,8 @@ What the actual types for these request-response pairs are, is up to you and dep
 In tower it is typical that a service wraps another service, called "layers", as such all your services and middleware will stack on top of each other,
 like a... _tower_.
 
-- if you are new to Tower you can start learning how to use it by building your own tower middleware from scratch by following the guide at: <https://github.com/tower-rs/tower/blob/master/guides/building-a-middleware-from-scratch.md>;
-  - if you are not convinced on the usefulness of Tower you perhaps read to [the "inventing your own Service trait" guide](https://tokio.rs/blog/2021-05-14-inventing-the-service-trait).
+- if you are new to Tower, you can start learning how to use it by building your own tower middleware from scratch by following the guide at: <https://github.com/tower-rs/tower/blob/master/guides/building-a-middleware-from-scratch.md>;
+  - if you are not convinced on the usefulness of Tower, you can perhaps read [the "inventing your own Service trait" guide](https://tokio.rs/blog/2021-05-14-inventing-the-service-trait).
  
 If you want to get an idea of how `Tower` might look like in a Rust ecosystem since 2024,
 you can enjoy this future today already at <https://github.com/plabayo/tower-async>.
@@ -343,7 +343,7 @@ The book "[Rust Atomics and Locks](https://marabos.nl/atomics/)" by O'Reilly is 
 
 This book is so good, that even Go, Python or JS developers that will never ever touch Rust, might want to learn Rust just to understand the knowledge that can be found in this Gem of a book. Read it. You won't regret it.
 
-As it is more advanced knowledge it can however be seen as "Extra", so in case you are in a hurry to finish [section (3) of the Rust track](#3-learn-async-rust), feel free to skip it. But even if so, keep its existence in mind and come perhaps back to it when you start to get yourself into trouble.
+As it is more advanced knowledge it can however be seen as "Extra", so in case you are in a hurry to finish [section (3) of the Rust track](#3-learn-async-rust), feel free to skip it. But even if so, keep its existence in mind and come back to it perhaps when you start to get yourself into trouble.
 
 Questions you should be able to answer at the end of this extra step:
 
@@ -378,7 +378,7 @@ Go through the entire book, filling any gaps you might still have and do all the
 
 At the end of the book you should be able to present your own GitHub or GitLab hosted projected based on the exercises and projects of the books, where you applied all your knowledge and also put in something of yourself in it.
 
-> ⓘ Backend frameworks like [Rocket](https://rocket.rs/) and [Actix](https://actix.rs/) are pretty commonly used in books. However know that [the Axum framework](https://docs.rs/axum/latest/axum/) is currently probably your best best if you need to choose a backend framework for your next or current Rust project.
+> ⓘ Backend frameworks like [Rocket](https://rocket.rs/) and [Actix](https://actix.rs/) are pretty commonly used in books. However know that [the Axum framework](https://docs.rs/axum/latest/axum/) is currently probably your best if you need to choose a backend framework for your next or current Rust project.
 >
 > Learning Axum in specific could be done by following tutorials
 > such as <https://github.com/jeremychone-channel/rust-axum-course>, which seem pretty complete and focussed.
@@ -426,14 +426,14 @@ Questions you should be able to answer at the end of this step:
 4. What primitive types are there in Rust and how are they laid out in memory?
 5. What is the Orphan rule? Why is it important?
 6. What is polling in the context of Asynchronous programming?
-7. List some additional testing tools beyond unit tests? Why does each one of them mather?
+7. List some additional testing tools beyond unit tests? Why does each one of them matter?
 8. What is Pin and Unpin?
-  - Note: Rust of Crust also has a great video about it should you need some more explanations about this tricky concept;
+  - Note: Crust of Rust also has a great video about it should you need some more explanations about this tricky concept;
 9. Why is Asynchronous programming more complicated than parallel programming?
 10. How can you test your Asynchronous code? And because it is Rust, what kind of Asynchronous problems do we not need to test if we structure our code right? And why not?
 11. In the context of concurrent programming, what are actors?
   - Bonus question: why do some people see this as the future?
-12. what is FFI? Why do we use it?
+12. What is FFI? Why do we use it?
 13. What is Rust without the STD? How do we use it and why?
 14. What are some common patterns found in the wild and that are discussed in the book?
 15. How can you continue to learn Rust?
@@ -461,7 +461,7 @@ What you'll build depends on your interest or perhaps in the type of industry or
 - If you're doing full stack development you can get inspired on what's next by checking out [WASM Learning Resources Appendix](#wasm-learning-resources);
   - For all your web dev needs you might also get inspired on what frameworks to use by checking out a website such as <https://www.arewewebyet.org/>;
   - By coincidence, some of the books and articles listed in this guide also teach you a lot about web development, so if you did indeed complete these guide you're really already well on your way to becoming a full stack developer in Rust, or backend, whatever floats your boat;
-- Some call WASM (on the server side) the next thing after docker containers. So perhaps even as a "pure" backened developer you might want to check out [that _same_ appendix](#wasm-learning-resources) to help you get started;
+- Some call WASM (on the server side) the next thing after docker containers. So perhaps even as a "pure" backend developer you might want to check out [that _same_ appendix](#wasm-learning-resources) to help you get started;
 - If you're a game developer (or inspiring to be) you can check out resources such as <https://arewegameyet.rs/#ecosystem> to figure out what Rust technologies are out there in the ecosystem to help you build the next fantastic game;
   - If you're a game developer you might also want to check out the [Rust GameDev Working Group](https://gamedev.rs/) (they also have a monthly news letter);
   - You could also subscribe to the a podcast about GameDev in Rust called [Rust GameDev Podcast](https://rustgamedev.com/);
@@ -470,9 +470,9 @@ What you'll build depends on your interest or perhaps in the type of industry or
   - Or you might want to apply to Google and help build [their Fuchsia OS](https://fuchsia.dev/) in Rust. Have fun;
     - It's open source so nobody can stop you to contribute it either way, well except them I guess;
 - If you want to develop blockchain technology... Well, not going to guide you in that one, there's a running joke that it's hard to find a job in Rust that's not blockchain tech, so, you should have no problem finding a job in that field if that's what you want to do;
-- If you want to develop embedded systems, you can check out the [Rust Embedded Working Groups's Blog](https://blog.rust-embedded.org/). There are also plenty of companies who sometimes appear in articles or podcasts listed in [the More Material appendix](#appendix-vi-more-material), so you can check that also out for yourself.
-  - A podcast episode about it the embedded WG can be found at: <https://rustacean-station.org/episode/jonathan-pallant/>
-  - You can interact with the WG using  the matrix chat: <https://matrix.to/#/!BHcierreUuwCMxVqOf:matrix.org>
+- If you want to develop embedded systems, you can check out the [Rust Embedded Working Groups's Blog](https://blog.rust-embedded.org/). There are also plenty of companies who sometimes appear in articles or podcasts listed in [the More Material appendix](#appendix-vi-more-material), so you can also check that out for yourself.
+  - A podcast episode about the embedded WG can be found at: <https://rustacean-station.org/episode/jonathan-pallant/>
+  - You can interact with the WG using the matrix chat: <https://matrix.to/#/!BHcierreUuwCMxVqOf:matrix.org>
 - If you are interested in using Rust for Data Engineering then <https://datawithrust.com/> could be a great start;
 
 There's a lot more of course. You probably know best where you're going. A lot of exciting stuff is happening. Plenty of conferences (e.g. Rust Conf) to help you get inspired on it if you're not already. And of course, plenty of people to help you out if you get stuck. So, good luck and have fun!
@@ -532,7 +532,7 @@ Frameworks that you might want to check if you want to make a front-end (web) ap
 - Very popular and fast front-end framework for Rust: [GitHub - yewstack/yew: Rust / Wasm framework for building client web apps](https://github.com/yewstack/yew)
 - Another front-end framework: [GitHub - chinedufn/percy: Build frontend browser apps with Rust + WebAssembly](https://github.com/chinedufn/percy). Supports server side rendering. 
 - Yet another front-end framework: [GitHub - sycamore-rs/sycamore](https://github.com/sycamore-rs/sycamore): A library for creating reactive web apps in Rust and WebAssembly
-- If you are looking for a complete framework you  might want to give <https://github.com/framesurge/perseus> achance, it builds on top of Sycamore;
+- If you are looking for a complete framework you  might want to give <https://github.com/framesurge/perseus> a chance, it builds on top of Sycamore;
 - Exciting new and very fast front-end framework: [GitHub - leptos-rs/leptos: Build fast web applications with Rust](https://github.com/leptos-rs/leptos).
 - Another front-end framework (or perhaps rather a GUI framework) that you might want to know about is Dioxus (<https://dioxuslabs.com/>) which is made not only for web-apps, but also with CLI, mobile and Desktop in mind.
 - Also a pretty nice front-end framework: [GitHub - framesurge/perseus: A state-driven web development framework for Rust with full support for server-side rendering and static generation](https://github.com/framesurge/perseus).
@@ -543,7 +543,7 @@ Run WASM Backend Services in the cloud:
 - Fermyon Cloud (free for now): [Deploy & manage cloud native WebAssembly apps](https://www.fermyon.com/cloud)
 - Wasmer's goal is to run any code on any client (think Java's dream, but for real): <https://wasmer.io/>
 
-As you can see, WASM on the backend it is a thing. Wether it's more then just hype is something the future will tell, but either way a lot of interesting stuff is happening and there's big money behind it somehow. So you might as well jump on the car, especially if you missed the Docker train somehow. Happens.
+As you can see, WASM on the backend is a thing. Whether it's more then just hype is something the future will tell, but either way a lot of interesting stuff is happening and there's big money behind it somehow. So you might as well jump in the car, especially if you missed the Docker train somehow. Happens.
 
 ### [Appendix III. Native Apps](#appendix-iii-native-apps)
 
@@ -555,11 +555,11 @@ Native apps are applications written for a specific platform. While that could b
 
 > ⓘ Build an optimized, secure, and frontend-independent application for multi-platform deployment.
 
-Tauri applications can be compared to Electron, but it uses a very different approach. Multiple rendering engines are supported, with web view like rendering engines being the default. But this is still different then shipping a Node runtime and Chromium with each and one of your apps. Meaning your desktop applications can be as small as a couple of megabytes, compared to the usually bloated 150MB apps. And once running they will also be a lot less resource hungry compared to your topical Electron app.
+Tauri applications can be compared to Electron, but it uses a very different approach. Multiple rendering engines are supported, with web view like rendering engines being the default. But this is still different then shipping a Node runtime and Chromium with each one of your apps. Meaning your desktop applications can be as small as a couple of megabytes, compared to the usually bloated 150MB apps. And once running, they will also be a lot less resource hungry compared to your topical Electron app.
 
 Mobile applications are not yet officially supported, but they will soon get support as well, as the underlying technology for it is already more or less ready.
 
-In case you want to write applications that work on both the web and a non-web platform you can achieve this by splitting of your business logic from your minimal front-end logic, such that you can write one front-end in any of the available front-end approaches (e.g. leptos or perseus) and another one using Tauri, with most of your code being available as one or more Rust libraries. 
+In case you want to write applications that work on both the web and a non-web platform you can achieve this by splitting your business logic from your minimal front-end logic, such that you can write one front-end in any of the available front-end approaches (e.g. leptos or perseus) and another one using Tauri, with most of your code being available as one or more Rust libraries. 
 
 The front-end logic can be written using any web application front-end framework, e.g. Svelte.
 
@@ -584,7 +584,7 @@ A language is a tool, but a tool is not to be applied to any problem. Rust has i
 
 ### [Appendix V. Python / Javascript Developers](#appendix-v-python--javascript-developers)
 
-In case you come from Python or Javascript you can alternatively replace the first four steps of this learning guide with a single book. [Rust Web Programming](https://www.packtpub.com/product/rust-web-programming-second-edition/9781803234694) (Packt Publishing) aims to get web developers (including Python developers) get started with Rust and has a very pragmatic approach.
+In case you come from Python or Javascript you can alternatively replace the first four steps of this learning guide with a single book. [Rust Web Programming](https://www.packtpub.com/product/rust-web-programming-second-edition/9781803234694) (Packt Publishing) aims to get web developers (including Python developers) started with Rust and has a very pragmatic approach.
 
 Given how important Async is in our work environment it is still worth to go through section [(3) "Learn Async Rust"](#3-learn-async-rust) to make sure you do really grasp that very well. It is also where a lot of your Rust knowledge starts to come together, so if you get that you know you're on the right track.
 
@@ -618,7 +618,7 @@ Podcasts:
 
 Actuality:
 
-- ["This week in Rust"](https://this-week-in-rust.org/) is a weekly newsletter helping you stay up to date with Rust from the lazy comfort of your Mailbox. Easy. They can also be read online in case you prefer a browser instead of the web or do not want to subscribe for w/e reason.
+- ["This week in Rust"](https://this-week-in-rust.org/) is a weekly newsletter helping you stay up to date with Rust from the lazy comfort of your Mailbox. Easy. They can also be read online in case you prefer a browser instead or do not want to subscribe for w/e reason.
   - Blog articles from the community get shared here as well, some accessible to new comers to Rust, others a bit more advanced
   - They also share VOD's of recent conferences, e.g. the issue in which they share the rust talks from [FOSDEM 2023: This Week in Rust 481  · This Week in Rust](https://this-week-in-rust.org/blog/2023/02/08/this-week-in-rust-481/)
 - ["Rust Magazine"](https://rustmagazine.org/): an online magazine dedicated to Rust
@@ -669,13 +669,13 @@ A nice reference sheet if you need one can be found at: <https://cheats.rs/>
 
 Learning from and working with a community is one of the many perks of Rust, which is rightfully known for its warm, inclusive and charming community. Always open and friendly to others.
 
-Here are some chat servers you can join to interact with this fantastic community reward. All of them are great places to meet other Rust developers, find help, share news or a project and also to give back to the community yourself:
+Here are some chat servers you can join to interact with this fantastic community. All of them are great places to meet other Rust developers, find help, share news or a project and also to give back to the community yourself:
 
 - Discord chat server for the Tokio ecosystem and its community: <https://discord.com/invite/tokio>;
 - Discord chat server for the Rust community in general (has a great channel for beginners to find help, and in a very fast manner): <https://discord.com/invite/rust-lang>;
 - zulip chat server for Rust, great for core work and advanced purposes: <https://rust-lang.zulipchat.com/>.
 
-There are others of course but these are the one which are both active, inclusive, friendly and known to the authors of this guide as being a great place to be and be part of.
+There are others of course but these are the ones which are both active, inclusive, friendly and known to the authors of this guide as being a great place to be and be part of.
 
 ### [Appendix VIII. Debugging Rust](#appendix-viii-debugging-rust)
 
@@ -704,4 +704,4 @@ want to ensure you know the right tools and crates to help you deal with point (
     and introduce you to "Open Telemetry" in general.
 - If you do not use _Tokio_, then a crate like [log](https://crates.io/crates/log) is your best bet, and it will ensure that no matter what application makes use of your crate, will be able to consume your logs the way they want :)
 
-Finally when shit really hits the fan, and you do not see what's wrong from metrics and logs (alone), you might need to grab to a debugger. The book <https://rustc-dev-guide.rust-lang.org/debugging-support-in-rustc.html> might be able to give you a good starting point. Articles such as <https://dev.to/rogertorres/debugging-rust-with-vs-code-11dj> might help you get started on debugging in case you are using VScode for Rust, which is what plenty of people seem to use these days. There's also a Gist about it for VSCode at <https://gist.github.com/xanathar/c7c83e6d53b72dd4464f695607012629>.
+Finally when shit really hits the fan, and you do not see what's wrong from metrics and logs (alone), you might need to grab a debugger. The book <https://rustc-dev-guide.rust-lang.org/debugging-support-in-rustc.html> might be able to give you a good starting point. Articles such as <https://dev.to/rogertorres/debugging-rust-with-vs-code-11dj> might help you get started on debugging in case you are using VSCode for Rust, which is what plenty of people seem to use these days. There's also a Gist about it for VSCode at <https://gist.github.com/xanathar/c7c83e6d53b72dd4464f695607012629>.
