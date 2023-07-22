@@ -222,6 +222,7 @@ Should you want some inspiration or a more guided approach, here are some resour
 
 - [Command-Line Rust](https://www.oreilly.com/library/view/command-line-rust/9781098109424/): build a cli tool such as grep in rust, using test driven development (TDD), all to learn Rust
 - [Rust Application Books - The Little Book of Rust Books](https://lborb.github.io/book/applications.html): lists a lot of different books, including ones that allow you to develop small projects using Rust, usually in a well guided fashion;
+  - You might find <https://archive.is/acQA2> an interesting companion article as it gives some (common) ideas that you can apply to the CLI tool you're building;
   - [Introduction - PNGme: An Intermediate Rust Project](https://picklenerd.github.io/pngme_book/introduction.html) is an especially fun small project. It allows you to apply the knowledge that you learned above in a very narrow program, that is for once not network related. At the end you'll have a cli tool that allows you to encode and decode "hidden" messages in a PNG image;
 - [Introduction - MacroKata](https://tfpk.github.io/macrokata/index.html): Macro's are in general not very covered in the resources above, as it is not that common that you have to write your own macros. They can however be convenient in certain situations. This book can be seen as a bootstrap tutorial to get you started with one kind of Rust macros.
   - If you are interested in (also) learning procedural macros you can perhaps consult the following resources:
@@ -240,6 +241,7 @@ If you have a lot of free time at your hand and you want to build something real
 - Build your own CHIP-8 (8-bit computer) interpreter: [Cowgod's Chip-8 Technical Reference](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM) (no Rust guidance, directly from the CHIP-8 specification instead, you can do it, I believe in you)
 - Build your own Ray Tracer (not a Rust tutorial, but can easily be implemented in Rust as well): [Ray Tracing in One Weekend Series](https://raytracing.github.io/) (fun if you always had the dream to start dabbling into the world of Graphics Programming)
   - <https://www.superperfundo.dev/?tag=ray-tracer-challenge> might be a useful blog series if you want a more guided approach on how you might make a Ray Tracer in Rust;
+  - <https://archive.is/t6Ifp> is an interesting article in this area as well, where it introduces you to a language called PO;
 
 Seriously though, do not consider the above recommended or mandatory in any way. If you however really like to develop stuff and you do like to do it extensively in your free time, then, and only then, I do believe that the above are a great way to really solidify your current Rust knowledge and give yourself a great (pragmatic) foundation.
 
@@ -280,6 +282,11 @@ As an extra you may also want to read and develop alongside the following articl
 
 - [The HTTP crash course nobody asked for](https://fasterthanli.me/articles/the-http-crash-course-nobody-asked-for)
 - [Understanding Rust futures by going way too deep](https://fasterthanli.me/articles/understanding-rust-futures-by-going-way-too-deep)
+- To get to get a deeper understanding about the concepts of pinning and the like you might find the following articles helpful:
+  - [Put a pin on That](https://archive.is/pHfCn)
+    - This article refers also to [Pin, Unpin and why Rust neeeds them](https://archive.is/LH91o)
+    - as well as [Pin and Suffering](https://archive.is/32RlT)
+  - All of the above are great articles to get you quickly up to speeds with the concept, and helpful as a repeater or because you hvae no desire or time to read some of the books that talk about this topic and that I recommend in other parts of this guide;
 
 In order to help you understand how Async code works (e.g. what about the Async keyword and How do futures really work. And how do you define traits with futures. And How do you implement them), you might want to read through the articles linked in the [Tower](#tower) section, as seeing how to implement your own _Tower_ middleware might answer many of such questions. Gaining a deeper theoretical but still pragmatic enough understanding behind it is probably better done by reading some of the books listed in this guide.
 
@@ -510,7 +517,7 @@ You can learn to create, compile and run your first Rust program at "[First Step
 
 No custom linting configurations or agreements are required beyond this. If you use these two tools, you're golden. These tools also work nicely with any IDE you might use. Within your CI environment these same tools will be used to check that your code adheres to its standards.
 
-Clippy can be seen as a testing ground to see what lints are useful and which ones aren't. The ones that are often get shipped into the official compiler a while later. Some lints are also ignored by default for whatever reasons. You can find all lints (AFAIK) at <https://doc.rust-lang.org/rustc/lints/listing/index.html>, should you want to enable even more lints.
+Clippy can be seen as a testing ground to see what lints are useful and which ones aren't. The ones that are often get shipped into the official compiler a while later. Some lints are also ignored by default for whatever reasons. You can find all lints (AFAIK) at <https://rust-lang.github.io/rust-clippy/stable/index.html>, should you want to enable even more lints.
 
 Some useful reasons why you might stil want to enable custom lints are:
 
