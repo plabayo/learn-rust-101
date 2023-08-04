@@ -392,6 +392,9 @@ At the end of the book you should be able to present your own GitHub or GitLab h
 >
 > Given how much Axum is built with [Tower in mind, you probably also want to learn that](#tower).
 
+> There's also a "Crust of Rust" episode, by Jon Gjengset, about "decrusting"
+> Axum — and by extension _Tower_ — available at <https://www.youtube.com/watch?v=Wnb_n5YktO8>.
+
 Questions you should be able to answer at the end of this step:
 
 1. How can we write a Full stack app in Rust?
