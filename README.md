@@ -381,6 +381,8 @@ This guide is either way not meant to be read in a single session or series. Tak
 
 ## [4. Study using the "Zero to Production in Rust" book](#4-study-using-the-zero-to-production-in-rust-book)
 
+> 🔗 <https://zero2prod.com>
+
 Go through the entire book, filling any gaps you might still have and do all the exercises as well.
 
 At the end of the book you should be able to present your own GitHub or GitLab hosted projected based on the exercises and projects of the books, where you applied all your knowledge and also put in something of yourself in it.
