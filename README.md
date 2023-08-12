@@ -267,6 +267,10 @@ A good starting point is the [API Guidelines](https://rust-lang.github.io/api-gu
 
 A next and continuous step is to read blog posts and watch videos about API design. The Rust newsletter often has an article listed in its weekly edition. But other platforms such as HackerNews will have interesting Rust articles pop up as well. <https://sabrinajewson.org/blog/errors> is for example a great article talking about one might to give errors as much love as the other parts of the API, and also talks about why crates like `thiserror` might not be that great. All in all, similar to other parts of your continuous Rust learning journey, you'll want to remain critical and open to new ideas and see what works for you and what not.
 
+If you are however still in the camp of `thiserror`, you might be able to make good use of blog posts such as <https://determinate.systems/posts/instrumenting-axum> that guide you through adding instrumentation to your Axum based web service,
+using `thiserror` among other excellent crates such as `tracing`. A great read, especially if you're not that experienced with instrumentation
+that goes beyon the basic single line logs.
+
 ## [3. Learn Async Rust](#3-learn-async-rust)
 
 There is no standard / official Asynchronous runtime. This in contrast to actual CPU threads [which you can create from within the std library](https://doc.rust-lang.org/std/thread/fn.spawn.html).
@@ -410,6 +414,19 @@ Questions you should be able to answer at the end of this step:
 9. How do we make a web server with Rust?
 10. The book uses Actix. What are some alternatives these days?
 
+### Alternatives
+
+The goal of hands-on learning with "Zero to Production" is mostly to help you get started writing some
+actual Rust projects, there are however also plenty of alternatives to achieve the same.
+
+- <https://knowledge.dev/> is an interactive book to help you practice Rust by doing projects;
+- <https://www.rustadventure.dev/> is a similar concept, which also has a discord and a bit more variety in projects;
+- most Rust conferences also have workshops, free or paid, to help you get into Rust or tackle more advanced concepts;
+- Shuttle, which allows you to build and ship Rust code, also has a series of tutorials to create, build and ship all kind of projects,
+  available at <https://www.shuttle.rs/launchpad>;
+- <https://codecrafters.io/> is a paid platform (with very limited free tier) is a platform to help you build projects like your own
+  Redis, Git, Grep, Docker and more. And that all using Rust (among other languages available);
+
 ## [5. Contribute for the first time to an existing project](#5-contribute-for-the-first-time-to-an-existing-project)
 
 Contribute to an open source project that you like or may want to strongly depend upon in the future.
@@ -512,6 +529,9 @@ cargo 1.67.1 (8ecd4f20a 2023-01-10)
 ```
 
 You can learn to create, compile and run your first Rust program at "[First Steps with Cargo - The Cargo Book](https://www.rust-lang.org/learn/get-started)".
+
+> If you are looking for a fun bigger project to help you learn Rust,
+> you might find it fun to buy your own cargo-like tool: <https://blog.mgattozzi.dev/freight-part-1/>
 
 #### [Linting and styling](#linting-and-styling)
 
@@ -727,3 +747,22 @@ want to ensure you know the right tools and crates to help you deal with point (
 - If you do not use _Tokio_, then a crate like [log](https://crates.io/crates/log) is your best bet, and it will ensure that no matter what application makes use of your crate, will be able to consume your logs the way they want :)
 
 Finally when shit really hits the fan, and you do not see what's wrong from metrics and logs (alone), you might need to grab a debugger. The book <https://rustc-dev-guide.rust-lang.org/debugging-support-in-rustc.html> might be able to give you a good starting point. Articles such as <https://dev.to/rogertorres/debugging-rust-with-vs-code-11dj> might help you get started on debugging in case you are using VSCode for Rust, which is what plenty of people seem to use these days. There's also a Gist about it for VSCode at <https://gist.github.com/xanathar/c7c83e6d53b72dd4464f695607012629>.
+
+### [Appendix IX. Shipping Rust](#appendix-ix-shipping-rust)
+
+Shipping Rust does not have to be different from shipping code in other languages.
+So all the knowledge you have or will learn about the Cloud, Docker, Bare Metal, Vms,
+Lambda functions, WASM workers, containers, and whatever else also can be applied here.
+
+If you however find cloud platforms like AWS or GCloud a bit dounting (or have choice stress),
+and find deploying to your own VPS or VM a bit too barebones, you might find some of the following
+solutions to be helpful, specifically with the goal of shipping rust code such as a web service:
+
+- <https://fly.io/>: allows you to ship rust code fairly painlessly by using docker containers;
+- <https://www.shuttle.rs/> has a pretty unique approach by letting you deploy your Rust code directly, without containers,
+  and by adding your stack dependencies (e.g. database needs) as macros to your Rust `main.rs` code;
+- Using <https://github.com/cloudflare/workers-rs> you can ship your Rust code to Cloudflare's workers platform;
+- <https://www.fermyon.com/#> is another similar cloud platform that also allows you to ship Rust (WASM) workers;
+
+If you want to ship on a more standard cloud platform such as _AWS_ you can learn to do so,
+using this exam09opipo [
