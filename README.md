@@ -104,6 +104,7 @@ Support this project by becoming a [sponsor](https://github.com/sponsors/plabayo
     - [Educational](#educational)
   - [Appendix VII. Community Chat](#appendix-vii-community-chat)
   - [Appendix VIII. Debugging Rust](#appendix-viii-debugging-rust)
+  - [Appendix IX. Shipping Rust](#appendix-ix-shipping-rust)
 
 ## [About](#about)
 
