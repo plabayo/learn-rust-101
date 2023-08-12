@@ -766,4 +766,4 @@ solutions to be helpful, specifically with the goal of shipping rust code such a
 - <https://www.fermyon.com/#> is another similar cloud platform that also allows you to ship Rust (WASM) workers;
 
 If you want to ship on a more standard cloud platform such as _AWS_ you can learn to do so,
-using this exam09opipo [
+you can learn to do so as part of practicing Rust using "[4. Study using the "Zero to Production in Rust" book](#4-study-using-the-zero-to-production-in-rust-book)".
