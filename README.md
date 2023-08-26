@@ -248,6 +248,14 @@ If you have a lot of free time at your hand and you want to build something real
 
 Seriously though, do not consider the above recommended or mandatory in any way. If you however really like to develop stuff and you do like to do it extensively in your free time, then, and only then, I do believe that the above are a great way to really solidify your current Rust knowledge and give yourself a great (pragmatic) foundation.
 
+At this point you might also be ready to start reading alternative — community driven — learning resources on foundational Rust knowledge. With such content you do however always need to be careful as they might contain mistakes, not well rounded or closed opinions. An example of possible valuable learning resources are the following blog series about the Rust type system:
+
+- part 1 (<https://sanjuvi.github.io/Blog/posts/Rust-type-system-part-1/>): ownership and move semantics, aliasing and mutation, lifetime and region based resource management;
+- part 2 (<https://sanjuvi.github.io/Blog/posts/Rust-Type-System-Part-2>/): type as sets, algebraic data types, patterns in Rust using Algebraic types, traits, generic associated types (GAT), operator overloading, use cases;
+- part 3 (<https://sanjuvi.github.io/Blog/posts/Rust-Type-System-Part-3>/): container types, interior mutability, concurrency, deadlocks without threads.
+
+More parts to come as well.
+
 ### [Code like a pro in Rust](#code-like-a-pro-in-rust)
 
 At this point of your Rust learning journey you've come a far way already, relatively speaking. Perhaps you want to shortcut, at least for now.
@@ -284,6 +292,8 @@ The most popular and recommended by many Async Runtime is [the Tokio runtime](ht
 - Afterwards you can finally start going through the Tokio [learning journey Tutorial](https://tokio.rs/tokio/tutorial) 
 
 Please also join the Tokio Discord community as part of your async Journey, a place where you can ask any questions you want as well: <https://discord.com/invite/tokio>. This server also has individual channels for the different projects in the Tokio ecosystem such as Hyper, Axum, Tower and more. The maintainers of the different projects are also very active in the server and are happy to help you out, but of course please do not take this for granted. Be respectful and if possible contribute back to the community as well.
+
+The following article is a very nice introduction to Rust async: <https://ibraheem.ca/posts/too-many-web-servers/>.
 
 As an extra you may also want to read and develop alongside the following articles:
 
