@@ -1,6 +1,8 @@
 [![Repository Banner Image](./img/banner.png)](https://rust-lang.guide)
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/plabayo/learn-rust-101?style=social)](https://github.com/plabayo/learn-rust-101) [![GitHub](https://img.shields.io/github/license/plabayo/learn-rust-101)](https://github.com/plabayo/learn-rust-101/blob/main/LICENSE) [![available to hire](https://img.shields.io/badge/Glen-available%20to%20hire%20as%20consultant-green)](mailto:glen@plabayo.tech) [![GitHub Sponsors Badge](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/plabayo)
+[![GitHub Repo stars](https://img.shields.io/github/stars/plabayo/learn-rust-101?style=social)](https://github.com/plabayo/learn-rust-101) [![GitHub](https://img.shields.io/github/license/plabayo/learn-rust-101)](https://github.com/plabayo/learn-rust-101/blob/main/LICENSE) [![available to hire](https://img.shields.io/badge/Glen-available%20to%20hire%20as%20consultant-green)](mailto:glen@plabayo.tech)
+
+[![Github Sponsors Badge](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA)](https://github.com/sponsors/plabayo) [![Buy Me A Coffee Badge](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/plabayo)
 
 
 [rust]: https://www.rust-lang.org/
