@@ -139,6 +139,8 @@ continuous journey as a capable Rust developer.
 
 In case you are a Python or Javascript developer you might find the [Appendix V. Python / Javascript developers](#appendix-v-python--javascript-developers) section useful.
 
+Not convinced yet? Read here what others have to say about Rust: <https://brson.github.io/fireflowers/>
+
 ## [1. Learn Rust](#1-learn-rust)
 
 In case you're new to the language we suggest you to take a look at [Learn Rust](https://www.rust-lang.org/learn)  (free):
@@ -258,6 +260,8 @@ At this point you might also be ready to start reading alternative — community
 
 More parts to come as well.
 
+For the brave among you with the time for it, learn to build your own Operating System (OS) using Rust: <https://os.phil-opp.com/>
+
 ### [Code like a pro in Rust](#code-like-a-pro-in-rust)
 
 At this point of your Rust learning journey you've come a far way already, relatively speaking. Perhaps you want to shortcut, at least for now.
@@ -297,7 +301,18 @@ Please also join the Tokio Discord community as part of your async Journey, a pl
 
 The following article is a very nice introduction to Rust async: <https://ibraheem.ca/posts/too-many-web-servers/>.
 
-As an extra you may also want to read and develop alongside the following articles:
+Extra Learning Resources:
+
+- <https://cfsamsonbooks.gitbook.io/explaining-atomics-in-rust/>;
+- <https://bitbashing.io/async-rust.html>: great article to make you think about why Async rust might feel so wrong.
+  - A big problem is that most people use Tokio in multithreade mode which puts extra restrictions (Send + 'Static),
+    which makes Async feel extra difficult.
+  - It's also important that people, next to having experience with Tokio and getting a good understanding of Async rust and all it entails,
+    to also discover, play and use other async runtimes.
+    - <https://github.com/smol-rs/smol> is a great alternative Async runtime that you might want to try out;
+- Learn more about Async Rust and what the current situation is/was in 2023: <https://corrode.dev/blog/async/>
+
+As an extra, and perhaps slighty sidetracked, you may also want to read and develop alongside the following articles:
 
 - [The HTTP crash course nobody asked for](https://fasterthanli.me/articles/the-http-crash-course-nobody-asked-for)
 - [Understanding Rust futures by going way too deep](https://fasterthanli.me/articles/understanding-rust-futures-by-going-way-too-deep)
@@ -315,7 +330,12 @@ In order to help you understand how Async code works (e.g. what about the Async 
 
 To get a better idea about how futures work and the executor which polls them, you might want to read this article: <https://bertptrs.nl/2023/04/27/how-does-async-rust-work.html>.
 
-The blog series as found at <https://hegdenu.net/posts/understanding-async-await-1/> can be another great reference to help you understand the entire `async/await` part of Rust.
+The blog series as found at <https://hegdenu.net/posts/understanding-async-await-1/> can be another great reference to help you understand the entire `async/await` part of Rust:
+
+- [part 1: why doesn’t my task do anything if I don’t await it?](https://hegdenu.net/posts/understanding-async-await-1/)
+- [part 2: how does a pending future get woken?](https://hegdenu.net/posts/understanding-async-await-2/)
+- [part 3: why shouldn’t I hold a mutex guard across an await point?](https://hegdenu.net/posts/understanding-async-await-3/)
+- [part 4: why would I ever want to write a future manually?](https://hegdenu.net/posts/understanding-async-await-4/#why-would-i-ever-want-to-write-a-future-manually)
 
 Questions you should be able to answer at the end of this step:
 
@@ -391,6 +411,10 @@ Questions you should be able to answer at the end of this extra step:
 16. What is Acquire and Release? What is this an example of?
 17. When we talk about a "happens-before relationship". What do we mean with it? Why is it important?
 18. What is caching in context of your CPU? How does it affect us? What can we do about it?
+
+> FYI: if you ever write real-world production low level sync/atomic/concurrent code,
+> you might want to check out Loom, as it will help you test that code better then possible with regular tests:
+> <https://docs.rs/loom/latest/loom/>.
 
 ## [A Note About the remaining part of this guide](#a-note-about-the-remaining-part-of-this-guide)
 
@@ -514,10 +538,12 @@ What you'll build depends on your interest or perhaps in the type of industry or
   - Or you might want to apply to Google and help build [their Fuchsia OS](https://fuchsia.dev/) in Rust. Have fun;
     - It's open source so nobody can stop you to contribute it either way, well except them I guess;
 - If you want to develop blockchain technology... Well, not going to guide you in that one, there's a running joke that it's hard to find a job in Rust that's not blockchain tech, so, you should have no problem finding a job in that field if that's what you want to do;
+   - Ok, ok. Here also a list for you folks: <https://github.com/rust-in-blockchain/awesome-blockchain-rust>
 - If you want to develop embedded systems, you can check out the [Rust Embedded Working Groups's Blog](https://blog.rust-embedded.org/). There are also plenty of companies who sometimes appear in articles or podcasts listed in [the More Material appendix](#appendix-vi-more-material), so you can also check that out for yourself.
   - A podcast episode about the embedded WG can be found at: <https://rustacean-station.org/episode/jonathan-pallant/>
   - You can interact with the WG using the matrix chat: <https://matrix.to/#/!BHcierreUuwCMxVqOf:matrix.org>
 - If you are interested in using Rust for Data Engineering then <https://datawithrust.com/> could be a great start;
+- Related to the previous, if you want to use ML from within Rust (or together with it), you might find the following list a great resource: 
 
 There's a lot more of course. You probably know best where you're going. A lot of exciting stuff is happening. Plenty of conferences (e.g. Rust Conf) to help you get inspired on it if you're not already. And of course, plenty of people to help you out if you get stuck. So, good luck and have fun!
 
@@ -606,6 +632,11 @@ As you can see, WASM on the backend is a thing. Whether it's more then just hype
 
 Native apps are applications written for a specific platform. While that could be any platform, it usually refers to anything that is not the "web" and even more so, these days, it pretty much always refers to Desktop, Mobile or the combination of. Cross platform apps mean that multiple platforms are supported, which could be any set of web or non-web platforms.
 
+> If you ever need to interact with other native languages:
+>
+> - For C you probably want to just use bindgen;
+> - For C++ you can make use of <https://github.com/dtolnay/cxx> (cxx);
+
 #### [Tauri](#tauri)
 
 **Tauri** is the toolset you want to check out if you want to build native apps with a Gui in Rust. You can find all information about it on their official website: <https://tauri.app/>
@@ -626,6 +657,9 @@ You can also opt to go fully native by using plugins such as tauri-egui: <https:
 
 As with any (new) language, there's no point in replacing every existing technology written before, with a new implementation written in Rust. While at times there are benefits such as with [ripgrep](https://github.com/BurntSushi/ripgrep) instead of grep, this is not a generally useful strategy not a desired one.
 
+There's also a great modern alternative to Makefiles, as much as love as we have for it. It's named 'just'
+and you can find it at <https://github.com/casey/just>, basically 'Make' with variables + more.
+
 - In [Appendix II.](#appendix-ii-webassembly-wasm) we already saw that Rust can be compiled to WASM, and as such you can build an entire WebApp in Rust. However instead of replacing your entire WebApp, it is also just as well possible that you only replace the components of your App where it makes sense, e.g. where you need to do a lot of computations;
 - In [Appendix III.](#appendix-iii-native-apps) we learned about Tauri to build native apps with Rust, and also here noted that it can be done while at the same time building your core frontend logic in the frameworks you are used to;
 
@@ -643,6 +677,17 @@ for the Javacript world but for many others as well, such as Python for example.
 - [Pydantic](https://github.com/pydantic/pydantic) is a library for Data validation using Python type hints.
 - [Ruff](https://github.com/astral-sh/ruff) is An extremely fast Python linter, written in Rust.
 
+Python web developers can also make use of Rust to write their Python web services, without having to know Rust:
+
+- Granian (<https://github.com/emmett-framework/granian>):
+  - A Rust HTTP server for Python applications (written on top of Hyper);
+  - Supports ASGI/3, RSGI and WSGI interface applications;
+  - Example usage: run your FastAPI web service :)
+- Robyn (<https://news.ycombinator.com/item?id=34399125>):
+  - A High-Performance, Community-Driven, and Innovator Friendly Web Framework with a Rust runtime.
+  - In contrast to `Granian` this does mean you need to write your service using the Robyn way to do things,
+    so not possible to use an existing service built with FastAPI.
+
 And plenty more will follow surely.
 
 A language is a tool, but a tool is not to be applied to any problem. Rust has its advantages and use cases, it would be foolish not to use it where desirable.
@@ -658,6 +703,11 @@ Should you after completing this book (even if partly) want to have some more ha
 However, in case you are confident you did get all the foundational concepts of Rust and want to just develop stuff already and get it "into your fingers" you might want to opt to after this (and before jumping onto section (5)) read ["Rust In Action"](https://www.manning.com/books/rust-in-action) first. It gives a lot of fun things to build. Alternatively you can check the "Learn More Rust: Extra" part of [section (2) Learn more Rust](#2-learn-more-rust), where we also go over many ideas for you to get more experience and help you solidify your Rust knowledge.
 
 The "Rust in Action" book can also be seen as yet another alternative all together, as it is also aimed at introducing Rust to people who never did any Systems programming, So you could also do it instead of the Rust Web Programming book.
+
+Do you ever want to develop something using both Rust and Python?
+
+- Check out the pyo3 project: <https://github.com/PyO3/pyo3>
+- You might also like the following resource in your learning journey of it: <https://dora.carsmos.ai/blog/rust-python/>
 
 ### [Appendix VI. More Material](#appendix-vi-more-material)
 
@@ -789,3 +839,5 @@ solutions to be helpful, specifically with the goal of shipping rust code such a
 
 If you want to ship on a more standard cloud platform such as _AWS_
 you can learn to do so as part of practicing Rust using "[4. Study using the "Zero to Production in Rust" book](#4-study-using-the-zero-to-production-in-rust-book)".
+
+Finally, in the spirit of KISS, nothing wrong with deploying like this: <https://logankeenan.com/posts/deploy-your-rust-project-to-any-hosting-provider-in-minutes/>.
