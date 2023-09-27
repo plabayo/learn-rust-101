@@ -10,9 +10,13 @@ Official Blogs:
   - e.g. in October of 2022 GAT's (Generic Associated Types) were finally stabilised, after 6+ years of work: [Generic associated types to be stable in Rust 1.65 — Rust Blog](https://blog.rust-lang.org/2022/10/28/gats-stabilization.html)
   - [The "Inside Rust" Blog](https://blog.rust-lang.org/inside-rust/index.html)
 
-Conferences:
+Conferences. There are many and even more meetups and other small gatherings.
+Here we'll only list the bigger (still active) conferences:
 
-- RustConf#2022: <https://rustconf.tilde.io/courses/enrolled/1857336>
+- RustConf, one of the larger anual gatherings of the Rust Community, in the US: <https://rustconf.com/>
+- Rust Nation, a big conference held anually in London (UK): <https://www.rustnationuk.com/>
+- EuroRust, another big conference in Brussels (Belgium, EU): <https://eurorust.eu/>
+- RustFest, used to be a big global event, but no recent edition has taken place: <https://rustfest.world/>
 
 Podcasts:
 
