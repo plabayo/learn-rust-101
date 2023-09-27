@@ -12,7 +12,7 @@ As it is more advanced knowledge it can however be seen as "Extra", so in case y
 > you might want to check out Loom, as it will help you test that code better then possible with regular tests:
 > <https://docs.rs/loom/latest/loom/>.
 
-### Rust Atomics and Locs: Questions
+### Rust Atomics and Locks: Questions
 
 Questions you should be able to answer at the end of this extra step:
 
