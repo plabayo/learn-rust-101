@@ -8,8 +8,8 @@ Becoming proficient in Rust requires the fulfillment of three pillars:
 
 - Pillar I: Learn Rust and get your foundations right
   - [Learn Rust](/guide/learn-rust/index.html)
-  - [Learn More Rust](/guide/learn-more-rust.md)
-  - [Learn Async Rust](/guide/learn-async-rus.mdt)
+  - [Learn More Rust](/guide/learn-more-rust/index.html)
+  - [Learn Async Rust](/guide/learn-async-rust/index.html)
   - [Study using the "Rust for Rustaceans: Idiomatic Programming for Experienced Developers" book](/guide/study-using-the-rust-for-rustaceans-idiomatic-programming-for-experienced-developers-book.md)
 - Pillar II: Develop with Rust (Practical Experience)
   - [Study using the "Zero to Production in Rust" book](/guide/study-using-the-zero-to-production-in-rust-book.md)
