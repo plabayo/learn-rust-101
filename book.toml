@@ -1,0 +1,11 @@
+[book]
+authors = ["Glen Henri J. De Cauwsemaecker <glen@plabayo.tech>"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Rust 101"
+
+[output.html]
+git-repository-url = "https://github.com/plabayo/learn-rust-101"
+git-repository-icon = "fa-github"
+cname = "rust-lang.guide"
