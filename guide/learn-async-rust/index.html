@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Learn Async Rust - Rust 101</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../intro/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../../intro/prologue.html"><strong aria-hidden="true">2.</strong> Prologue</a></li><li class="chapter-item expanded "><a href="../../intro/learning-rust.html"><strong aria-hidden="true">3.</strong> Learning Rust</a></li><li class="chapter-item expanded "><a href="../../intro/about.html"><strong aria-hidden="true">4.</strong> About</a></li><li class="chapter-item expanded affix "><li class="part-title">Learning Guide</li><li class="chapter-item expanded "><a href="../../guide/learn-rust/index.html"><strong aria-hidden="true">5.</strong> Learn Rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../guide/learn-rust/questions.html"><strong aria-hidden="true">5.1.</strong> Learn Rust: Questions</a></li></ol></li><li class="chapter-item expanded "><a href="../../guide/learn-more-rust/index.html"><strong aria-hidden="true">6.</strong> Learn More Rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../guide/learn-more-rust/questions.html"><strong aria-hidden="true">6.1.</strong> Learn More Rust: Questions</a></li><li class="chapter-item expanded "><a href="../../guide/learn-more-rust/extra.html"><strong aria-hidden="true">6.2.</strong> Learn More Rust: Extra</a></li></ol></li><li class="chapter-item expanded "><a href="../../guide/learn-async-rust/index.html" class="active"><strong aria-hidden="true">7.</strong> Learn Async Rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../guide/learn-async-rust/questions.html"><strong aria-hidden="true">7.1.</strong> Learn Async Rust: Questions</a></li><li class="chapter-item expanded "><a href="../../guide/learn-async-rust/rust-atomics-and-locs.html"><strong aria-hidden="true">7.2.</strong> Rust Atomics and Locs</a></li><li class="chapter-item expanded "><a href="../../guide/learn-async-rust/threading.html"><strong aria-hidden="true">7.3.</strong> Threading</a></li><li class="chapter-item expanded "><a href="../../guide/learn-async-rust/tower.html"><strong aria-hidden="true">7.4.</strong> Tower</a></li></ol></li><li class="chapter-item expanded "><a href="../../guide/a-note-about-the-remaining-part-of-this-guide.html"><strong aria-hidden="true">8.</strong> A note about the remaining steps of this guide</a></li><li class="chapter-item expanded "><a href="../../guide/study-using-the-zero-to-production-in-rust-book.html"><strong aria-hidden="true">9.</strong> Study using the "Zero to Production in Rust" book</a></li><li class="chapter-item expanded "><a href="../../guide/contribute-for-the-first-time-to-an-existing-project.html"><strong aria-hidden="true">10.</strong> Contribute for the first time to an existing project</a></li><li class="chapter-item expanded "><a href="../../guide/study-using-the-rust-for-rustaceans-idiomatic-programming-for-experienced-developers-book.html"><strong aria-hidden="true">11.</strong> Study using the "Rust for Rustaceans: Idiomatic Programming for Experienced Developers" book</a></li><li class="chapter-item expanded "><a href="../../guide/contribute-an-advanced-feature-to-an-existing-project-or-start-a-project-from-scratch.html"><strong aria-hidden="true">12.</strong> Contribute an advanced feature to an existing project or start a project from scratch</a></li><li class="chapter-item expanded "><a href="../../guide/next-steps.html"><strong aria-hidden="true">13.</strong> Next Steps</a></li><li class="chapter-item expanded affix "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="../../appendix/appendix-i-install-rust.html"><strong aria-hidden="true">14.</strong> Appendix I. Install Rust</a></li><li class="chapter-item expanded "><a href="../../appendix/appendix-ii-webassembly-wasm.html"><strong aria-hidden="true">15.</strong> Appendix II. WebAssembly (WASM)</a></li><li class="chapter-item expanded "><a href="../../appendix/appendix-iii-native-apps.html"><strong aria-hidden="true">16.</strong> Appendix III. Native Apps</a></li><li class="chapter-item expanded "><a href="../../appendix/appendix-iv-rust-in-the-background.html"><strong aria-hidden="true">17.</strong> Appendix IV. Rust in the background</a></li><li class="chapter-item expanded "><a href="../../appendix/appendix-v-python--javascript-developers.html"><strong aria-hidden="true">18.</strong> Appendix V. Python / Javascript developers</a></li><li class="chapter-item expanded "><a href="../../appendix/appendix-vi-more-material.html"><strong aria-hidden="true">19.</strong> Appendix VI. More Material</a></li><li class="chapter-item expanded "><a href="../../appendix/appendix-vii-community-chat.html"><strong aria-hidden="true">20.</strong> Appendix VII. Community Chat</a></li><li class="chapter-item expanded "><a href="../../appendix/appendix-viii-debugging-rust.html"><strong aria-hidden="true">21.</strong> Appendix VIII. Debugging Rust</a></li><li class="chapter-item expanded "><a href="../../appendix/appendix-ix-shipping-rust.html"><strong aria-hidden="true">22.</strong> Appendix IX. Shipping Rust</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Rust 101</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/plabayo/learn-rust-101" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="learn-async-rust"><a class="header" href="#learn-async-rust">Learn Async Rust</a></h2>
+<p>There is no standard / official Asynchronous runtime. This in contrast to actual CPU threads <a href="https://doc.rust-lang.org/std/thread/fn.spawn.html">which you can create from within the std library</a>.</p>
+<p>The most popular and recommended by many Async Runtime is <a href="https://tokio.rs/">the Tokio runtime</a>. Which brings us to the next chapter:</p>
+<ul>
+<li>To start with your Async Learning Journey you might want to start with: <a href="https://rust-lang.github.io/async-book/">Getting Started - Asynchronous Programming in Rust</a>;</li>
+<li>Afterwards you can finally start going through the Tokio <a href="https://tokio.rs/tokio/tutorial">learning journey Tutorial</a> </li>
+</ul>
+<p>Please also join the Tokio Discord community as part of your async Journey, a place where you can ask any questions you want as well: <a href="https://discord.com/invite/tokio">https://discord.com/invite/tokio</a>. This server also has individual channels for the different projects in the Tokio ecosystem such as Hyper, Axum, Tower and more. The maintainers of the different projects are also very active in the server and are happy to help you out, but of course please do not take this for granted. Be respectful and if possible contribute back to the community as well.</p>
+<p>The following article is a very nice introduction to Rust async: <a href="https://ibraheem.ca/posts/too-many-web-servers/">https://ibraheem.ca/posts/too-many-web-servers/</a>.</p>
+<p>Extra Learning Resources:</p>
+<ul>
+<li><a href="https://cfsamsonbooks.gitbook.io/explaining-atomics-in-rust/">https://cfsamsonbooks.gitbook.io/explaining-atomics-in-rust/</a>;</li>
+<li><a href="https://bitbashing.io/async-rust.html">https://bitbashing.io/async-rust.html</a>: great article to make you think about why Async rust might feel so wrong.
+<ul>
+<li>A big problem is that most people use Tokio in multithreade mode which puts extra restrictions (Send + 'Static),
+which makes Async feel extra difficult.</li>
+<li>It's also important that people, next to having experience with Tokio and getting a good understanding of Async rust and all it entails,
+to also discover, play and use other async runtimes.
+<ul>
+<li><a href="https://github.com/smol-rs/smol">https://github.com/smol-rs/smol</a> is a great alternative Async runtime that you might want to try out;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Learn more about Async Rust and what the current situation is/was in 2023: <a href="https://corrode.dev/blog/async/">https://corrode.dev/blog/async/</a></li>
+</ul>
+<p>As an extra, and perhaps slighty sidetracked, you may also want to read and develop alongside the following articles:</p>
+<ul>
+<li><a href="https://fasterthanli.me/articles/the-http-crash-course-nobody-asked-for">The HTTP crash course nobody asked for</a></li>
+<li><a href="https://fasterthanli.me/articles/understanding-rust-futures-by-going-way-too-deep">Understanding Rust futures by going way too deep</a></li>
+<li>To get to get a deeper understanding about the concepts of pinning and the like you might find the following articles helpful:
+<ul>
+<li><a href="https://archive.is/pHfCn">Put a pin on That</a>
+<ul>
+<li>This article refers also to <a href="https://archive.is/LH91o">Pin, Unpin and why Rust neeeds them</a></li>
+<li>as well as <a href="https://archive.is/32RlT">Pin and Suffering</a></li>
+</ul>
+</li>
+<li>All of the above are great articles to get you quickly up to speeds with the concept, and helpful as a repeater or because you hvae no desire or time to read some of the books that talk about this topic and that I recommend in other parts of this guide;</li>
+</ul>
+</li>
+</ul>
+<p>In order to help you understand how Async code works (e.g. what about the Async keyword and How do futures really work. And how do you define traits with futures. And How do you implement them), you might want to read through the articles linked in the <a href="#tower">Tower</a> section, as seeing how to implement your own <em>Tower</em> middleware might answer many of such questions. Gaining a deeper theoretical but still pragmatic enough understanding behind it is probably better done by reading some of the books listed in this guide.</p>
+<blockquote>
+<p>ⓘ Note: Tokio also provides support to <a href="https://unixism.net/loti/">the new Linux kernel io_uring concept</a>, a new powerful way to allow async programming on Linux. Support for it can be found at: <a href="https://github.com/tokio-rs/tokio-uring">GitHub - tokio-rs/tokio-uring: An io_uring backed runtime for Rust</a></p>
+<p>Synacktiv made an IO network scanner using io_uring as can be seen at <a href="https://github.com/synacktiv/io_uring_scanner">GitHub - synacktiv/io_uring_scanner: io_uring based network scanner written in Rust</a>, using tokio's low level userspace bindings to io_uring.</p>
+</blockquote>
+<p>To get a better idea about how futures work and the executor which polls them, you might want to read this article: <a href="https://bertptrs.nl/2023/04/27/how-does-async-rust-work.html">https://bertptrs.nl/2023/04/27/how-does-async-rust-work.html</a>.</p>
+<p>The blog series as found at <a href="https://hegdenu.net/posts/understanding-async-await-1/">https://hegdenu.net/posts/understanding-async-await-1/</a> can be another great reference to help you understand the entire <code>async/await</code> part of Rust:</p>
+<ul>
+<li><a href="https://hegdenu.net/posts/understanding-async-await-1/">part 1: why doesn’t my task do anything if I don’t await it?</a></li>
+<li><a href="https://hegdenu.net/posts/understanding-async-await-2/">part 2: how does a pending future get woken?</a></li>
+<li><a href="https://hegdenu.net/posts/understanding-async-await-3/">part 3: why shouldn’t I hold a mutex guard across an await point?</a></li>
+<li><a href="https://hegdenu.net/posts/understanding-async-await-4/#why-would-i-ever-want-to-write-a-future-manually">part 4: why would I ever want to write a future manually?</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../guide/learn-more-rust/extra.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../guide/learn-async-rust/questions.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../guide/learn-more-rust/extra.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../guide/learn-async-rust/questions.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

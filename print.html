@@ -1,0 +1,989 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Rust 101</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="intro/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="intro/prologue.html"><strong aria-hidden="true">2.</strong> Prologue</a></li><li class="chapter-item expanded "><a href="intro/learning-rust.html"><strong aria-hidden="true">3.</strong> Learning Rust</a></li><li class="chapter-item expanded "><a href="intro/about.html"><strong aria-hidden="true">4.</strong> About</a></li><li class="chapter-item expanded affix "><li class="part-title">Learning Guide</li><li class="chapter-item expanded "><a href="guide/learn-rust/index.html"><strong aria-hidden="true">5.</strong> Learn Rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="guide/learn-rust/questions.html"><strong aria-hidden="true">5.1.</strong> Learn Rust: Questions</a></li></ol></li><li class="chapter-item expanded "><a href="guide/learn-more-rust/index.html"><strong aria-hidden="true">6.</strong> Learn More Rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="guide/learn-more-rust/questions.html"><strong aria-hidden="true">6.1.</strong> Learn More Rust: Questions</a></li><li class="chapter-item expanded "><a href="guide/learn-more-rust/extra.html"><strong aria-hidden="true">6.2.</strong> Learn More Rust: Extra</a></li></ol></li><li class="chapter-item expanded "><a href="guide/learn-async-rust/index.html"><strong aria-hidden="true">7.</strong> Learn Async Rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="guide/learn-async-rust/questions.html"><strong aria-hidden="true">7.1.</strong> Learn Async Rust: Questions</a></li><li class="chapter-item expanded "><a href="guide/learn-async-rust/rust-atomics-and-locs.html"><strong aria-hidden="true">7.2.</strong> Rust Atomics and Locs</a></li><li class="chapter-item expanded "><a href="guide/learn-async-rust/threading.html"><strong aria-hidden="true">7.3.</strong> Threading</a></li><li class="chapter-item expanded "><a href="guide/learn-async-rust/tower.html"><strong aria-hidden="true">7.4.</strong> Tower</a></li></ol></li><li class="chapter-item expanded "><a href="guide/a-note-about-the-remaining-part-of-this-guide.html"><strong aria-hidden="true">8.</strong> A note about the remaining steps of this guide</a></li><li class="chapter-item expanded "><a href="guide/study-using-the-zero-to-production-in-rust-book.html"><strong aria-hidden="true">9.</strong> Study using the "Zero to Production in Rust" book</a></li><li class="chapter-item expanded "><a href="guide/contribute-for-the-first-time-to-an-existing-project.html"><strong aria-hidden="true">10.</strong> Contribute for the first time to an existing project</a></li><li class="chapter-item expanded "><a href="guide/study-using-the-rust-for-rustaceans-idiomatic-programming-for-experienced-developers-book.html"><strong aria-hidden="true">11.</strong> Study using the "Rust for Rustaceans: Idiomatic Programming for Experienced Developers" book</a></li><li class="chapter-item expanded "><a href="guide/contribute-an-advanced-feature-to-an-existing-project-or-start-a-project-from-scratch.html"><strong aria-hidden="true">12.</strong> Contribute an advanced feature to an existing project or start a project from scratch</a></li><li class="chapter-item expanded "><a href="guide/next-steps.html"><strong aria-hidden="true">13.</strong> Next Steps</a></li><li class="chapter-item expanded affix "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="appendix/appendix-i-install-rust.html"><strong aria-hidden="true">14.</strong> Appendix I. Install Rust</a></li><li class="chapter-item expanded "><a href="appendix/appendix-ii-webassembly-wasm.html"><strong aria-hidden="true">15.</strong> Appendix II. WebAssembly (WASM)</a></li><li class="chapter-item expanded "><a href="appendix/appendix-iii-native-apps.html"><strong aria-hidden="true">16.</strong> Appendix III. Native Apps</a></li><li class="chapter-item expanded "><a href="appendix/appendix-iv-rust-in-the-background.html"><strong aria-hidden="true">17.</strong> Appendix IV. Rust in the background</a></li><li class="chapter-item expanded "><a href="appendix/appendix-v-python--javascript-developers.html"><strong aria-hidden="true">18.</strong> Appendix V. Python / Javascript developers</a></li><li class="chapter-item expanded "><a href="appendix/appendix-vi-more-material.html"><strong aria-hidden="true">19.</strong> Appendix VI. More Material</a></li><li class="chapter-item expanded "><a href="appendix/appendix-vii-community-chat.html"><strong aria-hidden="true">20.</strong> Appendix VII. Community Chat</a></li><li class="chapter-item expanded "><a href="appendix/appendix-viii-debugging-rust.html"><strong aria-hidden="true">21.</strong> Appendix VIII. Debugging Rust</a></li><li class="chapter-item expanded "><a href="appendix/appendix-ix-shipping-rust.html"><strong aria-hidden="true">22.</strong> Appendix IX. Shipping Rust</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Rust 101</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/plabayo/learn-rust-101" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><a href="https://rust-lang.guide"><img src="intro/banner.png" alt="Repository Banner Image" /></a></p>
+<p><a href="https://github.com/plabayo/learn-rust-101"><img src="https://img.shields.io/github/stars/plabayo/learn-rust-101?style=social" alt="GitHub Repo stars" /></a> <a href="https://github.com/plabayo/learn-rust-101/blob/main/LICENSE"><img src="https://img.shields.io/github/license/plabayo/learn-rust-101" alt="GitHub" /></a> <a href="mailto:glen@plabayo.tech"><img src="https://img.shields.io/badge/Glen-available%20to%20hire%20as%20consultant-green" alt="available to hire" /></a></p>
+<p><a href="https://github.com/sponsors/plabayo"><img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&amp;logo=GitHub-Sponsors&amp;logoColor=#EA4AAA" alt="Github Sponsors Badge" /></a> <a href="https://www.buymeacoffee.com/plabayo"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&amp;logo=buy-me-a-coffee&amp;logoColor=black" alt="Buy Me A Coffee Badge" /></a></p>
+<blockquote>
+<p>ⓘ A guide to aid you in your journey of becoming a Rustacean (Rust developer). See the <a href="https://github.com/plabayo/learn-rust-101/blob/main/CONTRIBUTING.md">Contributing</a> and <a href="https://github.com/plabayo/learn-rust-101/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a> for more information about how to contribute to this repository.</p>
+</blockquote>
+<h2 id="disclaimer"><a class="header" href="#disclaimer">Disclaimer</a></h2>
+<p>This guide is made by <a href="https://www.glendc.com/">Glen De Cauwsemaecker</a> and is in no way endorsed nor affiliated with the Rust foundation. Rust &amp; Cargo are registered trademarks of the Rust foundation.</p>
+<h2 id="sharing-is-caring"><a class="header" href="#sharing-is-caring">Sharing is caring</a></h2>
+<p>This guide is free and will remain gratis available to share for all who are interested or until the overlords at GitHub pull it down.</p>
+<p>🗞 This guide was featured <a href="https://news.ycombinator.com/item?id=35489029">on the front page of HackerNews on the 8th of April 2023</a> and in <a href="https://this-week-in-rust.org/blog/2023/04/12/this-week-in-rust-490/">the weekly edition of the Rust newsletter on the 12th of April 2023</a>.</p>
+<h2 id="sponsors"><a class="header" href="#sponsors">Sponsors</a></h2>
+<p>Support this project by becoming a <a href="https://github.com/sponsors/plabayo">sponsor</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="prologue"><a class="header" href="#prologue">Prologue</a></h2>
+<p><a href="https://www.rust-lang.org/">Rust</a> is a modern systems programming language with safety in mind as one of its core goals and strengths. Systems programming is programming within a resource constrained environment. However, as a lot of our services run now in paid-for-usage cloud environments, we can also consider them as resource constrained environments. This is why Rust is a great fit for more use cases than people might realize.</p>
+<p>As it is a modern language and has taken the lessons from many other languages before it, it is also surprisingly pleasant to use once you get the hang of it. Its type system also allows expressive code that can help you exclude a great categories of bugs beyond the benefits that static typing can bring.</p>
+<p>The goal of this guide is to introduce Rust to you as an individual or an entire organization. Should this not be sufficient you can also contact me for 1-on-1 coaching or workshops for your organization, by emailing me at <a href="mailto:glen@plabayo.tech">glen@plabayo.tech</a>. More information on Glen can be found at <a href="https://glendc.com/">https://glendc.com/</a>.</p>
+<p>This guide is fully open source and the complete source code can be found at <a href="https://github.com/plabayo/learn-rust-101">https://github.com/plabayo/learn-rust-101</a>. If you find any errors or have any suggestions, please open an issue or a pull request. If you want to contribute to this guide, please read the <a href="https://github.com/plabayo/learn-rust-101/blob/main/CONTRIBUTING.md">Contributing Guidelines</a>. This guide is licensed under the <a href="https://github.com/plabayo/learn-rust-101/blob/main/LICENSE">MIT License</a> and developed with love by <a href="https://plabayo.tech/">Plabayo</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="rust-101-course"><a class="header" href="#rust-101-course">Rust 101 Course</a></h2>
+<p>The origins of this guide can be found in the preparation of a semester long course I gave to a group of employees at <a href="https://www.otainsight.com/">OTA Insight Ltd.</a>. The recordings of this course are available on YouTube at: <a href="https://www.youtube.com/playlist?list=PLQgXEsLXFxpVyLddG8FFXfNQEiodTzAjj">https://www.youtube.com/playlist?list=PLQgXEsLXFxpVyLddG8FFXfNQEiodTzAjj</a>. The videos are however not of the highest quality, especially given the many better resources out there.</p>
+<h2 id="learning-rust"><a class="header" href="#learning-rust">Learning Rust</a></h2>
+<p>Becoming proficient in Rust requires the fulfillment of three pillars:</p>
+<ul>
+<li>Pillar I: Learn Rust and get your foundations right
+<ul>
+<li><a href="intro//guide/learn-rust/index.html">Learn Rust</a></li>
+<li><a href="intro//guide/learn-more-rust.html">Learn More Rust</a></li>
+<li><a href="intro//guide/learn-async-rus.html">Learn Async Rust</a></li>
+<li><a href="intro//guide/study-using-the-rust-for-rustaceans-idiomatic-programming-for-experienced-developers-book.html">Study using the &quot;Rust for Rustaceans: Idiomatic Programming for Experienced Developers&quot; book</a></li>
+</ul>
+</li>
+<li>Pillar II: Develop with Rust (Practical Experience)
+<ul>
+<li><a href="intro//guide/study-using-the-zero-to-production-in-rust-book.html">Study using the &quot;Zero to Production in Rust&quot; book</a></li>
+<li><a href="intro//guide/contribute-for-the-first-time-to-an-existing-project.html">Contribute for the first time to an existing project</a></li>
+<li><a href="intro//guide/contribute-an-advanced-feature-to-an-existing-project-or-start-a-project-from-scratch.html">Contribute an advanced feature to an existing project or start a project from scratch</a></li>
+</ul>
+</li>
+<li>Pillar III: Be part of the Rust Ecosystem:
+<ul>
+<li><a href="intro//guide/next-steps.html">Next Steps</a></li>
+</ul>
+</li>
+</ul>
+<p>What steps of each pillar you do is not of too much problem, do whatever feels best for you.
+You can of course complete all steps, and do them in the order as given, but most likely
+you probably want to use this learning guide more as a reference and for inspiration,
+rather then to follow it word by word.</p>
+<p>The above paths are just a suggestion and also should make clear that there are many ways and approaches to using this guide.
+Most important is that you do enjoy the journey and that you learn consistently (e.g. ~ X hours per week). How you'll walk the path and how often you revisit things will depend on your learning style and capabilities. There are however no wrong ways to go. E.g. maybe you want to dive into some code yourself as soon as possible and only then will start covering foundations. Or perhaps you first wanna feel very comfortable to only then start really coding yourself once you think you understand the foundations well. All up to you really.</p>
+<p>Only thing I would really want to hammer on is to do a lot of coding yourself. The best way to learn is to do. So don't be afraid to make mistakes and to try things out. You'll learn a lot more that way. It will be a very confronting journey but it will be worth it. If all you do is read and read you'll never really get a feel for the language and you'll never really get a feel for what you can do with it. So please, do a lot of coding yourself. Plus at times we can trick our brain into thinking we understand something when we don't.</p>
+<p>Also even if you start to reach advanced topics (e.g. Rust for Rustaceans), it is still very important to keep doing the basics. You'll be surprised how quickly you can forget things. So keep doing the basics and keep doing the advanced topics. It is a never ending journey.</p>
+<p>You'll notice when reading this guide that there are often alternatives mentioned or several layers of difficulty. With this in mind it might very well be your choice to go through a section shallow to start, going through the basic/foundational material, to then come back to it after having gone through other sections already with more experience under your belt. At this point you might have more confidence to get to the more advanced material of the section or have gained the background or mindset to understand that content and get more out of it. The spatial repetition as a result is on top of this all an excellent way to slowly but surely mold your grey mass into the desired shape.</p>
+<p>In case you are not planning to work on a project anytime soon that requires Async programming. Feel free to skip <a href="intro//guide/learn-async-rust.html">that section</a> for the time being should it be the case. For now just know that official Async support in Rust exists and that it has an important place within the Rust ecosystem. You can always come (back) to it at a future point when you do decide or realize that strong foundations in this section can help out.</p>
+<p>If you ever feel stuck, or want a guide, teacher or mentor. Feel free to reach out to Glen at <a href="mailto:glen@plabayo.tech">glen@plabayo.tech</a> to book a 1-on-1 session or a workshop for your organization. It can be a one time thing or we can meet regularly to help you along the way.</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="about"><a class="header" href="#about">About</a></h2>
+<p><a href="https://www.glendc.com/">Glen De Cauwsemaecker</a> created this Educational track to help you get started with <a href="https://www.rust-lang.org/">Rust</a> from an absolute beginner all the way until you're an expert in it. He is open to mentor people, lead workshops and more. If you're a team lead that wants to introduce Rust to their team, feel free to talk to him. Glen started with Rust around 2015, when Rust was still unstable and fast moving. Coming from a C++ background in a system programming job the benefits were immediately clear to him. In the meanwhile things have changed a lot and many companies have been starting to adopt Rust in their toolset:</p>
+<ul>
+<li>Amazon Web Services (AWS) has used Rust since 2017 for its serverless computing offerings, AWS Lambda and AWS Fargate. With that, Rust has gained further inroads. The company has written the Bottlerocket OS and the AWS Nitro System to deliver its Elastic Compute Cloud (EC2) service.</li>
+<li>Cloudflare develops many of its services, including its public DNS, serverless computing, and packet inspection offerings with Rust.</li>
+<li>Dropbox rebuilt its backend warehouse, which manages exabytes of storage, with Rust.</li>
+<li>Google develops parts of Android, such as its Bluetooth module, with Rust. Rust is also used for the crosvm component of Chrome OS and plays an important role in Google's new operating system, Fuchsia.</li>
+<li>Facebook uses Rust to power Facebook's web, mobile, and API services, as well as parts of HHVM, the HipHop virtual machine used by the Hack programming language.</li>
+<li>Microsoft writes components of its Azure platform including a security daemon for its Internet of Things (IoT) service in Rust.</li>
+<li>Mozilla uses Rust to enhance the Firefox web browser, which contains 15 million lines of code. Mozilla's first two Rust-in-Firefox projects, its MP4 metadata parser and text encoder/decoder, led to overall performance and stability improvements.</li>
+<li>GitHub's npm, Inc., uses Rust to deliver &quot;upwards of 1.3 billion package downloads per day.&quot;</li>
+<li>Oracle developed a container runtime with Rust to overcome problems with the Go reference implementation.</li>
+<li>Samsung, via its subsidiary SmartThings, uses Rust in its Hub, which is the firmware backend for its Internet of Things (IoT) service.</li>
+<li><a href="https://foundation.rust-lang.org/news/rust-identified-as-safer-coding-tool-by-nist/">The U.S. Department of Commerce's National Institute of Standards and Technology (NIST) has added Rust to its list of &quot;Safer Languages&quot; as part of its Software Assurance Metrics and Tool Evaluation (SAMATE)</a>.</li>
+</ul>
+<p>Google also has a nice article about Facts and Debunked Myths about Rust which you can find at <a href="https://opensource.googleblog.com/2023/06/rust-fact-vs-fiction-5-insights-from-googles-rust-journey-2022.html">https://opensource.googleblog.com/2023/06/rust-fact-vs-fiction-5-insights-from-googles-rust-journey-2022.html</a> (2022).</p>
+<p>The language and its ecosystem have also very matured. Concepts like Async have also landed and Async runtimes such as Tokio have become stable and can be used without fear. While it was harder to convince companies to jump on the Rust wagon in the past, by now it should be a lot easier to sell. Is it one language to replace them all? Of course not, but neither should it be overlooked. Are you not sure how Rust might benefit your team for one thing or another? Contact <a href="https://www.glendc.com/">Glen</a> and figure it out together.</p>
+<p>If you are a bit of a history nerd you might also enjoy:</p>
+<ul>
+<li>this article: <a href="https://www.technologyreview.com/2023/02/14/1067869/rust-worlds-fastest-growing-programming-language/">How Rust went from a side project to the world's most-loved programming language</a></li>
+<li>or this podcast: <a href="https://rustacean-station.org/episode/042-ben-striegel/">History of Rust with Ben Striegel — Rustacean Station</a></li>
+</ul>
+<p>There's a <a href="intro//appendix/appendix-vi-more-material.html">last section on the end of the Rust learning content</a>.
+This one contains useful references and sources that you can check as part of your
+continuous journey as a capable Rust developer.</p>
+<p>In case you are a Python or Javascript developer you might find the <a href="intro//appendix/appendix-v-python--javascript-developers.html">Appendix V. Python / Javascript developers</a> section useful.</p>
+<p>Not convinced yet? Read here what others have to say about Rust: <a href="https://brson.github.io/fireflowers/">https://brson.github.io/fireflowers/</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="learn-rust"><a class="header" href="#learn-rust">Learn Rust</a></h2>
+<p>In case you're new to the language we suggest you to take a look at <a href="https://www.rust-lang.org/learn">Learn Rust</a>  (free):</p>
+<ul>
+<li><a href="https://doc.rust-lang.org/book/">The Rust Programming Language - The Rust Programming Language</a> gives you a very nice overview;
+<ul>
+<li>There are plenty of exercises in the book and at the end of your learning journey you'll get to <a href="https://doc.rust-lang.org/book/ch20-00-final-project-a-web-server.html">build your own multi-threaded web server</a>!</li>
+</ul>
+</li>
+<li><a href="https://github.com/rust-lang/rustlings">GitHub - rust-lang/rustlings</a>: Small exercises to get you used to reading and writing Rust code! is an alternative more pragmatic approach on learning the language;</li>
+<li><a href="https://doc.rust-lang.org/stable/rust-by-example/">Introduction - Rust By Example</a> is there for people who like learning from real-world examples;</li>
+<li><a href="https://learn.microsoft.com/en-us/training/paths/rust-first-steps/">https://learn.microsoft.com/en-us/training/paths/rust-first-steps/</a> is yet another alternative, this time offered by Microsoft,
+which seems very similar to the rust book, but more pragmatic tones and you can earn XP!</li>
+</ul>
+<p>Sooner or later you might also need help for a project you work on or simply to learn a concept you do not really understand. Not everybody has a senior or friend around that can help them out with this. For all of this and more you want to probably join one or multiple of the community chat servers listed in <a href="guide/learn-rust//appendix/appendix-vii-community-chat.html">Appendix VII. Community Chat</a>.</p>
+<blockquote>
+<p>ⓘ <strong>Hardcore</strong> alternative</p>
+<p><a href="https://www.oreilly.com/library/view/programming-rust-2nd/9781492052586/">Programming Rust, 2nd Edition</a> (O'Reilly Publishing) is a big book and will take you some time to get through. It is not for the faint of heart. However… If you do choose for this route as an alternative to <a href="guide/learn-rust//guide/learn-rust/index.html">(1) Learn Rust</a>, you will absolutely not regret it. In fact, your entire rest of the Journey will be a breeze.</p>
+<p>The &quot;Programming Rust, 2nd Edition&quot; book is a gem and in case you can handle big dry Technical books such as these it is one that will give you just as much love back as the energy that you put into it. Take your time, get through it, play with it, and enjoy. In fact, it can be easily paired with Rustlings by doing the exercises linked to the content you're reading. Rust by Example can also be added on top of that to see some more code related to the stuff you're learning.</p>
+<p>Soak it in. It's a hardcore alternative, but if you're up for it, it's there for you to grab.</p>
+<p>If you've never done any Systems programming before, this will be an especially helpful book given it will explain a lot of the magic you've encountered in your very protected professional life so far. You're welcome.</p>
+</blockquote>
+<h3 id="alternative-or-companion-resources"><a class="header" href="#alternative-or-companion-resources">Alternative or Companion resources</a></h3>
+<p><a href="https://google.github.io/comprehensive-rust/">Welcome to Comprehensive Rust 🦀 - Comprehensive Rust 🦀</a>: a small bootcamp course by Google focused on Android Engineers. Most of it is however applicable to anyone coming to Rust from another language and could be a great alternative or companion for some of the resources above.</p>
+<p><a href="https://www.lurklurk.org/effective-rust/">The &quot;Effective Rust&quot; book</a> is an excellent book that might just as well be official Rust material, and
+recommended for all Rust learners. So once you think you understand the content of &quot;the Rust book&quot; and the like, you probably want to start reading &quot;Effective Rust&quot;, you won't regret it.</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="learn-rust-questions"><a class="header" href="#learn-rust-questions">Learn Rust: Questions</a></h2>
+<p>Questions you should be able to answer at the end of this step:</p>
+<ol>
+<li>Rust is a Memory-Safe language. How? Why? In what way is this different from other Memory Safe languages such as Go?</li>
+<li>Rust is a performant language. Why can it claim this. How?</li>
+<li>How do you structure data in Rust?</li>
+<li>Is data passed by Reference or value in Rust? And what does it mean?</li>
+<li>Is data mutable or immutable by default? How do we make it the other way?</li>
+<li>What are traits and how are these related to the data models that you structure in Rust?</li>
+<li>How can you extend the behavior of external types?</li>
+<li>Can you extend behavior of external types using external traits? Why or why not?</li>
+<li>What is a constant? Where can we define these?</li>
+<li>What is a static variable? How is it different from a constant? What's special about mutable variables?</li>
+<li>How does Rust support Async Rust? How do you use it? What are Futures?</li>
+<li>How do you achieve parallel programming in Rust?</li>
+<li>What's the difference between async programming and parallel programming? How are they related?</li>
+<li>What is the borrow checker? What is ownership? How are these concepts related?</li>
+<li>Data can be moved and it can also be dropped. What do we mean with this? How do we have control over this?</li>
+<li>How do we achieve shared mutable references to the same data? How can this be done safe?</li>
+<li>What are lifetimes? How do they work? Can you give some examples of where these are used?</li>
+<li>What are generics? Why do we use them? </li>
+<li>What are Rust Macros? When do we use these? What type of Macros are there?</li>
+<li>How do you build Rust projects?</li>
+<li>How do we use dependencies of other developers into our projects? And how do we call such dependencies?</li>
+<li>What are sum types? What are product types?</li>
+<li>What is an Enum in Rust and how can we use it? How can we define it?</li>
+<li>What is pattern matching in Rust? How do we do it? How is it more powerful than a switch?</li>
+<li>How do we write tests in Rust? What kind of tests are there?</li>
+<li>What are closures and how are they related to functions? What do they have in common? How do they differ?</li>
+<li>What kind of smart pointers does the Rust std library provide you? What are their use cases, differences, and so on?</li>
+<li>What is unsafe Rust? How do we use it? When do we use it? What guarantees do we still get, even when using unsafe Rust?</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="learn-more-rust"><a class="header" href="#learn-more-rust">Learn more Rust</a></h2>
+<ul>
+<li><a href="https://doc.rust-lang.org/cargo/index.html">Introduction - The Cargo Book</a>: Cargo is the Rust package manager. Cargo downloads your Rust package's dependencies, compiles your packages, makes distributable packages, and uploads them to crates.io: <a href="http://crates.io/">Rust Package Registry</a>, the Rust community's package registry;</li>
+<li><a href="https://rust-cli.github.io/book/index.html">Getting started - Command Line Applications in Rust</a>: Gives you another practical approach in your Rust Learning, by specifically learning how to write CLI applications in it;</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="learn-more-rust-questions"><a class="header" href="#learn-more-rust-questions">Learn More Rust: Questions</a></h2>
+<p>Questions you should be able to answer at the end of this step:</p>
+<ol>
+<li>Make sure to be able to answer all questions of step (1).</li>
+<li>What is cargo and why does it exist?</li>
+<li>What kind of extensions exist for Cargo, how do we install them, how do we use them and what are some commonly used ones?</li>
+<li>What is the Cargo.toml file?</li>
+<li>What is the Cargo.lock file?</li>
+<li>What are build scripts? Why do we use these? How do we use these?</li>
+<li>How can we build code? How do we test code?</li>
+<li>How can we check code without building the final binaries?</li>
+<li>How do we make a simple CLI application? How do we pass arguments and flags? How do we handle signals?</li>
+<li>How can we structure our code and package(s)?</li>
+<li>What does public and private mean in the context of Rust? At what scope do these operate?</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="learn-more-rust-extra"><a class="header" href="#learn-more-rust-extra">Learn More Rust: Extra</a></h2>
+<p>Once you went through the resources in the previous two chapters you might want to start working on a real project to start applying and solidifying your knowledge. A classic way to do this is by porting a small specialized codebase from one language to Rust, keeping in mind to not 1-to-1 map the lines of code but to instead focus on porting the logic with the &quot;Rust way to do things&quot; in mind.</p>
+<p>Should you want some inspiration or a more guided approach, here are some resources that could help you out with this extra optional, but recommended step:</p>
+<ul>
+<li><a href="https://www.oreilly.com/library/view/command-line-rust/9781098109424/">Command-Line Rust</a>: build a cli tool such as grep in rust, using test driven development (TDD), all to learn Rust</li>
+<li><a href="https://lborb.github.io/book/applications.html">Rust Application Books - The Little Book of Rust Books</a>: lists a lot of different books, including ones that allow you to develop small projects using Rust, usually in a well guided fashion;
+<ul>
+<li>You might find <a href="https://archive.is/acQA2">https://archive.is/acQA2</a> an interesting companion article as it gives some (common) ideas that you can apply to the CLI tool you're building;</li>
+<li><a href="https://picklenerd.github.io/pngme_book/introduction.html">Introduction - PNGme: An Intermediate Rust Project</a> is an especially fun small project. It allows you to apply the knowledge that you learned above in a very narrow program, that is for once not network related. At the end you'll have a cli tool that allows you to encode and decode &quot;hidden&quot; messages in a PNG image;</li>
+</ul>
+</li>
+<li><a href="https://tfpk.github.io/macrokata/index.html">Introduction - MacroKata</a>: Macro's are in general not very covered in the resources above, as it is not that common that you have to write your own macros. They can however be convenient in certain situations. This book can be seen as a bootstrap tutorial to get you started with one kind of Rust macros.
+<ul>
+<li>If you are interested in (also) learning procedural macros you can perhaps consult the following resources:
+<ul>
+<li><a href="https://github.com/dtolnay/proc-macro-workshop">GitHub - dtolnay/proc-macro-workshop: Learn to write Rust procedural macros [Rust Latam conference, Montevideo Uruguay, March 2019]</a></li>
+<li><a href="https://www.youtube.com/watch?v=geovSK3wMB8">Procedural Macros in Rust (part 1)</a></li>
+<li>Check out &quot;<a href="https://diesel.rs/">Diesel is a Safe, Extensible ORM and Query Builder for Rust</a>&quot; if you want to see a very cool example of macros (besides all the derives, formatting and printing you might already have been doing)</li>
+<li><a href="https://docs.rs/serde_json/latest/serde_json/macro.json.html">json in serde_json - Rust</a> is another neat example as it allows you to quickly define a Json value directly in Rust
+<ul>
+<li>Taking a couple of hours is also a life well spent reading through this codebase as it will teach you a lot of nice things about Rust, especially given how simple and scoped the problem of json serialization is. It will really show you and teach you how serde works and why it works;</li>
+</ul>
+</li>
+<li>Most web frameworks (if not all) in Rust also heavily make use of Macro's to give you a very neat and clean API</li>
+</ul>
+</li>
+<li>And of course do not forget to consult the &quot;classic&quot; macro Rust book: <a href="https://danielkeep.github.io/tlborm/book/index.html">The Little Book of Rust Macros</a></li>
+<li>If you want to get a quick intro and overview of Macros this video can help a lot as well: <a href="https://www.youtube.com/watch?v=MWRPYBoCEaY">Rust's Witchcraft</a></li>
+</ul>
+</li>
+</ul>
+<p>If you have a lot of free time at your hand and you want to build something really cool that is totally useless, here are some more ideas:</p>
+<ul>
+<li>Build your own Gameboy (classic) emulator: <a href="https://rylev.github.io/DMG-01/public/book/introduction.html">Introduction - DMG-01: How to Emulate a Game Boy</a></li>
+<li>Build your own CHIP-8 (8-bit computer) interpreter: <a href="http://devernay.free.fr/hacks/chip8/C8TECH10.HTM">Cowgod's Chip-8 Technical Reference</a> (no Rust guidance, directly from the CHIP-8 specification instead, you can do it, I believe in you)</li>
+<li>Build your own Ray Tracer (not a Rust tutorial, but can easily be implemented in Rust as well): <a href="https://raytracing.github.io/">Ray Tracing in One Weekend Series</a> (fun if you always had the dream to start dabbling into the world of Graphics Programming)
+<ul>
+<li><a href="https://www.superperfundo.dev/?tag=ray-tracer-challenge">https://www.superperfundo.dev/?tag=ray-tracer-challenge</a> might be a useful blog series if you want a more guided approach on how you might make a Ray Tracer in Rust;</li>
+<li><a href="https://archive.is/t6Ifp">https://archive.is/t6Ifp</a> is an interesting article in this area as well, where it introduces you to a language called PO;</li>
+</ul>
+</li>
+</ul>
+<p>Seriously though, do not consider the above recommended or mandatory in any way. If you however really like to develop stuff and you do like to do it extensively in your free time, then, and only then, I do believe that the above are a great way to really solidify your current Rust knowledge and give yourself a great (pragmatic) foundation.</p>
+<p>At this point you might also be ready to start reading alternative — community driven — learning resources on foundational Rust knowledge. With such content you do however always need to be careful as they might contain mistakes, not well rounded or closed opinions. An example of possible valuable learning resources are the following blog series about the Rust type system:</p>
+<ul>
+<li>part 1 (<a href="https://sanjuvi.github.io/Blog/posts/Rust-type-system-part-1/">https://sanjuvi.github.io/Blog/posts/Rust-type-system-part-1/</a>): ownership and move semantics, aliasing and mutation, lifetime and region based resource management;</li>
+<li>part 2 (<a href="https://sanjuvi.github.io/Blog/posts/Rust-Type-System-Part-2">https://sanjuvi.github.io/Blog/posts/Rust-Type-System-Part-2</a>/): type as sets, algebraic data types, patterns in Rust using Algebraic types, traits, generic associated types (GAT), operator overloading, use cases;</li>
+<li>part 3 (<a href="https://sanjuvi.github.io/Blog/posts/Rust-Type-System-Part-3">https://sanjuvi.github.io/Blog/posts/Rust-Type-System-Part-3</a>/): container types, interior mutability, concurrency, deadlocks without threads.</li>
+</ul>
+<p>More parts to come as well.</p>
+<p>For the brave among you with the time for it, learn to build your own Operating System (OS) using Rust: <a href="https://os.phil-opp.com/">https://os.phil-opp.com/</a>### Code like a pro in Rust</p>
+<p>At this point of your Rust learning journey you've come a far way already, relatively speaking. Perhaps you want to shortcut, at least for now.</p>
+<p>If so, <a href="https://www.manning.com/books/code-like-a-pro-in-rust">the still to be published &quot;Code like a pro in Rust&quot; book</a> might be enough for you to quickly get from beginner to advanced Rust programmer.</p>
+<h3 id="a-crust-of-rust"><a class="header" href="#a-crust-of-rust">A Crust of Rust</a></h3>
+<p>Once you get at this point you are around the level of a beginner or intermediate Rust programmer. At this point you could already start to tackle stuff like <a href="guide/learn-more-rust//guide/study-using-the-rust-for-rustaceans-idiomatic-programming-for-experienced-developers-book.html">&quot;Rust for Rustaceans&quot; of step (6)</a>. However it might be a bit much.</p>
+<p>Therefore while you go through the next couple of sections it could be helpful to now and then (e.g. while washing dishes or instead of Netflix) an education Rust code video. In the appendix at the bottom of this page there a couple of such suggestions.</p>
+<p>Particular to this context you might want to save <a href="https://www.youtube.com/playlist?list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa">the &quot;Crust of Rust&quot; playlist</a>. Each video will go over a specific topic, e.g. Lifetimes, macros, Atomics, … No need to watch them one by one, feel free to jump to them in whatever orders and only those that interest you (which is the same tip that I can give for the &quot;Rust for Rustaceans&quot; book).</p>
+<h3 id="api-design"><a class="header" href="#api-design">API Design</a></h3>
+<p>Designing APIs is a big part of being a Rust programmer, any programmer really. Once you start to get comfortable enough in Rust or start building your own public crate, it is a topic you'll want to invest in.</p>
+<p>A good starting point is the <a href="https://rust-lang.github.io/api-guidelines/about.html">API Guidelines</a> which are a set of guidelines that are meant to help you design good APIs. They are not meant to be followed blindly, but rather to be used as a reference to help you make the right decisions.</p>
+<p>A next and continuous step is to read blog posts and watch videos about API design. The Rust newsletter often has an article listed in its weekly edition. But other platforms such as HackerNews will have interesting Rust articles pop up as well. <a href="https://sabrinajewson.org/blog/errors">https://sabrinajewson.org/blog/errors</a> is for example a great article talking about one might to give errors as much love as the other parts of the API, and also talks about why crates like <code>thiserror</code> might not be that great. All in all, similar to other parts of your continuous Rust learning journey, you'll want to remain critical and open to new ideas and see what works for you and what not.</p>
+<p>If you are however still in the camp of <code>thiserror</code>, you might be able to make good use of blog posts such as <a href="https://determinate.systems/posts/instrumenting-axum">https://determinate.systems/posts/instrumenting-axum</a> that guide you through adding instrumentation to your Axum based web service,
+using <code>thiserror</code> among other excellent crates such as <code>tracing</code>. A great read, especially if you're not that experienced with instrumentation
+that goes beyon the basic single line logs.</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="learn-async-rust"><a class="header" href="#learn-async-rust">Learn Async Rust</a></h2>
+<p>There is no standard / official Asynchronous runtime. This in contrast to actual CPU threads <a href="https://doc.rust-lang.org/std/thread/fn.spawn.html">which you can create from within the std library</a>.</p>
+<p>The most popular and recommended by many Async Runtime is <a href="https://tokio.rs/">the Tokio runtime</a>. Which brings us to the next chapter:</p>
+<ul>
+<li>To start with your Async Learning Journey you might want to start with: <a href="https://rust-lang.github.io/async-book/">Getting Started - Asynchronous Programming in Rust</a>;</li>
+<li>Afterwards you can finally start going through the Tokio <a href="https://tokio.rs/tokio/tutorial">learning journey Tutorial</a> </li>
+</ul>
+<p>Please also join the Tokio Discord community as part of your async Journey, a place where you can ask any questions you want as well: <a href="https://discord.com/invite/tokio">https://discord.com/invite/tokio</a>. This server also has individual channels for the different projects in the Tokio ecosystem such as Hyper, Axum, Tower and more. The maintainers of the different projects are also very active in the server and are happy to help you out, but of course please do not take this for granted. Be respectful and if possible contribute back to the community as well.</p>
+<p>The following article is a very nice introduction to Rust async: <a href="https://ibraheem.ca/posts/too-many-web-servers/">https://ibraheem.ca/posts/too-many-web-servers/</a>.</p>
+<p>Extra Learning Resources:</p>
+<ul>
+<li><a href="https://cfsamsonbooks.gitbook.io/explaining-atomics-in-rust/">https://cfsamsonbooks.gitbook.io/explaining-atomics-in-rust/</a>;</li>
+<li><a href="https://bitbashing.io/async-rust.html">https://bitbashing.io/async-rust.html</a>: great article to make you think about why Async rust might feel so wrong.
+<ul>
+<li>A big problem is that most people use Tokio in multithreade mode which puts extra restrictions (Send + 'Static),
+which makes Async feel extra difficult.</li>
+<li>It's also important that people, next to having experience with Tokio and getting a good understanding of Async rust and all it entails,
+to also discover, play and use other async runtimes.
+<ul>
+<li><a href="https://github.com/smol-rs/smol">https://github.com/smol-rs/smol</a> is a great alternative Async runtime that you might want to try out;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Learn more about Async Rust and what the current situation is/was in 2023: <a href="https://corrode.dev/blog/async/">https://corrode.dev/blog/async/</a></li>
+</ul>
+<p>As an extra, and perhaps slighty sidetracked, you may also want to read and develop alongside the following articles:</p>
+<ul>
+<li><a href="https://fasterthanli.me/articles/the-http-crash-course-nobody-asked-for">The HTTP crash course nobody asked for</a></li>
+<li><a href="https://fasterthanli.me/articles/understanding-rust-futures-by-going-way-too-deep">Understanding Rust futures by going way too deep</a></li>
+<li>To get to get a deeper understanding about the concepts of pinning and the like you might find the following articles helpful:
+<ul>
+<li><a href="https://archive.is/pHfCn">Put a pin on That</a>
+<ul>
+<li>This article refers also to <a href="https://archive.is/LH91o">Pin, Unpin and why Rust neeeds them</a></li>
+<li>as well as <a href="https://archive.is/32RlT">Pin and Suffering</a></li>
+</ul>
+</li>
+<li>All of the above are great articles to get you quickly up to speeds with the concept, and helpful as a repeater or because you hvae no desire or time to read some of the books that talk about this topic and that I recommend in other parts of this guide;</li>
+</ul>
+</li>
+</ul>
+<p>In order to help you understand how Async code works (e.g. what about the Async keyword and How do futures really work. And how do you define traits with futures. And How do you implement them), you might want to read through the articles linked in the <a href="guide/learn-async-rust/index.html#tower">Tower</a> section, as seeing how to implement your own <em>Tower</em> middleware might answer many of such questions. Gaining a deeper theoretical but still pragmatic enough understanding behind it is probably better done by reading some of the books listed in this guide.</p>
+<blockquote>
+<p>ⓘ Note: Tokio also provides support to <a href="https://unixism.net/loti/">the new Linux kernel io_uring concept</a>, a new powerful way to allow async programming on Linux. Support for it can be found at: <a href="https://github.com/tokio-rs/tokio-uring">GitHub - tokio-rs/tokio-uring: An io_uring backed runtime for Rust</a></p>
+<p>Synacktiv made an IO network scanner using io_uring as can be seen at <a href="https://github.com/synacktiv/io_uring_scanner">GitHub - synacktiv/io_uring_scanner: io_uring based network scanner written in Rust</a>, using tokio's low level userspace bindings to io_uring.</p>
+</blockquote>
+<p>To get a better idea about how futures work and the executor which polls them, you might want to read this article: <a href="https://bertptrs.nl/2023/04/27/how-does-async-rust-work.html">https://bertptrs.nl/2023/04/27/how-does-async-rust-work.html</a>.</p>
+<p>The blog series as found at <a href="https://hegdenu.net/posts/understanding-async-await-1/">https://hegdenu.net/posts/understanding-async-await-1/</a> can be another great reference to help you understand the entire <code>async/await</code> part of Rust:</p>
+<ul>
+<li><a href="https://hegdenu.net/posts/understanding-async-await-1/">part 1: why doesn’t my task do anything if I don’t await it?</a></li>
+<li><a href="https://hegdenu.net/posts/understanding-async-await-2/">part 2: how does a pending future get woken?</a></li>
+<li><a href="https://hegdenu.net/posts/understanding-async-await-3/">part 3: why shouldn’t I hold a mutex guard across an await point?</a></li>
+<li><a href="https://hegdenu.net/posts/understanding-async-await-4/#why-would-i-ever-want-to-write-a-future-manually">part 4: why would I ever want to write a future manually?</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="learn-async-rust-questions"><a class="header" href="#learn-async-rust-questions">Learn Async Rust: Questions</a></h2>
+<p>Questions you should be able to answer at the end of this step:</p>
+<ol>
+<li>How does Async programming work in Rust, if you didn't understand this already?</li>
+<li>What types of concurrent programming does Rust support? How many are there in general?</li>
+<li>What are Futures and how do they work? What function they have? How do they affect you?</li>
+<li>What is Send and Sync? What is it used for? How does it affect you?</li>
+<li>What are good use cases of Async code? What kind of tasks aren't a good fit for this?</li>
+<li>What are Async Executors? What are Async Runtimes?</li>
+<li>What is Tokio? How do you use it? What does it give you?</li>
+<li>What are some other libraries in the Tokio ecosystem?</li>
+<li>What can you build with Tokio?</li>
+<li>Why would you use Tokio?</li>
+<li>How do you achieve Async Rust programming with only standard library (stdlib) code?</li>
+<li>Why does Rust not bundle an Async runtime?</li>
+<li>What is parallel programming? How do you do it in Rust? How does it relate to Async programming?</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="rust-atomics-and-locks"><a class="header" href="#rust-atomics-and-locks">Rust Atomics and Locks</a></h3>
+<p>Understanding concurrency, the primitives used to do so safely and how it all works &quot;under the hood&quot; (e.g. the OS level) is not critical but it will help you big time the rest of your Async professional career.</p>
+<p>The book &quot;<a href="https://marabos.nl/atomics/">Rust Atomics and Locks</a>&quot; by O'Reilly is an amazingly good book by Mara Bos, an important Rust Contributor. Going through the book will take you some time despite its smaller size, but doing so is very rewarding. As with any technical book it is best to read this book as well as do its exercises and apply its knowledge using one program or another. Learn, Apply, Repeat. Play with it, Understand it.</p>
+<p>This book is so good, that even Go, Python or JS developers that will never ever touch Rust, might want to learn Rust just to understand the knowledge that can be found in this Gem of a book. Read it. You won't regret it.</p>
+<p>As it is more advanced knowledge it can however be seen as &quot;Extra&quot;, so in case you are in a hurry to finish <a href="guide/learn-async-rust/rust-atomics-and-locs.html#3-learn-async-rust">section (3) of the Rust track</a>, feel free to skip it. But even if so, keep its existence in mind and come back to it perhaps when you start to get yourself into trouble.</p>
+<blockquote>
+<p>FYI: if you ever write real-world production low level sync/atomic/concurrent code,
+you might want to check out Loom, as it will help you test that code better then possible with regular tests:
+<a href="https://docs.rs/loom/latest/loom/">https://docs.rs/loom/latest/loom/</a>.</p>
+</blockquote>
+<h3 id="rust-atomics-and-locs-questions"><a class="header" href="#rust-atomics-and-locs-questions">Rust Atomics and Locs: Questions</a></h3>
+<p>Questions you should be able to answer at the end of this extra step:</p>
+<ol>
+<li>What primitives are there in general to achieve concurrency?</li>
+<li>What primitives does the OS give you?</li>
+<li>What is the difference between threads and async programming?</li>
+<li>Why is async programming faster?</li>
+<li>When would you use threads? When would you use async programming?</li>
+<li>What's a Mutex? How could you implement one?</li>
+<li>What's a Conditional Variable? How could you implement one?</li>
+<li>What's a Signal? How could you implement one?</li>
+<li>What's a Channel? How do you implement it? What types of channels are there?</li>
+<li>What is Reordering? How can we deal with this? How does it affect us?</li>
+<li>How can we efficiently make a thread go to &quot;Sleep&quot; and have it woken up again?</li>
+<li>What's a Spin Lock? How do we build one?</li>
+<li>What's an atomic? What kind of atomics are there? How do they work under the hood?</li>
+<li>How does Rust achieve thread safety?</li>
+<li>What's Memory Ordering? What's the Memory Model? What types are there? Which ones can you use?</li>
+<li>What is Acquire and Release? What is this an example of?</li>
+<li>When we talk about a &quot;happens-before relationship&quot;. What do we mean with it? Why is it important?</li>
+<li>What is caching in context of your CPU? How does it affect us? What can we do about it?</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="threading"><a class="header" href="#threading">Threading</a></h3>
+<p>Please do remember that Async programming is only beneficial to optimize the idle time of your threads away.
+For tasks where you already near 100% utilize your threads (e.g. computation heavy algorithms) something
+like async will not help you and will in fact make your codebase a lot more complex and difficult to reason about.</p>
+<p>Should you have computation-heavy algorithms which you want to parallelize you can achieve that by making use
+of <a href="https://doc.rust-lang.org/std/thread/">threading</a> alone. A crate such as <a href="https://docs.rs/rayon/latest/rayon/">https://docs.rs/rayon/latest/rayon/</a> might help you a lot with this as well.</p>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="tower"><a class="header" href="#tower">Tower</a></h3>
+<p>Once you step into the world of Async Rust, Tokio and Web Services you'll sooner or later come across <a href="https://github.com/tower-rs/tower">Tower</a>, in a similar fashion as <a href="https://serde.rs/">Serde</a> blew your mind away for your serialization needs. Yes it did, you can admit it, this is a safe space.</p>
+<blockquote>
+<p>ⓘ Tower is a library of modular and reusable components for building robust networking clients and servers.</p>
+</blockquote>
+<p>With <a href="https://github.com/tower-rs/tower">Tower</a> everything is a service. A service takes in a request and outputs either an error or a response.
+What the actual types for these request-response pairs are, is up to you and depend mostly on the layer it is used.</p>
+<p>In tower it is typical that a service wraps another service, called &quot;layers&quot;, as such all your services and middleware will stack on top of each other,
+like a... <em>tower</em>.</p>
+<ul>
+<li>if you are new to Tower, you can start learning how to use it by building your own tower middleware from scratch by following the guide at: <a href="https://github.com/tower-rs/tower/blob/master/guides/building-a-middleware-from-scratch.md">https://github.com/tower-rs/tower/blob/master/guides/building-a-middleware-from-scratch.md</a>;
+<ul>
+<li>if you are not convinced on the usefulness of Tower, you can perhaps read <a href="https://tokio.rs/blog/2021-05-14-inventing-the-service-trait">the &quot;inventing your own Service trait&quot; guide</a>.</li>
+</ul>
+</li>
+</ul>
+<p>If you want to get an idea of how <code>Tower</code> might look like in a Rust ecosystem since 2024,
+you can enjoy this future today already at <a href="https://github.com/plabayo/tower-async">https://github.com/plabayo/tower-async</a>.
+Have fun not requiring to implement futures by hand.</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="a-note-about-the-remaining-part-of-this-guide"><a class="header" href="#a-note-about-the-remaining-part-of-this-guide">A Note About the remaining part of this guide</a></h2>
+<p>The next sections are all optional and are not required to really be productive in Rust. Some of it are alternative resources or extra content to learn from. Others is just miscellaneous content that is not really required to be productive in Rust, but might be interesting to you.</p>
+<p>This guide is either way not meant to be read in a single session or series. Take it as yours and just use it as part of your learning journey. Take your time as learning Rust isn't easy, but it is a very rewarding one once you did climb the mountain and are dancing with a double rainbow in the background.</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="study-using-the-zero-to-production-in-rust-book"><a class="header" href="#study-using-the-zero-to-production-in-rust-book">Study using the &quot;Zero to Production in Rust&quot; book</a></h2>
+<blockquote>
+<p>🔗 <a href="https://zero2prod.com">https://zero2prod.com</a></p>
+</blockquote>
+<p>Go through the entire book, filling any gaps you might still have and do all the exercises as well.</p>
+<p>At the end of the book you should be able to present your own GitHub or GitLab hosted projected based on the exercises and projects of the books, where you applied all your knowledge and also put in something of yourself in it.</p>
+<blockquote>
+<p>ⓘ Backend frameworks like <a href="https://rocket.rs/">Rocket</a> and <a href="https://actix.rs/">Actix</a> are pretty commonly used in books. However know that <a href="https://docs.rs/axum/latest/axum/">the Axum framework</a> is currently probably your best if you need to choose a backend framework for your next or current Rust project.</p>
+<p>Learning Axum in specific could be done by following tutorials
+such as <a href="https://github.com/jeremychone-channel/rust-axum-course">https://github.com/jeremychone-channel/rust-axum-course</a>, which seem pretty complete and focussed.</p>
+<p>Given how much Axum is built with <a href="guide/study-using-the-zero-to-production-in-rust-book.html#tower">Tower in mind, you probably also want to learn that</a>.</p>
+</blockquote>
+<blockquote>
+<p>There's also a &quot;Crust of Rust&quot; episode, by Jon Gjengset, about &quot;decrusting&quot;
+Axum — and by extension <em>Tower</em> — available at <a href="https://www.youtube.com/watch?v=Wnb_n5YktO8">https://www.youtube.com/watch?v=Wnb_n5YktO8</a>.</p>
+</blockquote>
+<p>Questions you should be able to answer at the end of this step:</p>
+<ol>
+<li>How can we write a Full stack app in Rust?</li>
+<li>How can we deploy and host a Full stack Rust app in the cloud?</li>
+<li>How can we add telemetry?</li>
+<li>How can we interact with Databases using Rust?</li>
+<li>How can we debug production-quality Rust applications?</li>
+<li>How can we test Rust applications?</li>
+<li>How do we make Async applications in Rust?</li>
+<li>How do we achieve TLS capabilities with Rust?</li>
+<li>How do we make a web server with Rust?</li>
+<li>The book uses Actix. What are some alternatives these days?</li>
+</ol>
+<h3 id="alternatives"><a class="header" href="#alternatives">Alternatives</a></h3>
+<p>The goal of hands-on learning with &quot;Zero to Production&quot; is mostly to help you get started writing some
+actual Rust projects, there are however also plenty of alternatives to achieve the same.</p>
+<ul>
+<li><a href="https://knowledge.dev/">https://knowledge.dev/</a> is an interactive book to help you practice Rust by doing projects;</li>
+<li><a href="https://www.rustadventure.dev/">https://www.rustadventure.dev/</a> is a similar concept, which also has a discord and a bit more variety in projects;</li>
+<li>most Rust conferences also have workshops, free or paid, to help you get into Rust or tackle more advanced concepts;</li>
+<li>Shuttle, which allows you to build and ship Rust code, also has a series of tutorials to create, build and ship all kind of projects,
+available at <a href="https://www.shuttle.rs/launchpad">https://www.shuttle.rs/launchpad</a>;</li>
+<li><a href="https://codecrafters.io/">https://codecrafters.io/</a> is a paid platform (with very limited free tier) is a platform to help you build projects like your own
+Redis, Git, Grep, Docker and more. And that all using Rust (among other languages available);</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="contribute-for-the-first-time-to-an-existing-project"><a class="header" href="#contribute-for-the-first-time-to-an-existing-project">Contribute for the first time to an existing project</a></h2>
+<p>Contribute to an open source project that you like or may want to strongly depend upon in the future.</p>
+<p>Many projects have a <code>good first issue</code> label, which is a good place to start. You can also look for issues that are labeled <code>help wanted</code> or <code>easy</code>.</p>
+<p>There's also the Rust Mentorship program, which pairs up new contributors with experienced Rustaceans. You can find more information about it at: <a href="https://rustbeginners.github.io/awesome-rust-mentors/">https://rustbeginners.github.io/awesome-rust-mentors/</a></p>
+<p>In <a href="https://this-week-in-rust.org/">The weekly Rust Newsletter</a> you can find a list of projects that are looking for contributors.</p>
+<p>If you are a seasoned programmer already you might also opt to already start making your own new project or porting a scoped project from another language to Rust.</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="study-using-the-rust-for-rustaceans-idiomatic-programming-for-experienced-developers-book"><a class="header" href="#study-using-the-rust-for-rustaceans-idiomatic-programming-for-experienced-developers-book">Study using the &quot;Rust for Rustaceans: Idiomatic Programming for Experienced Developers&quot; book</a></h2>
+<blockquote>
+<p>🔗 <a href="https://nostarch.com/rust-rustaceans">https://nostarch.com/rust-rustaceans</a></p>
+</blockquote>
+<p>Go through the entire book, getting a deep(er) understanding of the advanced concepts and inner workings of them.</p>
+<p>At the end of the book you should be able to present your own GitHub or GitLab hosted projected based on the exercises and projects of the books, where you applied all your knowledge and also put in something of yourself in it.</p>
+<p>Questions you should be able to answer at the end of this step:</p>
+<ol>
+<li>Be able to answer all questions from previous sections, in full confidence and in a lot more depth than you could do before.</li>
+<li>How is memory laid out for your Rust Data structures? Can you control it? If so, how?</li>
+<li>Explain in full detail so someone new to Rust can understand it what borrowing and lifetimes are, how do they work, why are they important, how do they affect us, how do we encounter it, why do we use it?</li>
+<li>What primitive types are there in Rust and how are they laid out in memory?</li>
+<li>What is the Orphan rule? Why is it important?</li>
+<li>What is polling in the context of Asynchronous programming?</li>
+<li>List some additional testing tools beyond unit tests? Why does each one of them matter?</li>
+<li>What is Pin and Unpin?</li>
+</ol>
+<ul>
+<li>Note: Crust of Rust also has a great video about it should you need some more explanations about this tricky concept;</li>
+</ul>
+<ol start="9">
+<li>Why is Asynchronous programming more complicated than parallel programming?</li>
+<li>How can you test your Asynchronous code? And because it is Rust, what kind of Asynchronous problems do we not need to test if we structure our code right? And why not?</li>
+<li>In the context of concurrent programming, what are actors?</li>
+</ol>
+<ul>
+<li>Bonus question: why do some people see this as the future?</li>
+</ul>
+<ol start="12">
+<li>What is FFI? Why do we use it?</li>
+<li>What is Rust without the STD? How do we use it and why?</li>
+<li>What are some common patterns found in the wild and that are discussed in the book?</li>
+<li>How can you continue to learn Rust?</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="contribute-an-advanced-feature-to-an-existing-project-or-start-a-project-from-scratch"><a class="header" href="#contribute-an-advanced-feature-to-an-existing-project-or-start-a-project-from-scratch">Contribute an advanced feature to an existing project or start a project from scratch</a></h2>
+<p>Start a project for yourself, your dog, your organization or mother. This might be a microservice, library or small tool. Everything is possible.</p>
+<p>Another option is to contribute to an open source project that you like or may want to strongly depend upon in the future.</p>
+<p>See <a href="guide//guide/contribute-for-the-first-time-to-an-existing-project.html">section (5) about your first contribution</a> for some inspiration on where to start.</p>
+<blockquote>
+<p>As it is assumed that at this point you are doing intermediate level work in Rust
+it will be the case that sooner or later you'll need to debug. Or perhaps you are about
+to deploy your own small project to production. In any case, you'll need to know how to
+debug Rust applications. You can read all about this and tracing in
+<a href="guide//appendix/appendix-viii-debugging-rust.html">Appendix VIII. Debugging Rust</a>.</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="next-steps"><a class="header" href="#next-steps">Next Steps</a></h2>
+<p>If you have completed all the steps above, you have done more then enough and can call yourself a Rustacean. You can now start to contribute to the Rust ecosystem and help others to learn Rust. Perhaps more importantly, you have all the knowledge you need to build your own projects in Rust.</p>
+<p>What you'll build depends on your interest or perhaps in the type of industry or company you're working in.</p>
+<ul>
+<li>If you're doing full stack development you can get inspired on what's next by checking out <a href="guide//appendix/appendix-ii-webassembly-wasm.html#wasm-learning-resources">WASM Learning Resources Appendix</a>;
+<ul>
+<li>For all your web dev needs you might also get inspired on what frameworks to use by checking out a website such as <a href="https://www.arewewebyet.org/">https://www.arewewebyet.org/</a>;</li>
+<li>By coincidence, some of the books and articles listed in this guide also teach you a lot about web development, so if you did indeed complete these guide you're really already well on your way to becoming a full stack developer in Rust, or backend, whatever floats your boat;</li>
+</ul>
+</li>
+<li>Some call WASM (on the server side) the next thing after docker containers. So perhaps even as a &quot;pure&quot; backend developer you might want to check out <a href="guide//appendix/appendix-ii-webassembly-wasm.html#wasm-learning-resources">that <em>same</em> appendix</a> to help you get started;</li>
+<li>If you're a game developer (or inspiring to be) you can check out resources such as <a href="https://arewegameyet.rs/#ecosystem">https://arewegameyet.rs/#ecosystem</a> to figure out what Rust technologies are out there in the ecosystem to help you build the next fantastic game;
+<ul>
+<li>If you're a game developer you might also want to check out the <a href="https://gamedev.rs/">Rust GameDev Working Group</a> (they also have a monthly news letter);</li>
+<li>You could also subscribe to the a podcast about GameDev in Rust called <a href="https://rustgamedev.com/">Rust GameDev Podcast</a>;</li>
+</ul>
+</li>
+<li>If you want to develop Operating Systems I already listed some resources to help you get started with that.
+<ul>
+<li>Once (and if) Rust is accepted as a second language (next to C) to develop patches for the Linux kernel you can also start contributing to the Linux kernel in Rust. Future dreams;</li>
+<li>Or you might want to apply to Google and help build <a href="https://fuchsia.dev/">their Fuchsia OS</a> in Rust. Have fun;
+<ul>
+<li>It's open source so nobody can stop you to contribute it either way, well except them I guess;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>If you want to develop blockchain technology... Well, not going to guide you in that one, there's a running joke that it's hard to find a job in Rust that's not blockchain tech, so, you should have no problem finding a job in that field if that's what you want to do;
+<ul>
+<li>Ok, ok. Here also a list for you folks: <a href="https://github.com/rust-in-blockchain/awesome-blockchain-rust">https://github.com/rust-in-blockchain/awesome-blockchain-rust</a></li>
+</ul>
+</li>
+<li>If you want to develop embedded systems, you can check out the <a href="https://blog.rust-embedded.org/">Rust Embedded Working Groups's Blog</a>. There are also plenty of companies who sometimes appear in articles or podcasts listed in <a href="guide/next-steps.html#appendix-vi-more-material">the More Material appendix</a>, so you can also check that out for yourself.
+<ul>
+<li>A podcast episode about the embedded WG can be found at: <a href="https://rustacean-station.org/episode/jonathan-pallant/">https://rustacean-station.org/episode/jonathan-pallant/</a></li>
+<li>You can interact with the WG using the matrix chat: <a href="https://matrix.to/#/!BHcierreUuwCMxVqOf:matrix.org">https://matrix.to/#/!BHcierreUuwCMxVqOf:matrix.org</a></li>
+</ul>
+</li>
+<li>If you are interested in using Rust for Data Engineering then <a href="https://datawithrust.com/">https://datawithrust.com/</a> could be a great start;</li>
+<li>Related to the previous, if you want to use ML from within Rust (or together with it), you might find the following list a great resource: </li>
+</ul>
+<p>There's a lot more of course. You probably know best where you're going. A lot of exciting stuff is happening. Plenty of conferences (e.g. Rust Conf) to help you get inspired on it if you're not already. And of course, plenty of people to help you out if you get stuck. So, good luck and have fun!</p>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="appendix-i-install-rust"><a class="header" href="#appendix-i-install-rust">Appendix I. Install Rust</a></h3>
+<p>In order to start using Rust you have to install and configure its tooling on your machinery.</p>
+<ul>
+<li>The Rust compiler (<code>rustc</code>), standard library and tooling (e.g. <code>cargo</code>) are all managed using <code>rustup</code>.
+<ul>
+<li>You can learn how to get started by going to: <a href="https://www.rust-lang.org/learn/get-started">https://www.rust-lang.org/learn/get-started</a></li>
+<li>Once you finished with this you'll have Rust ready on your machine out of the box. Each time there is a new version of Rust you can update it, simply by running <code>rustup update</code></li>
+</ul>
+</li>
+</ul>
+<p>With this installed you should now be able to run the following command:</p>
+<pre><code>cargo version
+</code></pre>
+<p>Which will output something like:</p>
+<pre><code>cargo 1.67.1 (8ecd4f20a 2023-01-10)
+</code></pre>
+<p>You can learn to create, compile and run your first Rust program at &quot;<a href="https://www.rust-lang.org/learn/get-started">First Steps with Cargo - The Cargo Book</a>&quot;.</p>
+<blockquote>
+<p>If you are looking for a fun bigger project to help you learn Rust,
+you might find it fun to buy your own cargo-like tool: <a href="https://blog.mgattozzi.dev/freight-part-1/">https://blog.mgattozzi.dev/freight-part-1/</a></p>
+</blockquote>
+<h4 id="linting-and-styling"><a class="header" href="#linting-and-styling"><a href="appendix/appendix-i-install-rust.html#linting-and-styling">Linting and styling</a></a></h4>
+<ul>
+<li>Install <code>clippy</code> using <code>rustup component add clippy</code>
+<ul>
+<li>This way you can use the command <code>cargo clippy</code> to help guarantee the quality of your code</li>
+</ul>
+</li>
+<li>Install <code>rustfmt</code> using <code>rustup component add rustfmt</code>
+<ul>
+<li>This way you can use <code>cargo fmt</code> to format your code (best to also configure this in your IDE to be done each time you save the file)</li>
+</ul>
+</li>
+</ul>
+<p>No custom linting configurations or agreements are required beyond this. If you use these two tools, you're golden. These tools also work nicely with any IDE you might use. Within your CI environment these same tools will be used to check that your code adheres to its standards.</p>
+<p>Clippy can be seen as a testing ground to see what lints are useful and which ones aren't. The ones that are often get shipped into the official compiler a while later. Some lints are also ignored by default for whatever reasons. You can find all lints (AFAIK) at <a href="https://rust-lang.github.io/rust-clippy/stable/index.html">https://rust-lang.github.io/rust-clippy/stable/index.html</a>, should you want to enable even more lints.</p>
+<p>Some useful reasons why you might stil want to enable custom lints are:</p>
+<ul>
+<li>to enable nightly features;</li>
+<li>to prevent the usage (in your own codebase) of <code>unsafe</code> code.</li>
+</ul>
+<p>For reference you can check the <a href="https://github.com/plabayo/tower-async">https://github.com/plabayo/tower-async</a> mono repository's <code>lib.rs</code> files,
+where I enable such opt-in lints myself, which itself is based on the original <code>tower-rs</code> code.</p>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="appendix-ii-webassembly-wasm"><a class="header" href="#appendix-ii-webassembly-wasm">Appendix II. WebAssembly (WASM)</a></h3>
+<blockquote>
+<p>ⓘ WebAssembly (abbreviated Wasm) is a binary instruction format for a stack-based virtual machine. Wasm is designed as a portable compilation target for programming languages, enabling deployment on the web for client and server applications.</p>
+<p>🔗 <a href="https://webassembly.org/">https://webassembly.org/</a></p>
+</blockquote>
+<p>WebAssembly on itself is completely isolated from Rust, but it must be said that among the WASM community, the Rust part is probably the biggest and most active one. Compiling Rust to WASM is a true pleasure and allows for browser client code to be written in Rust, be it a small library to be used from JS or an entire web client. WASM projects can also be used to quickly deploy web services (in the backend). These are similar to lambda functions but are even faster to use and in a way also safer.</p>
+<h4 id="wasm-learning-resources"><a class="header" href="#wasm-learning-resources">WASM Learning Resources</a></h4>
+<ul>
+<li>RustWasm book: <a href="https://rustwasm.github.io/docs/book/">Introduction - Rust and WebAssembly</a>
+<ul>
+<li>This is the officially recommended book to get you started, as can be seen at <a href="https://www.rust-lang.org/what/wasm">https://www.rust-lang.org/what/wasm</a> </li>
+</ul>
+</li>
+<li><a href="https://www.oreilly.com/library/view/programming-webassembly-with/9781680506846/">Programming WASM with Rust: Programming WebAssembly with Rust</a></li>
+<li>Build a web app with Rust (using Yew framework): <a href="https://kerkour.com/web-application-with-rust-and-webassembly">https://kerkour.com/web-application-with-rust-and-webassembly</a></li>
+<li>Rust to WebAssembly the hard way: <a href="https://surma.dev/things/rust-to-webassembly/index.html">Rust to WebAssembly the hard way — surma.dev</a></li>
+</ul>
+<p>Frameworks that you might want to check if you want to make a front-end (web) app using Rust:</p>
+<ul>
+<li>Make desktop apps using web tech (think Electron, but better): <a href="https://github.com/tauri-apps/tauri">GitHub - tauri-apps/tauri: Build smaller, faster, and more secure desktop applications with a web frontend</a>;</li>
+<li>Very popular and fast front-end framework for Rust: <a href="https://github.com/yewstack/yew">GitHub - yewstack/yew: Rust / Wasm framework for building client web apps</a></li>
+<li>Another front-end framework: <a href="https://github.com/chinedufn/percy">GitHub - chinedufn/percy: Build frontend browser apps with Rust + WebAssembly</a>. Supports server side rendering. </li>
+<li>Yet another front-end framework: <a href="https://github.com/sycamore-rs/sycamore">GitHub - sycamore-rs/sycamore</a>: A library for creating reactive web apps in Rust and WebAssembly</li>
+<li>If you are looking for a complete framework you  might want to give <a href="https://github.com/framesurge/perseus">https://github.com/framesurge/perseus</a> a chance, it builds on top of Sycamore;</li>
+<li>Exciting new and very fast front-end framework: <a href="https://github.com/leptos-rs/leptos">GitHub - leptos-rs/leptos: Build fast web applications with Rust</a>.</li>
+<li>Another front-end framework (or perhaps rather a GUI framework) that you might want to know about is Dioxus (<a href="https://dioxuslabs.com/">https://dioxuslabs.com/</a>) which is made not only for web-apps, but also with CLI, mobile and Desktop in mind.</li>
+<li>Also a pretty nice front-end framework: <a href="https://github.com/framesurge/perseus">GitHub - framesurge/perseus: A state-driven web development framework for Rust with full support for server-side rendering and static generation</a>.</li>
+</ul>
+<p>Run WASM Backend Services in the cloud:</p>
+<ul>
+<li>Cloudflare workers: <a href="https://workers.cloudflare.com/">Cloudflare Workers®</a></li>
+<li>Fermyon Cloud (free for now): <a href="https://www.fermyon.com/cloud">Deploy &amp; manage cloud native WebAssembly apps</a></li>
+<li>Wasmer's goal is to run any code on any client (think Java's dream, but for real): <a href="https://wasmer.io/">https://wasmer.io/</a></li>
+</ul>
+<p>As you can see, WASM on the backend is a thing. Whether it's more then just hype is something the future will tell, but either way a lot of interesting stuff is happening and there's big money behind it somehow. So you might as well jump in the car, especially if you missed the Docker train somehow. Happens.</p>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="appendix-iii-native-apps"><a class="header" href="#appendix-iii-native-apps">Appendix III. Native Apps</a></h3>
+<p>Native apps are applications written for a specific platform. While that could be any platform, it usually refers to anything that is not the &quot;web&quot; and even more so, these days, it pretty much always refers to Desktop, Mobile or the combination of. Cross platform apps mean that multiple platforms are supported, which could be any set of web or non-web platforms.</p>
+<blockquote>
+<p>If you ever need to interact with other native languages:</p>
+<ul>
+<li>For C you probably want to just use bindgen;</li>
+<li>For C++ you can make use of <a href="https://github.com/dtolnay/cxx">https://github.com/dtolnay/cxx</a> (cxx);</li>
+</ul>
+</blockquote>
+<h4 id="tauri"><a class="header" href="#tauri">Tauri</a></h4>
+<p><strong>Tauri</strong> is the toolset you want to check out if you want to build native apps with a Gui in Rust. You can find all information about it on their official website: <a href="https://tauri.app/">https://tauri.app/</a></p>
+<blockquote>
+<p>ⓘ Build an optimized, secure, and frontend-independent application for multi-platform deployment.</p>
+</blockquote>
+<p>Tauri applications can be compared to Electron, but it uses a very different approach. Multiple rendering engines are supported, with web view like rendering engines being the default. But this is still different then shipping a Node runtime and Chromium with each one of your apps. Meaning your desktop applications can be as small as a couple of megabytes, compared to the usually bloated 150MB apps. And once running, they will also be a lot less resource hungry compared to your topical Electron app.</p>
+<p>Mobile applications are not yet officially supported, but they will soon get support as well, as the underlying technology for it is already more or less ready.</p>
+<p>In case you want to write applications that work on both the web and a non-web platform you can achieve this by splitting your business logic from your minimal front-end logic, such that you can write one front-end in any of the available front-end approaches (e.g. leptos or perseus) and another one using Tauri, with most of your code being available as one or more Rust libraries. </p>
+<p>The front-end logic can be written using any web application front-end framework, e.g. Svelte.</p>
+<p>You can also opt to go fully native by using plugins such as tauri-egui: <a href="https://github.com/tauri-apps/tauri-egui">https://github.com/tauri-apps/tauri-egui</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="appendix-iv-rust-in-the-background"><a class="header" href="#appendix-iv-rust-in-the-background">Appendix IV. Rust in the background</a></h3>
+<p>As with any (new) language, there's no point in replacing every existing technology written before, with a new implementation written in Rust. While at times there are benefits such as with <a href="https://github.com/BurntSushi/ripgrep">ripgrep</a> instead of grep, this is not a generally useful strategy not a desired one.</p>
+<p>There's also a great modern alternative to Makefiles, as much as love as we have for it. It's named 'just'
+and you can find it at <a href="https://github.com/casey/just">https://github.com/casey/just</a>, basically 'Make' with variables + more.</p>
+<ul>
+<li>In <a href="appendix//appendix/appendix-ii-webassembly-wasm.html">Appendix II.</a> we already saw that Rust can be compiled to WASM, and as such you can build an entire WebApp in Rust. However instead of replacing your entire WebApp, it is also just as well possible that you only replace the components of your App where it makes sense, e.g. where you need to do a lot of computations;</li>
+<li>In <a href="appendix//appendix/appendix-iii-native-apps.html">Appendix III.</a> we learned about Tauri to build native apps with Rust, and also here noted that it can be done while at the same time building your core frontend logic in the frameworks you are used to;</li>
+</ul>
+<p>At times however you might be able to incorporate the benefits of Rust in your existing benefits without having to expose the language to anyone:</p>
+<ul>
+<li><a href="https://github.com/Schniz/fnm">FNM</a> is a replacement for NVM. While the latter is more powerful the first is a lot faster, which speeds up terminal start up times by a lot, just to give one benefit;</li>
+<li><a href="https://deno.land/">Deno</a> can be used as a replacement for NodeJS, and can not only run javascript but also typescript (for which you would otherwise use something like ts-node). It is not a 1-to-1 replacement, and it will require some effort, but it is already today a faster and more secure alternative;</li>
+<li><a href="https://swc.rs/">SWC</a> is a speedy light alternative to babel, with the first outperforming the last with its eyes closed and 1 foot still in the bed;</li>
+</ul>
+<p>These give just a small taste of what Rust can mean for Web developers even if they do not know or use Rust themselves directly.</p>
+<p>In fact some thing most Rust users will be users that do not even know they are using Rust. This is not only True
+for the Javacript world but for many others as well, such as Python for example.</p>
+<ul>
+<li><a href="https://github.com/pydantic/pydantic">Pydantic</a> is a library for Data validation using Python type hints.</li>
+<li><a href="https://github.com/astral-sh/ruff">Ruff</a> is An extremely fast Python linter, written in Rust.</li>
+</ul>
+<p>Python web developers can also make use of Rust to write their Python web services, without having to know Rust:</p>
+<ul>
+<li>Granian (<a href="https://github.com/emmett-framework/granian">https://github.com/emmett-framework/granian</a>):
+<ul>
+<li>A Rust HTTP server for Python applications (written on top of Hyper);</li>
+<li>Supports ASGI/3, RSGI and WSGI interface applications;</li>
+<li>Example usage: run your FastAPI web service :)</li>
+</ul>
+</li>
+<li>Robyn (<a href="https://news.ycombinator.com/item?id=34399125">https://news.ycombinator.com/item?id=34399125</a>):
+<ul>
+<li>A High-Performance, Community-Driven, and Innovator Friendly Web Framework with a Rust runtime.</li>
+<li>In contrast to <code>Granian</code> this does mean you need to write your service using the Robyn way to do things,
+so not possible to use an existing service built with FastAPI.</li>
+</ul>
+</li>
+</ul>
+<p>And plenty more will follow surely.</p>
+<p>A language is a tool, but a tool is not to be applied to any problem. Rust has its advantages and use cases, it would be foolish not to use it where desirable.</p>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="appendix-v-python--javascript-developers"><a class="header" href="#appendix-v-python--javascript-developers">Appendix V. Python / Javascript Developers</a></h3>
+<p>In case you come from Python or Javascript you can alternatively replace the first four steps of this learning guide with a single book. <a href="https://www.packtpub.com/product/rust-web-programming-second-edition/9781803234694">Rust Web Programming</a> (Packt Publishing) aims to get web developers (including Python developers) started with Rust and has a very pragmatic approach.</p>
+<p>Given how important Async is in our work environment it is still worth to go through section <a href="appendix//guide/learn-async-rust.html">(3) &quot;Learn Async Rust&quot;</a> to make sure you do really grasp that very well. It is also where a lot of your Rust knowledge starts to come together, so if you get that you know you're on the right track.</p>
+<p>Should you after completing this book (even if partly) want to have some more hands on experience you can opt to never the less do section (4) as well and go through <a href="appendix//guide/study-using-the-zero-to-production-in-rust-book.html">the &quot;Zero to Production in Rust&quot; book</a></p>
+<p>However, in case you are confident you did get all the foundational concepts of Rust and want to just develop stuff already and get it &quot;into your fingers&quot; you might want to opt to after this (and before jumping onto section (5)) read <a href="https://www.manning.com/books/rust-in-action">&quot;Rust In Action&quot;</a> first. It gives a lot of fun things to build. Alternatively you can check the &quot;Learn More Rust: Extra&quot; part of <a href="appendix//guide/learn-more-rust.html">section (2) Learn more Rust</a>, where we also go over many ideas for you to get more experience and help you solidify your Rust knowledge.</p>
+<p>The &quot;Rust in Action&quot; book can also be seen as yet another alternative all together, as it is also aimed at introducing Rust to people who never did any Systems programming, So you could also do it instead of the Rust Web Programming book.</p>
+<p>Do you ever want to develop something using both Rust and Python?</p>
+<ul>
+<li>Check out the pyo3 project: <a href="https://github.com/PyO3/pyo3">https://github.com/PyO3/pyo3</a></li>
+<li>You might also like the following resource in your learning journey of it: <a href="https://dora.carsmos.ai/blog/rust-python/">https://dora.carsmos.ai/blog/rust-python/</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="appendix-vi-more-material"><a class="header" href="#appendix-vi-more-material">Appendix VI. More Material</a></h3>
+<p>Learning to master a language has a beginning but it doesn't have an ending. You'll want to continue to learn, teach others and keep up to date. In this appendix you'll find material to help you with all this and more.</p>
+<h4 id="keep-up-to-date"><a class="header" href="#keep-up-to-date">Keep up to date</a></h4>
+<p>Official Blogs:</p>
+<ul>
+<li><a href="https://blog.rust-lang.org/">The Rust Programming Language Blog</a>
+<ul>
+<li>e.g. in October of 2022 GAT's (Generic Associated Types) were finally stabilised, after 6+ years of work: <a href="https://blog.rust-lang.org/2022/10/28/gats-stabilization.html">Generic associated types to be stable in Rust 1.65 — Rust Blog</a></li>
+<li><a href="https://blog.rust-lang.org/inside-rust/index.html">The &quot;Inside Rust&quot; Blog</a></li>
+</ul>
+</li>
+</ul>
+<p>Conferences:</p>
+<ul>
+<li>RustConf#2022: <a href="https://rustconf.tilde.io/courses/enrolled/1857336">https://rustconf.tilde.io/courses/enrolled/1857336</a></li>
+</ul>
+<p>Podcasts:</p>
+<ul>
+<li>Rustacean Station is a pretty great podcast with very interesting guests and even more interesting knowledge to share. Listen to it, you won't regret: <a href="https://rustacean-station.org/">https://rustacean-station.org/</a></li>
+<li>In order to learn Rust you can also listen to the New Rustacean podcast, which is a podcast about learning Rust: <a href="https://newrustacean.com/">https://newrustacean.com/</a>
+<ul>
+<li>It no longer airs, but its content remains useful and available</li>
+</ul>
+</li>
+</ul>
+<p>Actuality:</p>
+<ul>
+<li><a href="https://this-week-in-rust.org/">&quot;This week in Rust&quot;</a> is a weekly newsletter helping you stay up to date with Rust from the lazy comfort of your Mailbox. Easy. They can also be read online in case you prefer a browser instead or do not want to subscribe for w/e reason.
+<ul>
+<li>Blog articles from the community get shared here as well, some accessible to new comers to Rust, others a bit more advanced</li>
+<li>They also share VOD's of recent conferences, e.g. the issue in which they share the rust talks from <a href="https://this-week-in-rust.org/blog/2023/02/08/this-week-in-rust-481/">FOSDEM 2023: This Week in Rust 481  · This Week in Rust</a></li>
+</ul>
+</li>
+<li><a href="https://rustmagazine.org/">&quot;Rust Magazine&quot;</a>: an online magazine dedicated to Rust</li>
+</ul>
+<h4 id="lists"><a class="header" href="#lists">Lists</a></h4>
+<p>community curated crate lists:</p>
+<ul>
+<li><a href="https://blessed.rs/crates">Crate List - Blessed.rs</a></li>
+</ul>
+<h4 id="read"><a class="header" href="#read">Read</a></h4>
+<p>Free Rust Resources that we haven't mentioned yet, but are great to read at one point or another:</p>
+<ul>
+<li>The Rust Performance Book: <a href="https://nnethercote.github.io/perf-book/">https://nnethercote.github.io/perf-book/</a></li>
+<li>Rust Fuzz Book (Fuzz Testing): <a href="https://rust-fuzz.github.io/book/">https://rust-fuzz.github.io/book/</a></li>
+<li>Idiomatic solutions to common programming tasks: <a href="https://rust-lang-nursery.github.io/rust-cookbook/">https://rust-lang-nursery.github.io/rust-cookbook/</a></li>
+<li>The little book of Rust books: <a href="https://lborb.github.io/book/unofficial.html">Unofficial Rust Books - The Little Book of Rust Books</a> (which we also already linked in an earlier section)</li>
+</ul>
+<p>If you learn by doing and haven't gotten enough from the resources we linked already in &quot;Learn more Rust&quot;, here are some more tips:</p>
+<ul>
+<li>Implement a Redis client and server using Tokio, a very well documented and excellent guide on how to write Asynchronous code in Rust: <a href="https://github.com/tokio-rs/mini-redis/">https://github.com/tokio-rs/mini-redis/</a> - for learning purposes only </li>
+<li>If you want to improve your borrowing and reference skills, implementing a Linked List data structure might be for you: <a href="https://rust-unofficial.github.io/too-many-lists/">https://rust-unofficial.github.io/too-many-lists/</a></li>
+<li>Or perhaps you want to write your own OS in Rust: <a href="https://os.phil-opp.com/">https://os.phil-opp.com/</a></li>
+</ul>
+<p>A blog you might want to RSS subscribe to is Amos's his blog which is always fun to read, be it sometimes a bit heavy: <a href="https://fasterthanli.me/tags/rust/">https://fasterthanli.me/tags/rust/</a> </p>
+<p>A nice reference sheet if you need one can be found at: <a href="https://cheats.rs/">https://cheats.rs/</a></p>
+<h4 id="educational"><a class="header" href="#educational">Educational</a></h4>
+<ul>
+<li>Crust of Rust video series by &quot;Jon Gjengset&quot;, for those that want to see an experienced Rust Developer work through problems: <a href="https://www.youtube.com/playlist?list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa">Crust of Rust</a>
+<ul>
+<li>You can combine it while learning a bit about networking and implement TCP in Rust yourself: <a href="https://www.youtube.com/playlist?list=PLqbS7AVVErFivDY3iKAQk3_VAm8SXwt1X">https://www.youtube.com/playlist?list=PLqbS7AVVErFivDY3iKAQk3_VAm8SXwt1X</a></li>
+</ul>
+</li>
+<li>If you like to learn by watching you can find a Rust streaming list at <a href="https://github.com/jamesmunns/awesome-rust-streaming/">https://github.com/jamesmunns/awesome-rust-streaming/</a></li>
+<li>Interesting youtube channel with a lot of great stuff to learn about Rust: <a href="https://www.youtube.com/@NoBoilerplate">https://www.youtube.com/@NoBoilerplate</a></li>
+<li>If any of the basic (textual) learning resources from the actual learning journey didn't quite work for you, you might find a video course more useful. If so, here are two of them:
+<ul>
+<li><a href="https://www.udemy.com/course/ultimate-rust-crash-course/">Ultimate Rust Crash Course</a> </li>
+<li><a href="https://www.udemy.com/course/ultimate-rust-2/">Ultimate Rust 2: Intermediate Concepts</a></li>
+</ul>
+</li>
+<li>If you need inspiration on things you can build with Rust to get the language in your fingers as well as learn how software that you use is implemented, you might want to check out: <a href="https://app.codecrafters.io/tracks/rust">https://app.codecrafters.io/tracks/rust</a></li>
+<li>Learn Full Stack Rust Interactively: <a href="https://rustinsight.com/">Rust Insight! - an interactive book for practicing Rust on the laptop</a> (early access)</li>
+<li>A big index of many more learning resources, named aptly &quot;How to learn Modern Rust — A Guide to the adventurer&quot;: <a href="https://github.com/joaocarvalhoopen/How_to_learn_modern_Rust">https://github.com/joaocarvalhoopen/How_to_learn_modern_Rust</a>
+<ul>
+<li>Do not take the list as-is and use mostly as inspiration. No need to really do all on that list, but if you need more learning resources, there is plenty of good content and inspiration in there!</li>
+</ul>
+</li>
+<li>Black Hat Rust book: <a href="https://kerkour.com/black-hat-rust">https://kerkour.com/black-hat-rust</a> (could be nice for inspiration on some hands-on experience while becoming more familiar with Rust)</li>
+<li>If you want to test your Rust concept skills you might also enjoy taking <a href="https://dtolnay.github.io/rust-quiz/">the Rust Quiz</a>. The more answers you have wrong the better, as it means you'll learn new things from the explanation :)</li>
+<li>If you want to learn by doing by contributing to an existing Rust OSS project (including the Rust language and tooling) you can try to find a mentor to help you for free online in achieving this, by going to Awesome Rust Mentors: <a href="https://rustbeginners.github.io/awesome-rust-mentors/">https://rustbeginners.github.io/awesome-rust-mentors/</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="appendix-vii-community-chat"><a class="header" href="#appendix-vii-community-chat">Appendix VII. Community Chat</a></h3>
+<p>Learning from and working with a community is one of the many perks of Rust, which is rightfully known for its warm, inclusive and charming community. Always open and friendly to others.</p>
+<p>Here are some chat servers you can join to interact with this fantastic community. All of them are great places to meet other Rust developers, find help, share news or a project and also to give back to the community yourself:</p>
+<ul>
+<li>Discord chat server for the Tokio ecosystem and its community: <a href="https://discord.com/invite/tokio">https://discord.com/invite/tokio</a>;</li>
+<li>Discord chat server for the Rust community in general (has a great channel for beginners to find help, and in a very fast manner): <a href="https://discord.com/invite/rust-lang">https://discord.com/invite/rust-lang</a>;</li>
+<li>zulip chat server for Rust, great for core work and advanced purposes: <a href="https://rust-lang.zulipchat.com/">https://rust-lang.zulipchat.com/</a>.</li>
+</ul>
+<p>There are others of course but these are the ones which are both active, inclusive, friendly and known to the authors of this guide as being a great place to be and be part of.</p>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="appendix-viii-debugging-rust"><a class="header" href="#appendix-viii-debugging-rust">Appendix VIII. Debugging Rust</a></h3>
+<p>Debugging Rust code can be seen on three different levels:</p>
+<ol>
+<li>Write Rustic code, making full use of the language and its expressive type system;</li>
+<li>Have good logging and metrics in place for your production infrastructure;</li>
+<li>Know your way around a debugger.</li>
+</ol>
+<p>Underappreciated is point (1). Ensuring that impossible state and behavior is in fact impossible
+at compile team and thus guaranteed by the compiler is a big class of errors that you simply
+can no longer make and thus never have to debug. Using maker types and enums can help you a lot here.</p>
+<p>Rust is also a typed language so ensuring to use the proper types and use them consistently,
+will also help avoid a big category of bugs. Similarly, you probably do not really ever want to
+unwrap/expect any of your library code and only do so at the very top level, as to avoid nasty edge cases at runtime.</p>
+<p>That being said, sometimes things do go wrong. And debugging in production is not always fun.
+In fact, trying to reproduce rare scenarios locally is even less fun. For that you really
+want to ensure you know the right tools and crates to help you deal with point (2).</p>
+<ul>
+<li>If you use <a href="https://tokio.rs">Tokio</a> then the <a href="https://tracing.rs/tracing/"><code>tracing</code> crate</a> and its mini ecosystem will be your friend, to help you define logs, metrics and more.
+<ul>
+<li>The more data you have for your production infrastructure the easier it should be to spot potential issues that you didn't foresee but that you do clearly see in your logs and/or metrics;</li>
+<li>If you really want to dive deep and also learn about its macros, a blog article like <a href="https://dietcode.io/p/tracing-macros/">https://dietcode.io/p/tracing-macros/</a> might help you get into that;</li>
+<li>A blog article like <a href="https://broch.tech/posts/rust-tracing-opentelemetry/">https://broch.tech/posts/rust-tracing-opentelemetry/</a> might help you get started with Tracing in Rust,
+and introduce you to &quot;Open Telemetry&quot; in general.</li>
+</ul>
+</li>
+<li>If you do not use <em>Tokio</em>, then a crate like <a href="https://crates.io/crates/log">log</a> is your best bet, and it will ensure that no matter what application makes use of your crate, will be able to consume your logs the way they want :)</li>
+</ul>
+<p>Finally when shit really hits the fan, and you do not see what's wrong from metrics and logs (alone), you might need to grab a debugger. The book <a href="https://rustc-dev-guide.rust-lang.org/debugging-support-in-rustc.html">https://rustc-dev-guide.rust-lang.org/debugging-support-in-rustc.html</a> might be able to give you a good starting point. Articles such as <a href="https://dev.to/rogertorres/debugging-rust-with-vs-code-11dj">https://dev.to/rogertorres/debugging-rust-with-vs-code-11dj</a> might help you get started on debugging in case you are using VSCode for Rust, which is what plenty of people seem to use these days. There's also a Gist about it for VSCode at <a href="https://gist.github.com/xanathar/c7c83e6d53b72dd4464f695607012629">https://gist.github.com/xanathar/c7c83e6d53b72dd4464f695607012629</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="appendix-ix-shipping-rust"><a class="header" href="#appendix-ix-shipping-rust">Appendix IX. Shipping Rust</a></h3>
+<p>Shipping Rust does not have to be different from shipping code in other languages.
+So all the knowledge you have or will learn about the Cloud, Docker, Bare Metal, Vms,
+Lambda functions, WASM workers, containers, and whatever else also can be applied here.</p>
+<p>If you however find cloud platforms like AWS or GCloud a bit dounting (or have choice stress),
+and find deploying to your own VPS or VM a bit too barebones, you might find some of the following
+solutions to be helpful, specifically with the goal of shipping rust code such as a web service:</p>
+<ul>
+<li><a href="https://fly.io/">https://fly.io/</a>: allows you to ship rust code fairly painlessly by using docker containers;</li>
+<li><a href="https://www.shuttle.rs/">https://www.shuttle.rs/</a> has a pretty unique approach by letting you deploy your Rust code directly, without containers,
+and by adding your stack dependencies (e.g. database needs) as macros to your Rust <code>main.rs</code> code;</li>
+<li>Using <a href="https://github.com/cloudflare/workers-rs">https://github.com/cloudflare/workers-rs</a> you can ship your Rust code to Cloudflare's workers platform;</li>
+<li><a href="https://www.fermyon.com/#">https://www.fermyon.com/#</a> is another similar cloud platform that also allows you to ship Rust (WASM) workers;</li>
+</ul>
+<p>If you want to ship on a more standard cloud platform such as <em>AWS</em>
+you can learn to do so as part of practicing Rust using &quot;<a href="appendix/appendix-ix-shipping-rust.html#4-study-using-the-zero-to-production-in-rust-book">4. Study using the &quot;Zero to Production in Rust&quot; book</a>&quot;.</p>
+<p>Finally, in the spirit of KISS, nothing wrong with deploying like this: <a href="https://logankeenan.com/posts/deploy-your-rust-project-to-any-hosting-provider-in-minutes/">https://logankeenan.com/posts/deploy-your-rust-project-to-any-hosting-provider-in-minutes/</a>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>

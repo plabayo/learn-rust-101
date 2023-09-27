@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Appendix I. Install Rust - Rust 101</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../intro/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../intro/prologue.html"><strong aria-hidden="true">2.</strong> Prologue</a></li><li class="chapter-item expanded "><a href="../intro/learning-rust.html"><strong aria-hidden="true">3.</strong> Learning Rust</a></li><li class="chapter-item expanded "><a href="../intro/about.html"><strong aria-hidden="true">4.</strong> About</a></li><li class="chapter-item expanded affix "><li class="part-title">Learning Guide</li><li class="chapter-item expanded "><a href="../guide/learn-rust/index.html"><strong aria-hidden="true">5.</strong> Learn Rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../guide/learn-rust/questions.html"><strong aria-hidden="true">5.1.</strong> Learn Rust: Questions</a></li></ol></li><li class="chapter-item expanded "><a href="../guide/learn-more-rust/index.html"><strong aria-hidden="true">6.</strong> Learn More Rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../guide/learn-more-rust/questions.html"><strong aria-hidden="true">6.1.</strong> Learn More Rust: Questions</a></li><li class="chapter-item expanded "><a href="../guide/learn-more-rust/extra.html"><strong aria-hidden="true">6.2.</strong> Learn More Rust: Extra</a></li></ol></li><li class="chapter-item expanded "><a href="../guide/learn-async-rust/index.html"><strong aria-hidden="true">7.</strong> Learn Async Rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../guide/learn-async-rust/questions.html"><strong aria-hidden="true">7.1.</strong> Learn Async Rust: Questions</a></li><li class="chapter-item expanded "><a href="../guide/learn-async-rust/rust-atomics-and-locs.html"><strong aria-hidden="true">7.2.</strong> Rust Atomics and Locs</a></li><li class="chapter-item expanded "><a href="../guide/learn-async-rust/threading.html"><strong aria-hidden="true">7.3.</strong> Threading</a></li><li class="chapter-item expanded "><a href="../guide/learn-async-rust/tower.html"><strong aria-hidden="true">7.4.</strong> Tower</a></li></ol></li><li class="chapter-item expanded "><a href="../guide/a-note-about-the-remaining-part-of-this-guide.html"><strong aria-hidden="true">8.</strong> A note about the remaining steps of this guide</a></li><li class="chapter-item expanded "><a href="../guide/study-using-the-zero-to-production-in-rust-book.html"><strong aria-hidden="true">9.</strong> Study using the "Zero to Production in Rust" book</a></li><li class="chapter-item expanded "><a href="../guide/contribute-for-the-first-time-to-an-existing-project.html"><strong aria-hidden="true">10.</strong> Contribute for the first time to an existing project</a></li><li class="chapter-item expanded "><a href="../guide/study-using-the-rust-for-rustaceans-idiomatic-programming-for-experienced-developers-book.html"><strong aria-hidden="true">11.</strong> Study using the "Rust for Rustaceans: Idiomatic Programming for Experienced Developers" book</a></li><li class="chapter-item expanded "><a href="../guide/contribute-an-advanced-feature-to-an-existing-project-or-start-a-project-from-scratch.html"><strong aria-hidden="true">12.</strong> Contribute an advanced feature to an existing project or start a project from scratch</a></li><li class="chapter-item expanded "><a href="../guide/next-steps.html"><strong aria-hidden="true">13.</strong> Next Steps</a></li><li class="chapter-item expanded affix "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="../appendix/appendix-i-install-rust.html" class="active"><strong aria-hidden="true">14.</strong> Appendix I. Install Rust</a></li><li class="chapter-item expanded "><a href="../appendix/appendix-ii-webassembly-wasm.html"><strong aria-hidden="true">15.</strong> Appendix II. WebAssembly (WASM)</a></li><li class="chapter-item expanded "><a href="../appendix/appendix-iii-native-apps.html"><strong aria-hidden="true">16.</strong> Appendix III. Native Apps</a></li><li class="chapter-item expanded "><a href="../appendix/appendix-iv-rust-in-the-background.html"><strong aria-hidden="true">17.</strong> Appendix IV. Rust in the background</a></li><li class="chapter-item expanded "><a href="../appendix/appendix-v-python--javascript-developers.html"><strong aria-hidden="true">18.</strong> Appendix V. Python / Javascript developers</a></li><li class="chapter-item expanded "><a href="../appendix/appendix-vi-more-material.html"><strong aria-hidden="true">19.</strong> Appendix VI. More Material</a></li><li class="chapter-item expanded "><a href="../appendix/appendix-vii-community-chat.html"><strong aria-hidden="true">20.</strong> Appendix VII. Community Chat</a></li><li class="chapter-item expanded "><a href="../appendix/appendix-viii-debugging-rust.html"><strong aria-hidden="true">21.</strong> Appendix VIII. Debugging Rust</a></li><li class="chapter-item expanded "><a href="../appendix/appendix-ix-shipping-rust.html"><strong aria-hidden="true">22.</strong> Appendix IX. Shipping Rust</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Rust 101</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/plabayo/learn-rust-101" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h3 id="appendix-i-install-rust"><a class="header" href="#appendix-i-install-rust">Appendix I. Install Rust</a></h3>
+<p>In order to start using Rust you have to install and configure its tooling on your machinery.</p>
+<ul>
+<li>The Rust compiler (<code>rustc</code>), standard library and tooling (e.g. <code>cargo</code>) are all managed using <code>rustup</code>.
+<ul>
+<li>You can learn how to get started by going to: <a href="https://www.rust-lang.org/learn/get-started">https://www.rust-lang.org/learn/get-started</a></li>
+<li>Once you finished with this you'll have Rust ready on your machine out of the box. Each time there is a new version of Rust you can update it, simply by running <code>rustup update</code></li>
+</ul>
+</li>
+</ul>
+<p>With this installed you should now be able to run the following command:</p>
+<pre><code>cargo version
+</code></pre>
+<p>Which will output something like:</p>
+<pre><code>cargo 1.67.1 (8ecd4f20a 2023-01-10)
+</code></pre>
+<p>You can learn to create, compile and run your first Rust program at &quot;<a href="https://www.rust-lang.org/learn/get-started">First Steps with Cargo - The Cargo Book</a>&quot;.</p>
+<blockquote>
+<p>If you are looking for a fun bigger project to help you learn Rust,
+you might find it fun to buy your own cargo-like tool: <a href="https://blog.mgattozzi.dev/freight-part-1/">https://blog.mgattozzi.dev/freight-part-1/</a></p>
+</blockquote>
+<h4 id="linting-and-styling"><a class="header" href="#linting-and-styling"><a href="#linting-and-styling">Linting and styling</a></a></h4>
+<ul>
+<li>Install <code>clippy</code> using <code>rustup component add clippy</code>
+<ul>
+<li>This way you can use the command <code>cargo clippy</code> to help guarantee the quality of your code</li>
+</ul>
+</li>
+<li>Install <code>rustfmt</code> using <code>rustup component add rustfmt</code>
+<ul>
+<li>This way you can use <code>cargo fmt</code> to format your code (best to also configure this in your IDE to be done each time you save the file)</li>
+</ul>
+</li>
+</ul>
+<p>No custom linting configurations or agreements are required beyond this. If you use these two tools, you're golden. These tools also work nicely with any IDE you might use. Within your CI environment these same tools will be used to check that your code adheres to its standards.</p>
+<p>Clippy can be seen as a testing ground to see what lints are useful and which ones aren't. The ones that are often get shipped into the official compiler a while later. Some lints are also ignored by default for whatever reasons. You can find all lints (AFAIK) at <a href="https://rust-lang.github.io/rust-clippy/stable/index.html">https://rust-lang.github.io/rust-clippy/stable/index.html</a>, should you want to enable even more lints.</p>
+<p>Some useful reasons why you might stil want to enable custom lints are:</p>
+<ul>
+<li>to enable nightly features;</li>
+<li>to prevent the usage (in your own codebase) of <code>unsafe</code> code.</li>
+</ul>
+<p>For reference you can check the <a href="https://github.com/plabayo/tower-async">https://github.com/plabayo/tower-async</a> mono repository's <code>lib.rs</code> files,
+where I enable such opt-in lints myself, which itself is based on the original <code>tower-rs</code> code.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../guide/next-steps.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../appendix/appendix-ii-webassembly-wasm.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../guide/next-steps.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../appendix/appendix-ii-webassembly-wasm.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

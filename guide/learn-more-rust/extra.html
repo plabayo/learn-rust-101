@@ -1,0 +1,286 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Learn More Rust: Extra - Rust 101</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../../intro/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../../intro/prologue.html"><strong aria-hidden="true">2.</strong> Prologue</a></li><li class="chapter-item expanded "><a href="../../intro/learning-rust.html"><strong aria-hidden="true">3.</strong> Learning Rust</a></li><li class="chapter-item expanded "><a href="../../intro/about.html"><strong aria-hidden="true">4.</strong> About</a></li><li class="chapter-item expanded affix "><li class="part-title">Learning Guide</li><li class="chapter-item expanded "><a href="../../guide/learn-rust/index.html"><strong aria-hidden="true">5.</strong> Learn Rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../guide/learn-rust/questions.html"><strong aria-hidden="true">5.1.</strong> Learn Rust: Questions</a></li></ol></li><li class="chapter-item expanded "><a href="../../guide/learn-more-rust/index.html"><strong aria-hidden="true">6.</strong> Learn More Rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../guide/learn-more-rust/questions.html"><strong aria-hidden="true">6.1.</strong> Learn More Rust: Questions</a></li><li class="chapter-item expanded "><a href="../../guide/learn-more-rust/extra.html" class="active"><strong aria-hidden="true">6.2.</strong> Learn More Rust: Extra</a></li></ol></li><li class="chapter-item expanded "><a href="../../guide/learn-async-rust/index.html"><strong aria-hidden="true">7.</strong> Learn Async Rust</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../guide/learn-async-rust/questions.html"><strong aria-hidden="true">7.1.</strong> Learn Async Rust: Questions</a></li><li class="chapter-item expanded "><a href="../../guide/learn-async-rust/rust-atomics-and-locs.html"><strong aria-hidden="true">7.2.</strong> Rust Atomics and Locs</a></li><li class="chapter-item expanded "><a href="../../guide/learn-async-rust/threading.html"><strong aria-hidden="true">7.3.</strong> Threading</a></li><li class="chapter-item expanded "><a href="../../guide/learn-async-rust/tower.html"><strong aria-hidden="true">7.4.</strong> Tower</a></li></ol></li><li class="chapter-item expanded "><a href="../../guide/a-note-about-the-remaining-part-of-this-guide.html"><strong aria-hidden="true">8.</strong> A note about the remaining steps of this guide</a></li><li class="chapter-item expanded "><a href="../../guide/study-using-the-zero-to-production-in-rust-book.html"><strong aria-hidden="true">9.</strong> Study using the "Zero to Production in Rust" book</a></li><li class="chapter-item expanded "><a href="../../guide/contribute-for-the-first-time-to-an-existing-project.html"><strong aria-hidden="true">10.</strong> Contribute for the first time to an existing project</a></li><li class="chapter-item expanded "><a href="../../guide/study-using-the-rust-for-rustaceans-idiomatic-programming-for-experienced-developers-book.html"><strong aria-hidden="true">11.</strong> Study using the "Rust for Rustaceans: Idiomatic Programming for Experienced Developers" book</a></li><li class="chapter-item expanded "><a href="../../guide/contribute-an-advanced-feature-to-an-existing-project-or-start-a-project-from-scratch.html"><strong aria-hidden="true">12.</strong> Contribute an advanced feature to an existing project or start a project from scratch</a></li><li class="chapter-item expanded "><a href="../../guide/next-steps.html"><strong aria-hidden="true">13.</strong> Next Steps</a></li><li class="chapter-item expanded affix "><li class="part-title">Appendix</li><li class="chapter-item expanded "><a href="../../appendix/appendix-i-install-rust.html"><strong aria-hidden="true">14.</strong> Appendix I. Install Rust</a></li><li class="chapter-item expanded "><a href="../../appendix/appendix-ii-webassembly-wasm.html"><strong aria-hidden="true">15.</strong> Appendix II. WebAssembly (WASM)</a></li><li class="chapter-item expanded "><a href="../../appendix/appendix-iii-native-apps.html"><strong aria-hidden="true">16.</strong> Appendix III. Native Apps</a></li><li class="chapter-item expanded "><a href="../../appendix/appendix-iv-rust-in-the-background.html"><strong aria-hidden="true">17.</strong> Appendix IV. Rust in the background</a></li><li class="chapter-item expanded "><a href="../../appendix/appendix-v-python--javascript-developers.html"><strong aria-hidden="true">18.</strong> Appendix V. Python / Javascript developers</a></li><li class="chapter-item expanded "><a href="../../appendix/appendix-vi-more-material.html"><strong aria-hidden="true">19.</strong> Appendix VI. More Material</a></li><li class="chapter-item expanded "><a href="../../appendix/appendix-vii-community-chat.html"><strong aria-hidden="true">20.</strong> Appendix VII. Community Chat</a></li><li class="chapter-item expanded "><a href="../../appendix/appendix-viii-debugging-rust.html"><strong aria-hidden="true">21.</strong> Appendix VIII. Debugging Rust</a></li><li class="chapter-item expanded "><a href="../../appendix/appendix-ix-shipping-rust.html"><strong aria-hidden="true">22.</strong> Appendix IX. Shipping Rust</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Rust 101</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/plabayo/learn-rust-101" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="learn-more-rust-extra"><a class="header" href="#learn-more-rust-extra">Learn More Rust: Extra</a></h2>
+<p>Once you went through the resources in the previous two chapters you might want to start working on a real project to start applying and solidifying your knowledge. A classic way to do this is by porting a small specialized codebase from one language to Rust, keeping in mind to not 1-to-1 map the lines of code but to instead focus on porting the logic with the &quot;Rust way to do things&quot; in mind.</p>
+<p>Should you want some inspiration or a more guided approach, here are some resources that could help you out with this extra optional, but recommended step:</p>
+<ul>
+<li><a href="https://www.oreilly.com/library/view/command-line-rust/9781098109424/">Command-Line Rust</a>: build a cli tool such as grep in rust, using test driven development (TDD), all to learn Rust</li>
+<li><a href="https://lborb.github.io/book/applications.html">Rust Application Books - The Little Book of Rust Books</a>: lists a lot of different books, including ones that allow you to develop small projects using Rust, usually in a well guided fashion;
+<ul>
+<li>You might find <a href="https://archive.is/acQA2">https://archive.is/acQA2</a> an interesting companion article as it gives some (common) ideas that you can apply to the CLI tool you're building;</li>
+<li><a href="https://picklenerd.github.io/pngme_book/introduction.html">Introduction - PNGme: An Intermediate Rust Project</a> is an especially fun small project. It allows you to apply the knowledge that you learned above in a very narrow program, that is for once not network related. At the end you'll have a cli tool that allows you to encode and decode &quot;hidden&quot; messages in a PNG image;</li>
+</ul>
+</li>
+<li><a href="https://tfpk.github.io/macrokata/index.html">Introduction - MacroKata</a>: Macro's are in general not very covered in the resources above, as it is not that common that you have to write your own macros. They can however be convenient in certain situations. This book can be seen as a bootstrap tutorial to get you started with one kind of Rust macros.
+<ul>
+<li>If you are interested in (also) learning procedural macros you can perhaps consult the following resources:
+<ul>
+<li><a href="https://github.com/dtolnay/proc-macro-workshop">GitHub - dtolnay/proc-macro-workshop: Learn to write Rust procedural macros [Rust Latam conference, Montevideo Uruguay, March 2019]</a></li>
+<li><a href="https://www.youtube.com/watch?v=geovSK3wMB8">Procedural Macros in Rust (part 1)</a></li>
+<li>Check out &quot;<a href="https://diesel.rs/">Diesel is a Safe, Extensible ORM and Query Builder for Rust</a>&quot; if you want to see a very cool example of macros (besides all the derives, formatting and printing you might already have been doing)</li>
+<li><a href="https://docs.rs/serde_json/latest/serde_json/macro.json.html">json in serde_json - Rust</a> is another neat example as it allows you to quickly define a Json value directly in Rust
+<ul>
+<li>Taking a couple of hours is also a life well spent reading through this codebase as it will teach you a lot of nice things about Rust, especially given how simple and scoped the problem of json serialization is. It will really show you and teach you how serde works and why it works;</li>
+</ul>
+</li>
+<li>Most web frameworks (if not all) in Rust also heavily make use of Macro's to give you a very neat and clean API</li>
+</ul>
+</li>
+<li>And of course do not forget to consult the &quot;classic&quot; macro Rust book: <a href="https://danielkeep.github.io/tlborm/book/index.html">The Little Book of Rust Macros</a></li>
+<li>If you want to get a quick intro and overview of Macros this video can help a lot as well: <a href="https://www.youtube.com/watch?v=MWRPYBoCEaY">Rust's Witchcraft</a></li>
+</ul>
+</li>
+</ul>
+<p>If you have a lot of free time at your hand and you want to build something really cool that is totally useless, here are some more ideas:</p>
+<ul>
+<li>Build your own Gameboy (classic) emulator: <a href="https://rylev.github.io/DMG-01/public/book/introduction.html">Introduction - DMG-01: How to Emulate a Game Boy</a></li>
+<li>Build your own CHIP-8 (8-bit computer) interpreter: <a href="http://devernay.free.fr/hacks/chip8/C8TECH10.HTM">Cowgod's Chip-8 Technical Reference</a> (no Rust guidance, directly from the CHIP-8 specification instead, you can do it, I believe in you)</li>
+<li>Build your own Ray Tracer (not a Rust tutorial, but can easily be implemented in Rust as well): <a href="https://raytracing.github.io/">Ray Tracing in One Weekend Series</a> (fun if you always had the dream to start dabbling into the world of Graphics Programming)
+<ul>
+<li><a href="https://www.superperfundo.dev/?tag=ray-tracer-challenge">https://www.superperfundo.dev/?tag=ray-tracer-challenge</a> might be a useful blog series if you want a more guided approach on how you might make a Ray Tracer in Rust;</li>
+<li><a href="https://archive.is/t6Ifp">https://archive.is/t6Ifp</a> is an interesting article in this area as well, where it introduces you to a language called PO;</li>
+</ul>
+</li>
+</ul>
+<p>Seriously though, do not consider the above recommended or mandatory in any way. If you however really like to develop stuff and you do like to do it extensively in your free time, then, and only then, I do believe that the above are a great way to really solidify your current Rust knowledge and give yourself a great (pragmatic) foundation.</p>
+<p>At this point you might also be ready to start reading alternative — community driven — learning resources on foundational Rust knowledge. With such content you do however always need to be careful as they might contain mistakes, not well rounded or closed opinions. An example of possible valuable learning resources are the following blog series about the Rust type system:</p>
+<ul>
+<li>part 1 (<a href="https://sanjuvi.github.io/Blog/posts/Rust-type-system-part-1/">https://sanjuvi.github.io/Blog/posts/Rust-type-system-part-1/</a>): ownership and move semantics, aliasing and mutation, lifetime and region based resource management;</li>
+<li>part 2 (<a href="https://sanjuvi.github.io/Blog/posts/Rust-Type-System-Part-2">https://sanjuvi.github.io/Blog/posts/Rust-Type-System-Part-2</a>/): type as sets, algebraic data types, patterns in Rust using Algebraic types, traits, generic associated types (GAT), operator overloading, use cases;</li>
+<li>part 3 (<a href="https://sanjuvi.github.io/Blog/posts/Rust-Type-System-Part-3">https://sanjuvi.github.io/Blog/posts/Rust-Type-System-Part-3</a>/): container types, interior mutability, concurrency, deadlocks without threads.</li>
+</ul>
+<p>More parts to come as well.</p>
+<p>For the brave among you with the time for it, learn to build your own Operating System (OS) using Rust: <a href="https://os.phil-opp.com/">https://os.phil-opp.com/</a>### Code like a pro in Rust</p>
+<p>At this point of your Rust learning journey you've come a far way already, relatively speaking. Perhaps you want to shortcut, at least for now.</p>
+<p>If so, <a href="https://www.manning.com/books/code-like-a-pro-in-rust">the still to be published &quot;Code like a pro in Rust&quot; book</a> might be enough for you to quickly get from beginner to advanced Rust programmer.</p>
+<h3 id="a-crust-of-rust"><a class="header" href="#a-crust-of-rust">A Crust of Rust</a></h3>
+<p>Once you get at this point you are around the level of a beginner or intermediate Rust programmer. At this point you could already start to tackle stuff like <a href="/guide/study-using-the-rust-for-rustaceans-idiomatic-programming-for-experienced-developers-book.html">&quot;Rust for Rustaceans&quot; of step (6)</a>. However it might be a bit much.</p>
+<p>Therefore while you go through the next couple of sections it could be helpful to now and then (e.g. while washing dishes or instead of Netflix) an education Rust code video. In the appendix at the bottom of this page there a couple of such suggestions.</p>
+<p>Particular to this context you might want to save <a href="https://www.youtube.com/playlist?list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa">the &quot;Crust of Rust&quot; playlist</a>. Each video will go over a specific topic, e.g. Lifetimes, macros, Atomics, … No need to watch them one by one, feel free to jump to them in whatever orders and only those that interest you (which is the same tip that I can give for the &quot;Rust for Rustaceans&quot; book).</p>
+<h3 id="api-design"><a class="header" href="#api-design">API Design</a></h3>
+<p>Designing APIs is a big part of being a Rust programmer, any programmer really. Once you start to get comfortable enough in Rust or start building your own public crate, it is a topic you'll want to invest in.</p>
+<p>A good starting point is the <a href="https://rust-lang.github.io/api-guidelines/about.html">API Guidelines</a> which are a set of guidelines that are meant to help you design good APIs. They are not meant to be followed blindly, but rather to be used as a reference to help you make the right decisions.</p>
+<p>A next and continuous step is to read blog posts and watch videos about API design. The Rust newsletter often has an article listed in its weekly edition. But other platforms such as HackerNews will have interesting Rust articles pop up as well. <a href="https://sabrinajewson.org/blog/errors">https://sabrinajewson.org/blog/errors</a> is for example a great article talking about one might to give errors as much love as the other parts of the API, and also talks about why crates like <code>thiserror</code> might not be that great. All in all, similar to other parts of your continuous Rust learning journey, you'll want to remain critical and open to new ideas and see what works for you and what not.</p>
+<p>If you are however still in the camp of <code>thiserror</code>, you might be able to make good use of blog posts such as <a href="https://determinate.systems/posts/instrumenting-axum">https://determinate.systems/posts/instrumenting-axum</a> that guide you through adding instrumentation to your Axum based web service,
+using <code>thiserror</code> among other excellent crates such as <code>tracing</code>. A great read, especially if you're not that experienced with instrumentation
+that goes beyon the basic single line logs.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../guide/learn-more-rust/questions.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../guide/learn-async-rust/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../guide/learn-more-rust/questions.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../guide/learn-async-rust/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
