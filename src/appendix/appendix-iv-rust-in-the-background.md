@@ -29,7 +29,7 @@ Python web developers can also make use of Rust to write their Python web servic
   - A Rust HTTP server for Python applications (written on top of Hyper);
   - Supports ASGI/3, RSGI and WSGI interface applications;
   - Example usage: run your FastAPI web service :)
-- Robyn (<https://news.ycombinator.com/item?id=34399125>):
+- Robyn (<https://github.com/sparckles/robyn>):
   - A High-Performance, Community-Driven, and Innovator Friendly Web Framework with a Rust runtime.
   - In contrast to `Granian` this does mean you need to write your service using the Robyn way to do things,
     so not possible to use an existing service built with FastAPI.
