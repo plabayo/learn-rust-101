@@ -4,10 +4,14 @@
 
 [![Github Sponsors Badge](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA)](https://github.com/sponsors/plabayo) [![Buy Me A Coffee Badge](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/plabayo)
 
-
 [rust]: https://www.rust-lang.org/
 
 > ⓘ A guide to aid you in your journey of becoming a Rustacean (Rust developer). See the [Contributing](https://github.com/plabayo/learn-rust-101/blob/main/CONTRIBUTING.md) and [Code of Conduct](https://github.com/plabayo/learn-rust-101/blob/main/CODE_OF_CONDUCT.md) for more information about how to contribute to this repository.
+
+Ready to start your learning journey?
+
+Read [the prologue](https://rust-lang.guide/intro/prologue.html) next or jump straight to
+[the introduction of this learning guide](https://rust-lang.guide/intro/learning-rust.html).
 
 ## Disclaimer
 
