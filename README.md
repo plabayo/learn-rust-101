@@ -19,7 +19,7 @@ This guide is free and will remain gratis available to share for all who are int
 
 🗞 This guide was featured [on the front page of HackerNews on the 8th of April 2023](<https://news.ycombinator.com/item?id=35489029>) and in [the weekly edition of the Rust newsletter on the 12th of April 2023](https://this-week-in-rust.org/blog/2023/04/12/this-week-in-rust-490/).
 
-## Prelogue
+## Prologue
 
 [Rust][rust] is a modern systems programming language with safety in mind as one of its core goals and strengths. Systems programming is programming within a resource constrained environment. However, as a lot of our services run now in paid-for-usage cloud environments, we can also consider them as resource constrained environments. This is why Rust is a great fit for more use cases than people might realize.
 
