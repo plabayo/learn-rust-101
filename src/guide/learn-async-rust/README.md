@@ -22,15 +22,15 @@ Extra Learning Resources:
     - <https://github.com/smol-rs/smol> is a great alternative Async runtime that you might want to try out;
 - Learn more about Async Rust and what the current situation is/was in 2023: <https://corrode.dev/blog/async/>
 
-As an extra, and perhaps slighty sidetracked, you may also want to read and develop alongside the following articles:
+As an extra, and perhaps slightly sidetracked, you may also want to read and develop alongside the following articles:
 
 - [The HTTP crash course nobody asked for](https://fasterthanli.me/articles/the-http-crash-course-nobody-asked-for)
 - [Understanding Rust futures by going way too deep](https://fasterthanli.me/articles/understanding-rust-futures-by-going-way-too-deep)
 - To get to get a deeper understanding about the concepts of pinning and the like you might find the following articles helpful:
   - [Put a pin on That](https://archive.is/pHfCn)
-    - This article refers also to [Pin, Unpin and why Rust neeeds them](https://archive.is/LH91o)
+    - This article refers also to [Pin, Unpin and why Rust needs them](https://archive.is/LH91o)
     - as well as [Pin and Suffering](https://archive.is/32RlT)
-  - All of the above are great articles to get you quickly up to speeds with the concept, and helpful as a repeater or because you hvae no desire or time to read some of the books that talk about this topic and that I recommend in other parts of this guide;
+  - All of the above are great articles to get you quickly up to speeds with the concept, and helpful as a repeater or because you have no desire or time to read some of the books that talk about this topic and that I recommend in other parts of this guide;
 
 In order to help you understand how Async code works (e.g. what about the Async keyword and How do futures really work. And how do you define traits with futures. And How do you implement them), you might want to read through the articles linked in the [Tower](#tower) section, as seeing how to implement your own _Tower_ middleware might answer many of such questions. Gaining a deeper theoretical but still pragmatic enough understanding behind it is probably better done by reading some of the books listed in this guide.
 

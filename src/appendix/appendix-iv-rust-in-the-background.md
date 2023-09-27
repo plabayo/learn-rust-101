@@ -17,7 +17,7 @@ At times however you might be able to incorporate the benefits of Rust in your e
 These give just a small taste of what Rust can mean for Web developers even if they do not know or use Rust themselves directly.
 
 In fact some thing most Rust users will be users that do not even know they are using Rust. This is not only True
-for the Javacript world but for many others as well, such as Python for example.
+for the Javascript world but for many others as well, such as Python for example.
 
 - [Pydantic](https://github.com/pydantic/pydantic) is a library for Data validation using Python type hints.
 - [Ruff](https://github.com/astral-sh/ruff) is An extremely fast Python linter, written in Rust.

@@ -34,7 +34,7 @@ No custom linting configurations or agreements are required beyond this. If you 
 
 Clippy can be seen as a testing ground to see what lints are useful and which ones aren't. The ones that are often get shipped into the official compiler a while later. Some lints are also ignored by default for whatever reasons. You can find all lints (AFAIK) at <https://rust-lang.github.io/rust-clippy/stable/index.html>, should you want to enable even more lints.
 
-Some useful reasons why you might stil want to enable custom lints are:
+Some useful reasons why you might still want to enable custom lints are:
 
 - to enable nightly features;
 - to prevent the usage (in your own codebase) of `unsafe` code.
