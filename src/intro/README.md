@@ -30,11 +30,11 @@ You can find the book for sale at the following Amazon locations:
 | - | - | - |
 | US | [`$9.95`](https://amazon.com/dp/B0CK3HKTPW) | [`$2.99`](https://amazon.com/dp/B0CK5DY41H) |
 | UK | [`£8.19`](https://amazon.co.uk/dp/B0CK3HKTPW) | [`£2.46`](https://amazon.co.uk/dp/B0CK5DY41H) |
-| DE | [`€10.07`](https://amazon.de/dp/B0CK3HKTPW) | |
+| DE | [`10.07 €`](https://amazon.de/dp/B0CK3HKTPW) | |
 | FR | [`9,93 €`](https://amazon.fr/dp/B0CK3HKTPW) | [`2,83 €`](https://amazon.fr/dp/B0CK5DY41H) |
 | ES | [`9,79 €`](https://amazon.es/dp/B0CK3HKTPW) | [`2,83 €`](https://amazon.es/dp/B0CK5DY41H) |
 | IT | [`9,79 €`](https://amazon.it/dp/B0CK3HKTPW) | [`2,83 €`](https://amazon.it/dp/B0CK5DY41H) |
-| NL | [`€ 10,26`](https://amazon.nl/dp/B0CK3HKTPW) | [`€ 2,83`](https://amazon.nl/dp/B0CK5DY41H) |
+| NL | [`10,26 €`](https://amazon.nl/dp/B0CK3HKTPW) | [`2,83 €`](https://amazon.nl/dp/B0CK5DY41H) |
 | JP | [`¥1,631`](https://amazon.co.jp/dp/B0CK3HKTPW) | [`¥446`](https://amazon.co.jp/dp/B0CK5DY41H) |
 | PL | [`45,55 zł`](https://amazon.pl/dp/B0CK3HKTPW) | |
 | BR | | [`R$ 14,91`](https://amazon.com.br/dp/B0CK5DY41H) |
