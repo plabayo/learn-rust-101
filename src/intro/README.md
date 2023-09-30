@@ -28,20 +28,20 @@ You can find the book for sale at the following Amazon locations:
 
 | country  | paperback | kindle |
 | - | - | - |
-| US | https://amazon.com/dp/B0CK3HKTPW (`$9.95`) | https://amazon.com/dp/B0CK5DY41H (`$2.99`) |
-| UK | https://amazon.co.uk/dp/B0CK3HKTPW `(£8.19)` | https://amazon.co.uk/dp/B0CK5DY41H `(£2.46)` |
-| DE | https://amazon.de/dp/B0CK3HKTPW `(€10.07)` | |
-| FR | https://amazon.fr/dp/B0CK3HKTPW `(9,93 €)` | https://amazon.fr/dp/B0CK5DY41H `(2,83 €)` |
-| ES | https://amazon.es/dp/B0CK3HKTPW  `(9,79 €)` | https://amazon.es/dp/B0CK5DY41H `(2,83 €)` |
-| IT | https://amazon.it/dp/B0CK3HKTPW `(9,79 €)` | https://amazon.it/dp/B0CK5DY41H `(2,83 €)` |
-| NL | https://amazon.nl/dp/B0CK3HKTPW `(€ 10,26)` | https://amazon.nl/dp/B0CK5DY41H `(€ 2,83)` |
-| JP | https://amazon.co.jp/dp/B0CK3HKTPW `(¥1,631)` | https://amazon.co.jp/dp/B0CK5DY41H  `(¥446)` |
-| PL | https://www.amazon.pl/dp/B0CK3HKTPW `(45,55 zł)` | |
-| BR | | https://amazon.com.br/dp/B0CK5DY41H `(R$ 14,91)` |
-| CA | https://amazon.ca/dp/B0CK3HKTPW `(13.45 CAD)` | https://amazon.ca/dp/B0CK5DY41H `(4.04 CAD)` |
-| MX | https://amazon.com.mx/dp/B0CK3HKTPW `(unavailable)` |
-| AU | https://amazon.com.au/dp/B0CK3HKTPW `(30.37 AUD)` | https://amazon.com.au/dp/B0CK5DY41H `(4.68 AUD)` |
-| IN | | https://amazon.in/dp/B0CK5DY41H `(₹249.00)` |
+| US | <https://amazon.com/dp/B0CK3HKTPW> (`$9.95`) | <https://amazon.com/dp/B0CK5DY41H> (`$2.99`) |
+| UK | <https://amazon.co.uk/dp/B0CK3HKTPW> `(£8.19)` | <https://amazon.co.uk/dp/B0CK5DY41H> `(£2.46)` |
+| DE | <https://amazon.de/dp/B0CK3HKTPW> `(€10.07)` | |
+| FR | <https://amazon.fr/dp/B0CK3HKTPW> `(9,93 €)` | <https://amazon.fr/dp/B0CK5DY41H> `(2,83 €)` |
+| ES | <https://amazon.es/dp/B0CK3HKTPW>  `(9,79 €)` | <https://amazon.es/dp/B0CK5DY41H> `(2,83 €)` |
+| IT | <https://amazon.it/dp/B0CK3HKTPW> `(9,79 €)` | <https://amazon.it/dp/B0CK5DY41H> `(2,83 €)` |
+| NL | <https://amazon.nl/dp/B0CK3HKTPW> `(€ 10,26)` | <https://amazon.nl/dp/B0CK5DY41H> `(€ 2,83)` |
+| JP | <https://amazon.co.jp/dp/B0CK3HKTPW> `(¥1,631)` | <https://amazon.co.jp/dp/B0CK5DY41H>  `(¥446)` |
+| PL | <https://amazon.pl/dp/B0CK3HKTPW> `(45,55 zł)` | |
+| BR | | <https://amazon.com.br/dp/B0CK5DY41H> `(R$ 14,91)` |
+| CA | <https://amazon.ca/dp/B0CK3HKTPW> `(13.45 CAD)` | <https://amazon.ca/dp/B0CK5DY41H> `(4.04 CAD)` |
+| MX | <https://amazon.com.mx/dp/B0CK3HKTPW> `(unavailable)` |
+| AU | <https://amazon.com.au/dp/B0CK3HKTPW> `(30.37 AUD)` | <https://amazon.com.au/dp/B0CK5DY41H> `(4.68 AUD)` |
+| IN | | <https://amazon.in/dp/B0CK5DY41H> `(₹249.00)` |
 
 The kindle book will get updated several times per year.
 The paperbook gets updated less frequently then that.
