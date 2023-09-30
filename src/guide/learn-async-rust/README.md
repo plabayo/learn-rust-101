@@ -46,3 +46,9 @@ The blog series as found at <https://hegdenu.net/posts/understanding-async-await
 - [part 2: how does a pending future get woken?](https://hegdenu.net/posts/understanding-async-await-2/)
 - [part 3: why shouldn’t I hold a mutex guard across an await point?](https://hegdenu.net/posts/understanding-async-await-3/)
 - [part 4: why would I ever want to write a future manually?](https://hegdenu.net/posts/understanding-async-await-4/#why-would-i-ever-want-to-write-a-future-manually)
+
+Sooner or later you'll also start to see the conterversy surrounding Async, while most do agree it's a a great thing to be and have,
+and also acknowledge the hard work that is put into it, but not about all implementation details people agree.
+One such detail is about whether we really need `async fn` syntax, an interesting take about that can be read at
+<https://seanmonstar.com/post/66832922686/was-async-fn-a-mistake>. Like always follow interesting blogs,
+and news resources such as ["This week in Rust"](https://this-week-in-rust.org/).

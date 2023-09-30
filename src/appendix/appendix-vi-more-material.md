@@ -13,8 +13,8 @@ Official Blogs:
 Conferences. There are many and even more meetups and other small gatherings.
 Here we'll only list the bigger (still active) conferences:
 
-- RustConf, one of the larger anual gatherings of the Rust Community, in the US: <https://rustconf.com/>
-- Rust Nation, a big conference held anually in London (UK): <https://www.rustnationuk.com/>
+- RustConf, one of the larger annual gatherings of the Rust Community, in the US: <https://rustconf.com/>
+- Rust Nation, a big conference held annually in London (UK): <https://www.rustnationuk.com/>
 - EuroRust, another big conference in Brussels (Belgium, EU): <https://eurorust.eu/>
 - RustFest, used to be a big global event, but no recent edition has taken place: <https://rustfest.world/>
 

@@ -25,5 +25,8 @@ Sooner or later you might also need help for a project you work on or simply to 
 
 [Welcome to Comprehensive Rust 🦀 - Comprehensive Rust 🦀](https://google.github.io/comprehensive-rust/): a small bootcamp course by Google focused on Android Engineers. Most of it is however applicable to anyone coming to Rust from another language and could be a great alternative or companion for some of the resources above.
 
+> Google has a blog article about "Comprehensive Rust" to look back at a year of Teaching rust within Google,
+> available at <https://security.googleblog.com/2023/09/scaling-rust-adoption-through-training.html>.
+
 [The "Effective Rust" book](https://www.lurklurk.org/effective-rust/) is an excellent book that might just as well be official Rust material, and
 recommended for all Rust learners. So once you think you understand the content of "the Rust book" and the like, you probably want to start reading "Effective Rust", you won't regret it.

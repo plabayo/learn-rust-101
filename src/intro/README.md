@@ -13,6 +13,43 @@ Ready to start your learning journey?
 Read [the prologue](https://rust-lang.guide/intro/prologue.html) next or jump straight to
 [the introduction of this learning guide](https://rust-lang.guide/intro/learning-rust.html).
 
+## Buy this book
+
+In order to support the development and maintenance of this guide you can choose [to sponsor this project](#sponsors).
+You can however also purchase the kindle or paperback version through your preferred Amazon website.
+
+> Kindle Unlimited subscribers can download this book for free through the marketplace
+> where you get all your Kindle Unlimited books.
+
+The official book title is "Rust Programming Language Learning Guide", by "Glen De Cauwsemaecker",
+and its ISBN-13 is "9798862715767".
+
+You can find the book for sale at the following Amazon locations:
+
+| country  | paperback | kindle |
+| - | - | - |
+| US | https://amazon.com/dp/B0CK3HKTPW (`$9.95`) | https://amazon.com/dp/B0CK5DY41H (`$2.99`) |
+| UK | https://amazon.co.uk/dp/B0CK3HKTPW `(£8.19)` | https://amazon.co.uk/dp/B0CK5DY41H `(£2.46)` |
+| DE | https://amazon.de/dp/B0CK3HKTPW `(€10.07)` | |
+| FR | https://amazon.fr/dp/B0CK3HKTPW `(9,93 €)` | https://amazon.fr/dp/B0CK5DY41H `(2,83 €)` |
+| ES | https://amazon.es/dp/B0CK3HKTPW  `(9,79 €)` | https://amazon.es/dp/B0CK5DY41H `(2,83 €)` |
+| IT | https://amazon.it/dp/B0CK3HKTPW `(9,79 €)` | https://amazon.it/dp/B0CK5DY41H `(2,83 €)` |
+| NL | https://amazon.nl/dp/B0CK3HKTPW `(€ 10,26)` | https://amazon.nl/dp/B0CK5DY41H `(€ 2,83)` |
+| JP | https://amazon.co.jp/dp/B0CK3HKTPW `(¥1,631)` | https://amazon.co.jp/dp/B0CK5DY41H  `(¥446)` |
+| PL | https://www.amazon.pl/dp/B0CK3HKTPW `(45,55 zł)` | |
+| BR | | https://amazon.com.br/dp/B0CK5DY41H `(R$ 14,91)` |
+| CA | https://amazon.ca/dp/B0CK3HKTPW `(13.45 CAD)` | https://amazon.ca/dp/B0CK5DY41H `(4.04 CAD)` |
+| MX | https://amazon.com.mx/dp/B0CK3HKTPW `(unavailable)` |
+| AU | https://amazon.com.au/dp/B0CK3HKTPW `(30.37 AUD)` | https://amazon.com.au/dp/B0CK5DY41H `(4.68 AUD)` |
+| IN | | https://amazon.in/dp/B0CK5DY41H `(₹249.00)` |
+
+The kindle book will get updated several times per year.
+The paperbook gets updated less frequently then that.
+
+This website gets updated the fasted. As such, feel free to continue
+to use this website as your prinary guide, and if possible,
+you can therefore also choose to [sponsor](#sponsors) me instead.
+
 ## Disclaimer
 
 This guide is made by [Glen De Cauwsemaecker](https://www.glendc.com/) and is in no way endorsed nor affiliated with the Rust foundation. Rust & Cargo are registered trademarks of the Rust foundation.

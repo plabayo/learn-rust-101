@@ -25,4 +25,6 @@ want to ensure you know the right tools and crates to help you deal with point (
     and introduce you to "Open Telemetry" in general.
 - If you do not use _Tokio_, then a crate like [log](https://crates.io/crates/log) is your best bet, and it will ensure that no matter what application makes use of your crate, will be able to consume your logs the way they want :)
 
+> A detailed overview of logging libraries that are available can be found in <https://www.shuttle.rs/blog/2023/09/20/logging-in-rust>.
+
 Finally when shit really hits the fan, and you do not see what's wrong from metrics and logs (alone), you might need to grab a debugger. The book <https://rustc-dev-guide.rust-lang.org/debugging-support-in-rustc.html> might be able to give you a good starting point. Articles such as <https://dev.to/rogertorres/debugging-rust-with-vs-code-11dj> might help you get started on debugging in case you are using VSCode for Rust, which is what plenty of people seem to use these days. There's also a Gist about it for VSCode at <https://gist.github.com/xanathar/c7c83e6d53b72dd4464f695607012629>.
