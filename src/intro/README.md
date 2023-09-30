@@ -62,4 +62,6 @@ This guide is free and will remain gratis available to share for all who are int
 
 ## Sponsors
 
-Support this project by becoming a [sponsor](https://github.com/sponsors/plabayo).
+Support this project by becoming a [sponsor](https://github.com/sponsors/plabayo). GitHub sponsors can be a one-time thing or regular financial contributors.
+
+Or you can choose to [buy me a coffee](https://www.buymeacoffee.com/plabayo) instead.
