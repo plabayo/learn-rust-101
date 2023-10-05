@@ -21,7 +21,25 @@ Sooner or later you might also need help for a project you work on or simply to 
 >
 > If you've never done any Systems programming before, this will be an especially helpful book given it will explain a lot of the magic you've encountered in your very protected professional life so far. You're welcome.
 
-### Alternative or Companion resources
+### Learn Rust in a Month of Lunches
+
+There's only one Rust book out there — that I'm aware of — which assumes no programming experience or knowledge at all.
+
+The "Learn Rust in a Month of Lunches" book by David MacLeod is available at <https://www.manning.com/books/learn-rust-in-a-month-of-lunches>.
+
+It's a pretty unique and amazing book. Personally I do value of reading the same knowledge from many different PoV, both
+to understand the different angles on the same topic, but also as a way of learning by repetition. As such I think the original
+guide structure does still make sense.
+
+That said I do appreciate that not everyone has the stamina for a long Rust Journey. As such, if you want only a single resource or
+book to help you get started with Rust, beginning from zero, I can highly recommend this book. The chapters are pretty unique
+and read very smooth. Once you finished this book you should be ready to immediately skip to the advanced parts of this guide,
+such as [watching the Crust of Rust video series by "Jon Gjengset"](https://www.youtube.com/playlist?list=PLqbS7AVVErFiWDOAVrPt7aYmnuuOLYvOa)
+or [reading the Rust for Rustaceans book](https://nostarch.com/rust-rustaceans).
+
+It's honestly an amazing book, you won't regret picking it up, be it your only beginner Rust book or just one of many angles.
+
+### Even more Alternative or Companion resources
 
 [Welcome to Comprehensive Rust 🦀 - Comprehensive Rust 🦀](https://google.github.io/comprehensive-rust/): a small bootcamp course by Google focused on Android Engineers. Most of it is however applicable to anyone coming to Rust from another language and could be a great alternative or companion for some of the resources above.
 

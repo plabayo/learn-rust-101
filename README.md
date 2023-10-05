@@ -29,10 +29,6 @@ The goal of this guide is to introduce Rust to you as an individual or an entire
 
 This guide is fully open source and the complete source code can be found at <https://github.com/plabayo/learn-rust-101>. If you find any errors or have any suggestions, please open an issue or a pull request. If you want to contribute to this guide, please read the [Contributing Guidelines](https://github.com/plabayo/learn-rust-101/blob/main/CONTRIBUTING.md). This guide is licensed under the [MIT License](https://github.com/plabayo/learn-rust-101/blob/main/LICENSE) and developed with love by [Plabayo](https://plabayo.tech/).
 
-## Rust 101 Course
-
-The origins of this guide can be found in the preparation of a semester long course I gave to a group of employees at [OTA Insight Ltd.](https://www.otainsight.com/). The recordings of this course are available on YouTube at: <https://www.youtube.com/playlist?list=PLQgXEsLXFxpVyLddG8FFXfNQEiodTzAjj>. The videos are however not of the highest quality, especially given the many better resources out there.
-
 ## Learning Guide
 
 Source code for this guide is available under [./src](./src).

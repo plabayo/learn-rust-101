@@ -9,7 +9,7 @@ and find deploying to your own VPS or VM a bit too barebones, you might find som
 solutions to be helpful, specifically with the goal of shipping rust code such as a web service:
 
 - <https://fly.io/>: allows you to ship rust code fairly painlessly by using docker containers;
-- <https://render.com/> ship rust code without having to define a docker comtainer and with tls, cdn, db and other capabilities that can be enabled from an easy to use WebUI;
+- <https://render.com/> ship rust code without having to define a docker container and with tls, cdn, db and other capabilities that can be enabled from an easy to use WebUI;
 - <https://www.shuttle.rs/> has a pretty unique approach by letting you deploy your Rust code directly, without containers,
   and by adding your stack dependencies (e.g. database needs) as macros to your Rust `main.rs` code;
 - Using <https://github.com/cloudflare/workers-rs> you can ship your Rust code to Cloudflare's workers platform;

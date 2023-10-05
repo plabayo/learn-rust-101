@@ -6,6 +6,7 @@
 - [Prologue](./intro/prologue.md)
 - [Learning Rust](./intro/learning-rust.md)
 - [About](./intro/about.md)
+- [Support](./intro/support.md)
 
 # Learning Guide
 
