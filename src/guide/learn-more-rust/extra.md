@@ -2,23 +2,33 @@
 
 Once you went through the resources in the previous two chapters you might want to start working on a real project to start applying and solidifying your knowledge. A classic way to do this is by porting a small specialized codebase from one language to Rust, keeping in mind to not 1-to-1 map the lines of code but to instead focus on porting the logic with the "Rust way to do things" in mind.
 
-> Was it always your dream to make your own Game? And do you also want to learn Rust
->
-> <https://bfnightly.bracketproductions.com/webbuild.html> might be the free online guide for you!
->
-> In this tutorial you go through the entire process of building your own game and compile
-> it to WASM so that you can play it directly from any modern browser!
->
-> If you like this tutorial and other material by erbert Wolverson
-> you can also go over to <https://pragprog.com/titles/hwrust/hands-on-rust/> and buy his book,
-> available as paperback and ebook.
-
 Should you want some inspiration or a more guided approach, here are some resources that could help you out with this extra optional, but recommended step:
 
 - [Command-Line Rust](https://www.oreilly.com/library/view/command-line-rust/9781098109424/): build a cli tool such as grep in rust, using test driven development (TDD), all to learn Rust
 - [Rust Application Books - The Little Book of Rust Books](https://lborb.github.io/book/applications.html): lists a lot of different books, including ones that allow you to develop small projects using Rust, usually in a well guided fashion;
   - You might find <https://archive.is/acQA2> an interesting companion article as it gives some (common) ideas that you can apply to the CLI tool you're building;
   - [Introduction - PNGme: An Intermediate Rust Project](https://picklenerd.github.io/pngme_book/introduction.html) is an especially fun small project. It allows you to apply the knowledge that you learned above in a very narrow program, that is for once not network related. At the end you'll have a cli tool that allows you to encode and decode "hidden" messages in a PNG image;
+
+> Was it always your dream to make your own Game? And do you also want to learn Rust?
+>
+> <https://bfnightly.bracketproductions.com/webbuild.html> might be the free online guide for you!
+>
+> In this tutorial you go through the entire process of building your own game and compile
+> it to WASM so that you can play it directly from any modern browser!
+>
+> If you like this tutorial and other material by Herbert Wolverson
+> you can also go over to <https://pragprog.com/titles/hwrust/hands-on-rust/> and buy his book,
+> available as paperback and ebook.
+
+Most pragmatic commercial Rust books cover Macros only as much as you need to know about them:
+
+- What are macros?
+- How do they work?
+- How to read them?
+- And some books might even teach you about `cargo expand` (the tool that will help you with reading macros);
+
+When the day comes that you do feel ready to learn about Macros, here a list of extensive resources all about macros:
+
 - [Introduction - MacroKata](https://tfpk.github.io/macrokata/index.html): Macro's are in general not very covered in the resources above, as it is not that common that you have to write your own macros. They can however be convenient in certain situations. This book can be seen as a bootstrap tutorial to get you started with one kind of Rust macros.
   - If you are interested in (also) learning procedural macros you can perhaps consult the following resources:
     - [GitHub - dtolnay/proc-macro-workshop: Learn to write Rust procedural macros [Rust Latam conference, Montevideo Uruguay, March 2019]](https://github.com/dtolnay/proc-macro-workshop)
