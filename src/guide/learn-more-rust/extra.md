@@ -2,6 +2,17 @@
 
 Once you went through the resources in the previous two chapters you might want to start working on a real project to start applying and solidifying your knowledge. A classic way to do this is by porting a small specialized codebase from one language to Rust, keeping in mind to not 1-to-1 map the lines of code but to instead focus on porting the logic with the "Rust way to do things" in mind.
 
+> Was it always your dream to make your own Game? And do you also want to learn Rust
+>
+> <https://bfnightly.bracketproductions.com/webbuild.html> might be the free online guide for you!
+>
+> In this tutorial you go through the entire process of building your own game and compile
+> it to WASM so that you can play it directly from any modern browser!
+>
+> If you like this tutorial and other material by erbert Wolverson
+> you can also go over to <https://pragprog.com/titles/hwrust/hands-on-rust/> and buy his book,
+> available as paperback and ebook.
+
 Should you want some inspiration or a more guided approach, here are some resources that could help you out with this extra optional, but recommended step:
 
 - [Command-Line Rust](https://www.oreilly.com/library/view/command-line-rust/9781098109424/): build a cli tool such as grep in rust, using test driven development (TDD), all to learn Rust

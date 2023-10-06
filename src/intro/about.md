@@ -6,7 +6,9 @@
 - Cloudflare develops many of its services, including its public DNS, serverless computing, and packet inspection offerings with Rust.
 - Dropbox rebuilt its backend warehouse, which manages exabytes of storage, with Rust.
 - Google develops parts of Android, such as its Bluetooth module, with Rust. Rust is also used for the crosvm component of Chrome OS and plays an important role in Google's new operating system, Fuchsia.
-- Facebook uses Rust to power Facebook's web, mobile, and API services, as well as parts of HHVM, the HipHop virtual machine used by the Hack programming language.
+  - Google has also been teaching their engineers across the globe in Rust using [their Comprehensive Rust learning material](https://google.github.io/comprehensive-rust/) and
+    they've written about these activities at length at <https://security.googleblog.com/2023/09/scaling-rust-adoption-through-training.html>.
+- Meta uses Rust to power Meta's web, mobile, and API services, as well as parts of HHVM, the HipHop virtual machine used by the Hack programming language.
 - Microsoft writes components of its Azure platform including a security daemon for its Internet of Things (IoT) service in Rust.
 - Mozilla uses Rust to enhance the Firefox web browser, which contains 15 million lines of code. Mozilla's first two Rust-in-Firefox projects, its MP4 metadata parser and text encoder/decoder, led to overall performance and stability improvements.
 - GitHub's npm, Inc., uses Rust to deliver "upwards of 1.3 billion package downloads per day."

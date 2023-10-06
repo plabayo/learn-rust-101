@@ -21,6 +21,7 @@ What you'll build depends on your interest or perhaps in the type of industry or
   - A podcast episode about the embedded WG can be found at: <https://rustacean-station.org/episode/jonathan-pallant/>
   - You can interact with the WG using the matrix chat: <https://matrix.to/#/!BHcierreUuwCMxVqOf:matrix.org>
 - If you are interested in using Rust for Data Engineering then <https://datawithrust.com/> could be a great start;
+> A curated list of data & big-data in Rust can be found at <https://arewedatayet.com/>;
 - Related to the previous, if you want to use ML from within Rust (or together with it), you might find the following list a great resource: <https://www.arewelearningyet.com/>
 
 There's a lot more of course. You probably know best where you're going. A lot of exciting stuff is happening. Plenty of conferences (e.g. Rust Conf) to help you get inspired on it if you're not already. And of course, plenty of people to help you out if you get stuck. So, good luck and have fun!

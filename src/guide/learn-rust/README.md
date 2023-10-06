@@ -39,6 +39,10 @@ or [reading the Rust for Rustaceans book](https://nostarch.com/rust-rustaceans).
 
 It's honestly an amazing book, you won't regret picking it up, be it your only beginner Rust book or just one of many angles.
 
+That said, even if you skip the "learning material" from the first parts of this guide, because you're using this book,
+you might never the less want to look into and reference the earlier chapters for inspirational material, both for learning even more,
+as well as getting inspiration on the things you can build for fun, learning purposes or profit.
+
 ### Even more Alternative or Companion resources
 
 [Welcome to Comprehensive Rust 🦀 - Comprehensive Rust 🦀](https://google.github.io/comprehensive-rust/): a small bootcamp course by Google focused on Android Engineers. Most of it is however applicable to anyone coming to Rust from another language and could be a great alternative or companion for some of the resources above.
