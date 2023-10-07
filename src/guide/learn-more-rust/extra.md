@@ -58,7 +58,9 @@ At this point you might also be ready to start reading alternative — community
 
 More parts to come as well.
 
-For the brave among you with the time for it, learn to build your own Operating System (OS) using Rust: <https://os.phil-opp.com/>### Code like a pro in Rust
+For the brave among you with the time for it, learn to build your own Operating System (OS) using Rust: <https://os.phil-opp.com/>
+
+### Code like a pro in Rust
 
 At this point of your Rust learning journey you've come a far way already, relatively speaking. Perhaps you want to shortcut, at least for now.
 
