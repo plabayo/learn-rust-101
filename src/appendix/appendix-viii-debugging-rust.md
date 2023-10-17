@@ -27,4 +27,6 @@ want to ensure you know the right tools and crates to help you deal with point (
 
 > A detailed overview of logging libraries that are available can be found in <https://www.shuttle.rs/blog/2023/09/20/logging-in-rust>.
 
+Benchmarking can also be seen as part of debugging. Difference is that you are trying to solve performance issues rather than business logic ones. [Divan](https://github.com/nvzqz/divan) is a framework that can help with this and which was originally announced at <https://nikolaivazquez.com/blog/divan/>.
+
 Finally when shit really hits the fan, and you do not see what's wrong from metrics and logs (alone), you might need to grab a debugger. The book <https://rustc-dev-guide.rust-lang.org/debugging-support-in-rustc.html> might be able to give you a good starting point. Articles such as <https://dev.to/rogertorres/debugging-rust-with-vs-code-11dj> might help you get started on debugging in case you are using VSCode for Rust, which is what plenty of people seem to use these days. There's also a Gist about it for VSCode at <https://gist.github.com/xanathar/c7c83e6d53b72dd4464f695607012629>.

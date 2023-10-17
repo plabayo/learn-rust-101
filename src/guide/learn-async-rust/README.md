@@ -21,6 +21,11 @@ Extra Learning Resources:
     to also discover, play and use other async runtimes.
     - <https://github.com/smol-rs/smol> is a great alternative Async runtime that you might want to try out;
 - Learn more about Async Rust and what the current situation is/was in 2023: <https://corrode.dev/blog/async/>
+- Get an understanding about issues you might encounter at Rust regarding Async:
+  - Deadlocks
+  - Cancellation safety
+    - <https://docs.google.com/presentation/d/1CObHaEu1OnXhTEFs3RmuUQHJj_Uw9HOqWHqmnod6YXc/mobilepresent?slide=id.g228c626047c_0_222>
+    - <https://google.github.io/comprehensive-rust/async/pitfalls/cancellation.html>
 
 As an extra, and perhaps slightly sidetracked, you may also want to read and develop alongside the following articles:
 
@@ -52,3 +57,11 @@ and also acknowledge the hard work that is put into it, but not about all implem
 One such detail is about whether we really need `async fn` syntax, an interesting take about that can be read at
 <https://seanmonstar.com/post/66832922686/was-async-fn-a-mistake>. Like always follow interesting blogs,
 and news resources such as ["This week in Rust"](https://this-week-in-rust.org/).
+
+There are currently not yet async iterators. An interesting blog series that can help you
+get a grasp of what async iterators might look like or to get you start thinking on it
+is the following series by "Yoshua Wuyts":
+
+1. Async Iteration I: Semantics (2020): <https://blog.yoshuawuyts.com/async-iteration/>
+2. Async Iteration II: Async Iterator Crate (2022): <https://blog.yoshuawuyts.com/async-iterator-crate/>
+3. Async Iteration III: The Async Iterator Trait (2023): <https://blog.yoshuawuyts.com/async-iterator-trait/>

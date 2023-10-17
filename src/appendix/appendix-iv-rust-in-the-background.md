@@ -6,6 +6,8 @@ In case you have good reasons, such as security and being able to start with a c
 
 Of course, starting new projects inspired by classic/foundational tooling is however an opportunity to use Rust, even if your users do not need to know or care about it. A great example of that is just,a modern alternative to Makefiles, as much as love as we have for it. You can find it at <https://github.com/casey/just>, basically 'Make' with variables + more.
 
+[Graphite](https://graphite.rs/) is an in-development raster and vector graphics package that's free and open source. It is powered by a node graph compositing engine that fuses layers with nodes, providing a fully nondestructive editing experience. It's fully written in Rust, and can be used as a desktop app or in the browser. The crazy thing is that as an artist using it you are basically "painting" Rust, as Graphite documents are really rust programs. As such most of their contributors are actually people with compiler/language backgrounds. Most users however will never know this, and neither do they have to. 
+
 - In [Appendix II.](/appendix/appendix-ii-webassembly-wasm.md) we already saw that Rust can be compiled to WASM, and as such you can build an entire WebApp in Rust. However instead of replacing your entire WebApp, it is also just as well possible that you only replace the components of your App where it makes sense, e.g. where you need to do a lot of computations;
 - In [Appendix III.](/appendix/appendix-iii-native-apps.md) we learned about Tauri to build native apps with Rust, and also here noted that it can be done while at the same time building your core frontend logic in the frameworks you are used to;
 

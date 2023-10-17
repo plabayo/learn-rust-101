@@ -19,3 +19,7 @@ If you want to ship on a more standard cloud platform such as _AWS_
 you can learn to do so as part of practicing Rust using "[4. Study using the "Zero to Production in Rust" book](#4-study-using-the-zero-to-production-in-rust-book)".
 
 Finally, in the spirit of KISS, nothing wrong with deploying like this: <https://logankeenan.com/posts/deploy-your-rust-project-to-any-hosting-provider-in-minutes/>.
+
+#### Extra Production Rust Resources
+
+- If you are woried about Supply Chain attacks you can have a look at <https://davidlattimore.github.io/making-supply-chain-attacks-harder.html>;

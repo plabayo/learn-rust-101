@@ -6,6 +6,9 @@ Native apps are applications written for a specific platform. While that could b
 >
 > - For C you probably want to just use bindgen;
 > - For C++ you can make use of <https://github.com/dtolnay/cxx> (cxx);
+>   - Alternatively there's also <https://github.com/HKalbasi/zngur>,
+>     how it compares to CXX is described at <https://github.com/HKalbasi/zngur/blob/main/book/src/how_it_compares.md>
+> - Binding to Java can be done using <https://duchess-rs.github.io/duchess/>
 
 #### Tauri
 
