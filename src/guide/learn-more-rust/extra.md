@@ -40,6 +40,14 @@ When the day comes that you do feel ready to learn about Macros, here a list of 
   - And of course do not forget to consult the "classic" macro Rust book: [The Little Book of Rust Macros](https://danielkeep.github.io/tlborm/book/index.html)
   - If you want to get a quick intro and overview of Macros this video can help a lot as well: [Rust's Witchcraft](https://www.youtube.com/watch?v=MWRPYBoCEaY)
 
+> 🔗 [Rust Power Tools (MEAP)](https://www.manning.com/books/rust-power-tools) (By Manning Publications Co.)
+>
+> A great book to help you with supercharging your code with macros—the real power tools of the Rust programming language!
+>
+> This book focusses mostly on Procedural macros, but does give a quick intro of declaritive macros as well (`macro_rules!`).
+>
+> Rust Power Tools is a comprehensive guide to creating macros in Rust. You’ll start your journey with declarative macros, then quickly move on to the powerful procedural macros to build your own domain-specific language. Learn how to create public fields, work with custom attributes, integrate your macros with other crates, write effective tests to ensure your macros are reliable and bug-free, and even share your macros with other developers.
+
 If you have a lot of free time at your hand and you want to build something really cool that is totally useless, here are some more ideas:
 
 - Build your own Gameboy (classic) emulator: [Introduction - DMG-01: How to Emulate a Game Boy](https://rylev.github.io/DMG-01/public/book/introduction.html)
