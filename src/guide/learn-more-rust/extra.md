@@ -7,7 +7,7 @@ Should you want some inspiration or a more guided approach, here are some resour
 - [Command-Line Rust](https://www.oreilly.com/library/view/command-line-rust/9781098109424/): build a cli tool such as grep in rust, using test driven development (TDD), all to learn Rust
 - [Rust Application Books - The Little Book of Rust Books](https://lborb.github.io/book/applications.html): lists a lot of different books, including ones that allow you to develop small projects using Rust, usually in a well guided fashion;
   - You might find <https://archive.is/acQA2> an interesting companion article as it gives some (common) ideas that you can apply to the CLI tool you're building;
-  - [Introduction - PNGme: An Intermediate Rust Project](https://picklenerd.github.io/pngme_book/introduction.html) is an especially fun small project. It allows you to apply the knowledge that you learned above in a very narrow program, that is for once not network related. At the end you'll have a cli tool that allows you to encode and decode "hidden" messages in a PNG image;
+  - [Introduction - PNGme: An Intermediate Rust Project](https://jrdngr.github.io/pngme_book/) is an especially fun small project. It allows you to apply the knowledge that you learned above in a very narrow program, that is for once not network related. At the end you'll have a cli tool that allows you to encode and decode "hidden" messages in a PNG image;
 
 > Was it always your dream to make your own Game? And do you also want to learn Rust?
 >

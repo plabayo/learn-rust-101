@@ -21,6 +21,30 @@ Sooner or later you might also need help for a project you work on or simply to 
 >
 > If you've never done any Systems programming before, this will be an especially helpful book given it will explain a lot of the magic you've encountered in your very protected professional life so far. You're welcome.
 
+### Tour of Rust
+
+> 🔗 <https://tourofrust.com/index.html>
+
+This project is meant to give an experienced programmer a swift introduction to Rust as an alternative to reading lengthy book style documentation.
+
+* Chapter 1 - The Basics
+* Chapter 2 - Basic Control Flow
+* Chapter 3 - Basic Data Structure Types
+* Chapter 4 - Generic Types
+* Chapter 5 - Ownership & Borrowing Data
+* Chapter 6 - Text
+* Chapter 7 - Object Oriented Programming
+* Chapter 8 - Smart Pointers
+* Chapter 9 - Project Organization and Structure
+
+Content goals:
+* Chapter 1-4 should give you a strong taste of Rust's aesthetic
+* Chapter 1-6 should give a person from C a good idea how their ideas translate
+* Chapter 1-8 should give a person from C++ a good idea how their ideas translate
+* Chapter 9+ should talk about Rust specific concepts that doesn't fit well into the above
+
+This project also aims to provide this book in as many languages as possible.
+
 ### Learn Rust in a Month of Lunches
 
 There's only one Rust book out there — that I'm aware of — which assumes no programming experience or knowledge at all.

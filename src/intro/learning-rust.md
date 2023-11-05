@@ -1,6 +1,18 @@
-## Rust 101 Course
+## Why Learn Rust?
 
-The origins of this guide can be found in the preparation of a semester long course I gave to a group of employees at [OTA Insight Ltd.](https://www.otainsight.com/). The recordings of this course are available on YouTube at: <https://www.youtube.com/playlist?list=PLQgXEsLXFxpVyLddG8FFXfNQEiodTzAjj>. The videos are however not of the highest quality, especially given the many better resources out there.
+You might be wondering, why shall I learn Rust?
+In the [About](/intro/about.html) chapter you'll find plenty of reason to.
+
+However, you might want to read [the "Can Rust prevent logic errors?" article]
+at <https://itsallaboutthebit.com/logic-errors-in-rust/#> instead.
+
+In the article "Can Rust prevent logic errors?" Piotr Sarnacki explores the potential of Rust, a programming language, to reduce software bugs, specifically logic errors. He highlights Rust's features such as the absence of nulls, the necessity to handle function errors, prevention of data races, and explicit marking of mutable variables.
+
+Sarnacki contrasts Rust with Ruby, where runtime exceptions are common, suggesting that Rust allows for more stable applications. He discusses how Rust's expressiveness can help prevent some logic errors that might occur at runtime.
+
+He also discusses how Rust's tools for managing data ownership and access control can prevent logic errors caused by unwanted mutations. Additionally, he emphasizes the use of enums in Rust to handle multiple options, which can prevent errors when dealing with multiple possible states.
+
+In conclusion, Sarnacki believes that Rust offers many tools for writing correct software and its community's focus on correctness further enhances its value. Despite the potential for errors, he suggests that Rust has a relatively small amount of problematic features if misused.
 
 ## Learning Rust
 
@@ -31,3 +43,7 @@ As you navigate this guide, you'll find alternative suggestions and varying leve
 If you don't anticipate working on a project requiring Async programming soon, feel free to bypass [that section](/guide/learn-async-rust.md) for now. Just remember that Rust supports Async and it plays a significant role in the Rust ecosystem. You can always return to it when you're ready to strengthen your knowledge in this area.
 
 Should you ever feel stuck or in need of a mentor, don't hesitate to contact Glen at [glen@plabayo.tech](mailto:glen@plabayo.tech) to arrange a one-on-one session or a workshop for your organization. Whether it's a one-off or regular meetings, assistance is readily available.
+
+## Rust 101 Course
+
+The origins of this guide can be found in the preparation of a semester long course I gave to a group of employees at [OTA Insight Ltd.](https://www.otainsight.com/). The recordings of this course are available on YouTube at: <https://www.youtube.com/playlist?list=PLQgXEsLXFxpVyLddG8FFXfNQEiodTzAjj>. The videos are however not of the highest quality, especially given the many better resources out there.
