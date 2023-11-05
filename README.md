@@ -1,5 +1,7 @@
 [![Repository Banner Image](./src/intro/banner.png)](https://rust-lang.guide)
 
+[![Check Links](https://github.com/plabayo/learn-rust-101/actions/workflows/links.yml/badge.svg)](https://github.com/plabayo/learn-rust-101/actions/workflows/links.yml)
+
 [![GitHub Repo stars](https://img.shields.io/github/stars/plabayo/learn-rust-101?style=social)](https://github.com/plabayo/learn-rust-101) [![GitHub](https://img.shields.io/github/license/plabayo/learn-rust-101)](https://github.com/plabayo/learn-rust-101/blob/main/LICENSE) [![available to hire](https://img.shields.io/badge/Glen-available%20to%20hire%20as%20consultant-green)](mailto:glen@plabayo.tech)
 
 [![Github Sponsors Badge](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA)](https://github.com/sponsors/plabayo) [![Buy Me A Coffee Badge](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/plabayo)
