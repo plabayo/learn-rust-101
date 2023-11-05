@@ -44,7 +44,7 @@ When the day comes that you do feel ready to learn about Macros, here a list of 
 >
 > A great book to help you with supercharging your code with macros—the real power tools of the Rust programming language!
 >
-> This book focusses mostly on Procedural macros, but does give a quick intro of declaritive macros as well (`macro_rules!`).
+> This book focuses mostly on Procedural macros, but does give a quick intro of declarative macros as well (`macro_rules!`).
 >
 > Rust Power Tools is a comprehensive guide to creating macros in Rust. You’ll start your journey with declarative macros, then quickly move on to the powerful procedural macros to build your own domain-specific language. Learn how to create public fields, work with custom attributes, integrate your macros with other crates, write effective tests to ensure your macros are reliable and bug-free, and even share your macros with other developers.
 

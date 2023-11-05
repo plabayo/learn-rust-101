@@ -3,7 +3,8 @@
 You might be wondering, why shall I learn Rust?
 In the [About](/intro/about.html) chapter you'll find plenty of reason to.
 
-However, you might want to read [the "Can Rust prevent logic errors?" article]
+However, if you are a programmer coming from another language
+you might want to read the "Can Rust prevent logic errors?" article available
 at <https://itsallaboutthebit.com/logic-errors-in-rust/#> instead.
 
 In the article "Can Rust prevent logic errors?" Piotr Sarnacki explores the potential of Rust, a programming language, to reduce software bugs, specifically logic errors. He highlights Rust's features such as the absence of nulls, the necessity to handle function errors, prevention of data races, and explicit marking of mutable variables.

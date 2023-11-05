@@ -27,7 +27,7 @@ Extra Learning Resources:
     - <https://docs.google.com/presentation/d/1CObHaEu1OnXhTEFs3RmuUQHJj_Uw9HOqWHqmnod6YXc/mobilepresent?slide=id.g228c626047c_0_222>
     - <https://google.github.io/comprehensive-rust/async/pitfalls/cancellation.html>
 
-At <https://without.boats/blog/why-async-rust/> you can reat more toughts on Async rust, its history and its implementation.
+At <https://without.boats/blog/why-async-rust/> you can reat more thoughts on Async rust, its history and its implementation.
 
 As an extra, and perhaps slightly sidetracked, you may also want to read and develop alongside the following articles:
 
